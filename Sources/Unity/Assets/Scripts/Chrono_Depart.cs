@@ -5,8 +5,7 @@ using UnityEngine.UI;
 public class Chrono_Depart : MonoBehaviour
 {
     public GameObject Count;
-    public GameObject Départ;
-    public GameObject Go; 
+  
     public GameObject Vaisseau;
     // Start is called before the first frame update
     void Start()

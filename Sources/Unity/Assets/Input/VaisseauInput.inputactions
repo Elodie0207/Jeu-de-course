@@ -1,0 +1,94 @@
+{
+    "name": "VaisseauInput",
+    "maps": [
+        {
+            "name": " Vaisseau",
+            "id": "775e672a-11a2-4dce-a24e-8095b2f9ea12",
+            "actions": [
+                {
+                    "name": "Avancer",
+                    "type": "Button",
+                    "id": "7be5f9a7-78f9-4d8e-bbce-15b302c45439",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Gauche",
+                    "type": "Button",
+                    "id": "d9fbc22f-bb2a-4e4a-a373-16979d172b5b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Droite",
+                    "type": "Button",
+                    "id": "e1e15d0e-8e48-4be4-9a47-dc42ea9ea285",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Freiner",
+                    "type": "Button",
+                    "id": "48ec01c8-d5a4-4783-abb1-0ea173d26033",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "18218509-7da6-494a-ad73-210368d08485",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Avancer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3293bc2b-2b57-46eb-961e-5b78dd26aa06",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gauche",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b6e9acc5-db65-4392-99a7-061cb8fc4d06",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Droite",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "285330ff-7083-44f3-84c4-9604ed286fc1",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Freiner",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

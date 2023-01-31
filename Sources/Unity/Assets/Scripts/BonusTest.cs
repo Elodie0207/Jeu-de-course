@@ -1,17 +1,12 @@
 
 using UnityEngine;
 
-
-
 public class BonusTest : MonoBehaviour
 {
-    public CharacterController playerCharacterController;
 
-    public Bullet bulletProj;
-    
     private void OnTriggerEnter(Collider other)
     {
-        int bonusType =  UnityEngine.Random.Range(0,4);
+        int bonusType =  UnityEngine.Random.Range(0,2);
 
         
         
@@ -21,43 +16,19 @@ public class BonusTest : MonoBehaviour
         
             if (bonusType == 0)
             {
-
-                StartCoroutine(playerCharacterController.Nitro());
-                Debug.Log("Nitro");
-
-
+                
+                    Debug.Log("Non");
+                   
+                   
 
             }
 
             if (bonusType == 1)
             {
                     
-                StartCoroutine(playerCharacterController.SuperNitro());
-                Debug.Log("SuperNitro");
-
+                    Debug.Log("Oui");
                    
             }
-
-            if (bonusType == 2)
-            {
-
-                StartCoroutine(playerCharacterController.Gravity());
-                Debug.Log("SpeedMalus");
-
-
-
-            }   
-            
-            if (bonusType == 3)
-            {
-
-                bulletProj.Shoot();
-                Debug.Log("Bullet");
-
-
-
-            }   
-                
        
             Destroy(other.gameObject);
         }
