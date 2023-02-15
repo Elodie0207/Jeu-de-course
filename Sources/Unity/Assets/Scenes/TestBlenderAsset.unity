@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066460942}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5784de18402152469c395d737527068, type: 3}
   m_Name: 
@@ -1091,7 +1091,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066460942}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8.437069, y: 7.3653994, z: 14.105545}
@@ -1438,8 +1438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Count: {fileID: 569095577}
-  "D\xE9part": {fileID: 1734646877}
-  Go: {fileID: 958968850}
   Vaisseau: {fileID: 1066460942}
 --- !u!1001 &6641754285713460356
 PrefabInstance:
@@ -1776,5 +1774,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.167112, y: 0.10002538, z: 3.308397}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: -4.0835586, y: -0.44998577, z: 0.9113818}

@@ -5,36 +5,34 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    [SerializeField] private GameObject bulletPrefab;
+    public GameObject bullet;
     
-    [SerializeField] private float speed = 5.0f;
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public  float launchSpeed = 100f;
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-        
-    }
-
+    private int munition = 3;
+    
     public void Shoot()
     {
-        
-        if (Input.GetKeyDown((KeyCode.Space)))
+
+        while (munition != 0)
         {
 
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-            
-            
+
+            if (Input.GetKeyDown((KeyCode.Space)))
+            {
+
+                GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+
+                //newBullet.GetComponent<Rigidbody>().v= 
+
+                munition -= 1;
+
+
+
+
+            }
+
         }
-        
+
     }
 }
