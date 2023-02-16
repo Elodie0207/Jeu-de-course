@@ -37,11 +37,17 @@ public class CharacterController : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
         {
+	        
             var rotation = feetTransform.rotation;
+            /*
             rotation = Quaternion.Euler(
             	rotation.eulerAngles.x,
                 rotation.eulerAngles.y - yawRotationSpeed * Time.deltaTime,
-                rotation.eulerAngles.z);
+                rotation.eulerAngles.z);*/
+            rotation = Quaternion.Euler(
+	            rotation.eulerAngles.x,
+	            rotation.eulerAngles.y - yawRotationSpeed * Time.deltaTime,
+	            (float)(10.5));
 			feetTransform.rotation = rotation;
         }
         
@@ -51,7 +57,7 @@ public class CharacterController : MonoBehaviour
             rotation = Quaternion.Euler(
             	rotation.eulerAngles.x,
                 rotation.eulerAngles.y + yawRotationSpeed * Time.deltaTime,
-                rotation.eulerAngles.z);
+                (float)(-10.5));
 			feetTransform.rotation = rotation;
         }
 	movementIntent = movementIntent.normalized;
