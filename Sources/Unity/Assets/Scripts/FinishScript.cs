@@ -1,37 +1,34 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
+using UnityEngine.UI;
 public class FinishScript : MonoBehaviour
 {
-    public int nbTour = 3;
-    private int nbTourRestant = 1;
-
-    public Text tours;
-
-    private void Start()
-    {
-        tours.text = nbTourRestant + "/" + nbTour;
-    }
-
-    void OnTriggerEnter(Collider collide)
-    {
-
-        if (collide.CompareTag("Finish"))
+    public GameObject tour;
+        
+    void OnTriggerEnter(Collider collide){
+     
+        if(collide.tag=="Finish")
         {
-            if (nbTourRestant >= nbTour)
+            if (tour.GetComponent<Text>().text == "3")
             {
                 Debug.Log("Finish");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
             }
-            else
+            else if(tour.GetComponent<Text>().text == "0")
             {
-                nbTourRestant++;
-                tours.text = nbTourRestant + "/" + nbTour;
+                tour.GetComponent<Text>().text = "1";
+            }
+            else if(tour.GetComponent<Text>().text == "1")
+            {
+                tour.GetComponent<Text>().text = "2";
+            }
+            else if(tour.GetComponent<Text>().text == "2")
+            {
+                tour.GetComponent<Text>().text = "3";
             }
         }
     }
