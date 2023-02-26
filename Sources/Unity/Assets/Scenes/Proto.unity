@@ -429,6 +429,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7007429355176488284, guid: b641fac122fe8074a99c400366d4004b, type: 3}
   m_PrefabInstance: {fileID: 7007429355682650309}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1809803835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4801084962594039334, guid: e283edf9cc597ec4987c2b3176fc4fda, type: 3}
+  m_PrefabInstance: {fileID: 2580303667498782748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1164954525694240079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -492,6 +503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCharacterRoot
       objectReference: {fileID: 0}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: tours
+      value: 
+      objectReference: {fileID: 1809803835}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: nbTourRestant
       value: 2
