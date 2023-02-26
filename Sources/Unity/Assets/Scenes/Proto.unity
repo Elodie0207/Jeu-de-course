@@ -694,6 +694,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6187803131127618144, guid: e283edf9cc597ec4987c2b3176fc4fda, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187803131127618144, guid: e283edf9cc597ec4987c2b3176fc4fda, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261701629216141176, guid: e283edf9cc597ec4987c2b3176fc4fda, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e283edf9cc597ec4987c2b3176fc4fda, type: 3}
 --- !u!1001 &2859602830301114445
@@ -760,6 +772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7007429355176488284, guid: b641fac122fe8074a99c400366d4004b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7007429355814697390, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: m_Name
       value: "Chrono_D\xE9part"
