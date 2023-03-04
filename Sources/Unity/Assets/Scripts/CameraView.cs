@@ -40,10 +40,8 @@ public class CameraView : MonoBehaviour
 		if (Input.GetKey(KeyCode.A))
 		{
 			ShowBackView();
-			Debug.Log("Boutton A maintenue !");
-    	}else {
-			Debug.Log("Boutton A relache !");
-			if (CamEtat == false)
+        }else {
+            if (CamEtat == false)
             {
                 ShowThirdPersonView();
             }else

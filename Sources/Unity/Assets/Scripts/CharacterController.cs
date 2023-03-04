@@ -10,14 +10,14 @@ public class CharacterController : MonoBehaviour
 	public Transform feetTransform;
 	private Vector3 movementIntent;
 	public Rigidbody rb;
-	
-	
+
+	private Transform refFeetTransform;
 	
 	
     void Start()
     {
+	    refFeetTransform = feetTransform;
 
-	
 
     }
 
