@@ -6,24 +6,34 @@ using UnityEngine.AI;
 public class IA : MonoBehaviour
 {
     NavMeshAgent agent;
-    
-    void Start(){
+    public Transform move; 
+    public Transform next;
+    private int nbTour = 0;
+    private bool canMove = false;
+    void Awake(){
         agent = GetComponent<NavMeshAgent>();
-        agent.destination = GetDestination();
-    
+ 
     }
 
-    void Update()
-    {
-        if (agent.remainingDistance < 1)
+    void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("Points"))
         {
-            agent.destination = GetDestination();
+            canMove = true;
         }
     }
-
-    public Vector3 GetDestination()
+    void Update()
     {
-        //int destination = Random.Range(0, 4);
-        return GameObject.Find("Pts" + 2).transform.position;
+        if (canMove == false)
+        {
+            agent.destination = move.position;
+        }
+        else
+        {
+            agent.destination = next.position;
+        }
+
+
+
     }
+    
 }

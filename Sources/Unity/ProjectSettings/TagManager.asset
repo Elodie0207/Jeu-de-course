@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - BonusCube
   - IA
+  - Points
   layers:
   - Default
   - TransparentFX
