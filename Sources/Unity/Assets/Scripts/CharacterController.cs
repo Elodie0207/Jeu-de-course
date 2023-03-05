@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
@@ -10,16 +11,17 @@ public class CharacterController : MonoBehaviour
 	public Transform feetTransform;
 	private Vector3 movementIntent;
 	public Rigidbody rb;
-
-	private Transform refFeetTransform;
 	
+	public float levitationHeight = 5.0f;
+	public float levitationForce = 20.0f;
+	public LayerMask roadLayer;
+	private RaycastHit hit;
+	private bool levitationBool = true;
 	
-    void Start()
-    {
-	    refFeetTransform = feetTransform;
-
-
-    }
+	void Start()
+	{
+		rb.useGravity = false;
+	}
 
    
     
@@ -79,6 +81,19 @@ public class CharacterController : MonoBehaviour
 			rb.AddForce(movementForce * (feetTransform.rotation * movementIntent), ForceMode.Acceleration);
 		}*/
         rb.AddForce(movementForce * (feetTransform.rotation * movementIntent), ForceMode.Acceleration);
+        
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity, roadLayer)) {
+	        Vector3 levitationPos = hit.point + Vector3.up * levitationHeight;
+	        transform.position = levitationPos;
+	        
+	        if (levitationBool) {
+		        rb.AddForce(Vector3.up * levitationForce);
+	        }
+        }
+        else {
+	        levitationBool = false;
+	        rb.useGravity = true;
+        }
     }
     
     
@@ -101,8 +116,7 @@ public class CharacterController : MonoBehaviour
 	    yield return new WaitForSeconds(count);
 
 	    movementForce *= 0.5f;
-
-
+	    
     }
     
     public IEnumerator Gravity(float count = 5f)
