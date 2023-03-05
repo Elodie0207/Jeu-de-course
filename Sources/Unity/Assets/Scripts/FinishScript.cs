@@ -32,4 +32,13 @@ public class FinishScript : MonoBehaviour
             }
         }
     }
+    
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+            
+        }
+    }
 }

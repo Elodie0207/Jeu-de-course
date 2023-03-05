@@ -8,7 +8,6 @@ public class IA : MonoBehaviour
     NavMeshAgent agent;
     public Transform move; 
     public Transform next;
-    private int nbTour = 0;
     private bool canMove = false;
     void Awake(){
         agent = GetComponent<NavMeshAgent>();
