@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class FinishScript : MonoBehaviour
 {
     public GameObject tour;
-        
+    
+    
     void OnTriggerEnter(Collider collide){
      
         if(collide.tag=="Finish")
@@ -31,6 +32,9 @@ public class FinishScript : MonoBehaviour
                 tour.GetComponent<Text>().text = "3";
             }
         }
+        
+        
+        
     }
     
     void Update()
