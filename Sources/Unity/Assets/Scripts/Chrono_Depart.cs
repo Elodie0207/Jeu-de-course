@@ -37,15 +37,15 @@ private float Debut;
         Count.SetActive(true);
 
         yield return new WaitForSeconds(1);
-        Count.GetComponent<Text>().text="PARTEZ";
+        Count.GetComponent<Text>().text="GO";
         Count.SetActive(true);
 
           yield return new WaitForSeconds(1);
-        Count.GetComponent<Text>().text="PARTEZ";
+        Count.GetComponent<Text>().text="GO";
         Count.SetActive(false);
         Vaisseau.GetComponent<CharacterController>().enabled=true;
 		IA.GetComponent<NavMeshAgent>().speed=25;
-		if(Count.GetComponent<Text>().text=="PARTEZ"){
+		if(Count.GetComponent<Text>().text=="GO"){
 		 commencer=true; 
 Debut = Time.time;
 }

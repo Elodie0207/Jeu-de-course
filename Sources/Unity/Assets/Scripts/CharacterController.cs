@@ -32,7 +32,7 @@ public class CharacterController : MonoBehaviour
 	    float yPosition = feetTransform.position.y;
 	    float xPosition = feetTransform.position.x;
 		movementIntent = Vector3.zero;
-		if (yPosition < 0)
+		if (yPosition < -10)
 		{
 			Vector3 newPosition = new Vector3(-44.73f, 6.17f, 37.9f);
 
