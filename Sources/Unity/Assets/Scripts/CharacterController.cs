@@ -17,16 +17,29 @@ public class CharacterController : MonoBehaviour
 	public LayerMask roadLayer;
 	private RaycastHit hit;
 	private bool levitationBool = true;
-	private float maxAngle = 170f;
+
+
 	void Start()
 	{
 		rb.useGravity = false;
+		
+
 	}
 
     
     void Update()
     {
+	    float yPosition = feetTransform.position.y;
+	    float xPosition = feetTransform.position.x;
 		movementIntent = Vector3.zero;
+		if (yPosition < 0)
+		{
+			Vector3 newPosition = new Vector3(-44.73f, 6.17f, 37.9f);
+
+			
+			feetTransform.position = newPosition;
+		}
+		
         if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
         {
 			movementIntent += Vector3.forward;
@@ -95,20 +108,7 @@ public class CharacterController : MonoBehaviour
         }
     }
     
-    private void OnTriggerStay(Collider other)
-    {
-	    if (other.CompareTag("Player"))
-	    {
-		    // Vérifier l'angle de rotation du joueur
-		    float angle = Vector3.Angle(Vector3.forward, other.transform.forward);
-		    if (angle > maxAngle)
-		    {
-			    // Empêcher le joueur de tourner à 180 degrés
-			    Vector3 newForward = Vector3.RotateTowards(other.transform.forward, Vector3.forward, maxAngle * Mathf.Deg2Rad, 0f);
-			    other.transform.rotation = Quaternion.LookRotation(newForward);
-		    }
-	    }
-    }
+    
 
    public IEnumerator Nitro(float count = 5f)
     {
