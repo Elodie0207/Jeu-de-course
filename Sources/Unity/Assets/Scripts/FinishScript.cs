@@ -7,11 +7,10 @@ using UnityEngine.UI;
 public class FinishScript : MonoBehaviour
 {
     public GameObject tour;
-    
+    public Rigidbody rbVehicule;
     
     void OnTriggerEnter(Collider collide){
-     
-        if(collide.tag=="Finish")
+        if(collide.tag=="Finish" && rbVehicule.transform.forward.x > 0)
         {
             if (tour.GetComponent<Text>().text == "3")
             {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22550637, g: 0.24756417, b: 0.28312165, a: 1}
+  m_IndirectSpecularColor: {r: 0.22550638, g: 0.24756417, b: 0.28312162, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1268,6 +1268,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: rbVehicule
+      value: 
+      objectReference: {fileID: 1164954525694240084}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: nbTourRestant
       value: 2
       objectReference: {fileID: 0}
@@ -1358,6 +1362,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 1164954525694240080}
+--- !u!54 &1164954525694240084 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1164954526389486175, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+  m_PrefabInstance: {fileID: 1164954525694240079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2480953970471492285
 PrefabInstance:
   m_ObjectHideFlags: 0
