@@ -8,27 +8,48 @@ public class IA : MonoBehaviour
     NavMeshAgent agent;
     public Transform move; 
     public Transform next;
-    private bool canMove = false;
+    public Transform last;
+
+    private int points = 0;
+
+    
     void Awake(){
         agent = GetComponent<NavMeshAgent>();
- 
+        
     }
 
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Points"))
         {
-            canMove = true;
+            if (points < 3)
+            {
+                points += 1;
+            }
+           
         }
+       
+        
     }
     void Update()
     {
-        if (canMove == false)
+        print(points);
+        print(agent.destination);
+        if (points == 3)
+        {
+            points = 0;
+            agent.destination = move.position;
+        }
+        else if (points==0)
         {
             agent.destination = move.position;
         }
-        else
+        else if  (points==1)
         {
             agent.destination = next.position;
+            
+        }
+        else if (points==2){
+            agent.destination = last.position;
         }
 
 
