@@ -83,7 +83,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164954525915487477}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &1164954525962278050
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +238,11 @@ MonoBehaviour:
   movementForce: 100
   feetTransform: {fileID: 1164954526389486144}
   rb: {fileID: 1164954526389486175}
+  levitationHeight: 5
+  levitationForce: 20
+  roadLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1164954526389486174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tour: {fileID: 0}
+  rbVehicule: {fileID: 0}
 --- !u!1 &1164954526522416389
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +368,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164954526522416389}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &1164954526597667694
 GameObject:
   m_ObjectHideFlags: 0
