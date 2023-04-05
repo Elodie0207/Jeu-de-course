@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
-using System.Threading;
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class MultiControl : MonoBehaviour
 { 
 	public float yawRotationSpeed;
 	public float movementForce = 15; // vitesse
@@ -40,17 +38,17 @@ public class CharacterController : MonoBehaviour
 			feetTransform.position = newPosition;
 		}
 		
-        if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.I))
         {
 			movementIntent += Vector3.forward;
         }
 
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.K))
         {
 			movementIntent += Vector3.back;
         }
         
-        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.J))
         {
 	        
             var rotation = feetTransform.rotation;
@@ -66,7 +64,7 @@ public class CharacterController : MonoBehaviour
 			feetTransform.rotation = rotation;
         }
         
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.L))
         {
             var rotation = feetTransform.rotation;
             rotation = Quaternion.Euler(
@@ -81,7 +79,7 @@ public class CharacterController : MonoBehaviour
     private void FixedUpdate()
     {
 		//teste pr eculer + lent que avancer
-		/*if (Input.GetKey(KeyCode.S))
+		/*if (Input.GetKey(KeyCode.K))
 		{
 			if (movementForce > 6)
 				{
@@ -142,5 +140,10 @@ public class CharacterController : MonoBehaviour
 	   
     }
 
-   
+
+    
+    
+    
+
+
 }
