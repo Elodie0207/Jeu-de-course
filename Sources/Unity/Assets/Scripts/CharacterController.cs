@@ -9,28 +9,35 @@ public class CharacterController : MonoBehaviour
 	public float yawRotationSpeed;
 	public float movementForce = 15; // vitesse
 	public Transform feetTransform;
-	private Vector3 movementIntent;
 	public Rigidbody rb;
+	public Transform playerModelAndCamera;
+
+	public float maxDegreesRotation = 100f;
+	public float angleToRotateVehicle = 30f;
 	
 	public float levitationHeight = 5.0f;
 	public float levitationForce = 20.0f;
 	public LayerMask roadLayer;
+	private float startY;
+
 	private RaycastHit hit;
 	private bool levitationBool = true;
+	
+	private bool isRotatingLeft;
+	private bool isRotatingRight;
+	private Vector3 movementIntent;
 
 
 	void Start()
 	{
 		rb.useGravity = false;
-		
-
+		startY = transform.position.y;
 	}
 
     
     void Update()
     {
 	    float yPosition = feetTransform.position.y;
-	    float xPosition = feetTransform.position.x;
 		movementIntent = Vector3.zero;
 		if (yPosition < -10)
 		{
@@ -49,49 +56,63 @@ public class CharacterController : MonoBehaviour
         {
 			movementIntent += Vector3.back;
         }
-        
+
         if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
         {
-	        
-            var rotation = feetTransform.rotation;
-            /*
-            rotation = Quaternion.Euler(
-            	rotation.eulerAngles.x,
-                rotation.eulerAngles.y - yawRotationSpeed * Time.deltaTime,
-                rotation.eulerAngles.z);*/
-            rotation = Quaternion.Euler(
-	            rotation.eulerAngles.x,
-	            rotation.eulerAngles.y - yawRotationSpeed * Time.deltaTime,
-	            (float)(10.5));
-			feetTransform.rotation = rotation;
+			isRotatingLeft = true;
+	        movementIntent += Vector3.left;
+        }
+        else
+        {
+	        isRotatingLeft = false;
         }
         
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            var rotation = feetTransform.rotation;
-            rotation = Quaternion.Euler(
-            	rotation.eulerAngles.x,
-                rotation.eulerAngles.y + yawRotationSpeed * Time.deltaTime,
-                (float)(-10.5));
-			feetTransform.rotation = rotation;
+	        isRotatingRight = true;
+	        movementIntent += Vector3.right;
         }
-	movementIntent = movementIntent.normalized;
+        else
+        {
+	        isRotatingRight = false;
+        }
+        movementIntent = movementIntent.normalized;
 	}
 
     private void FixedUpdate()
     {
-		//teste pr eculer + lent que avancer
-		/*if (Input.GetKey(KeyCode.S))
-		{
-			if (movementForce > 6)
-				{
-					rb.AddForce((movementForce - 5) * (feetTransform.rotation * movementIntent), ForceMode.Acceleration);
-				}
-		}
-		else
-		{
-			rb.AddForce(movementForce * (feetTransform.rotation * movementIntent), ForceMode.Acceleration);
-		}*/
+	    if (isRotatingLeft)
+	    {
+		    var rotation = feetTransform.rotation;
+		    rotation = Quaternion.Euler(
+			    rotation.eulerAngles.x,
+			    rotation.eulerAngles.y - yawRotationSpeed * Time.deltaTime,
+			    rotation.eulerAngles.z);
+		    feetTransform.rotation = rotation;
+		    var localRotation = playerModelAndCamera.localRotation;
+		    localRotation = Quaternion.RotateTowards(localRotation, Quaternion.Euler(0f, 0f, angleToRotateVehicle), maxDegreesRotation * Time.deltaTime);
+		    playerModelAndCamera.localRotation = localRotation;
+	    }
+	    if (isRotatingRight)
+	    {
+		    var rotation = feetTransform.rotation;
+		    rotation = Quaternion.Euler(
+			    rotation.eulerAngles.x,
+			    rotation.eulerAngles.y + yawRotationSpeed * Time.deltaTime,
+			    rotation.eulerAngles.z);
+		    feetTransform.rotation = rotation;
+		    var localRotation = playerModelAndCamera.localRotation;
+		    localRotation = Quaternion.RotateTowards(localRotation, Quaternion.Euler(0f, 0f, -angleToRotateVehicle), maxDegreesRotation * Time.deltaTime);
+		    playerModelAndCamera.localRotation = localRotation;
+	    }
+
+	    if (!isRotatingLeft && !isRotatingRight)
+	    {
+		    var localRotation = playerModelAndCamera.localRotation;
+		    localRotation = Quaternion.RotateTowards(localRotation, Quaternion.Euler(0f, 0f, 0f), maxDegreesRotation * Time.deltaTime);
+		    playerModelAndCamera.localRotation = localRotation;
+	    }
+
         rb.AddForce(movementForce * (feetTransform.rotation * movementIntent), ForceMode.Acceleration);
         
         if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity, roadLayer)) {
@@ -141,6 +162,4 @@ public class CharacterController : MonoBehaviour
 	    movementForce *= 2f;
 	   
     }
-
-   
 }

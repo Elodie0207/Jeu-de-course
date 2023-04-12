@@ -6,22 +6,22 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 { 
 	public Button buttonResol;
-public GameObject boutton_jouer;
-public GameObject boutton_quitter;
-private string langage="";
-//public GameObject boutton;
-public int test = 0;
-public GameObject CanvaCourrant;
-public GameObject nouveauCanva;
-public Dropdown drop;
-public Button boutton_retour;
+    public GameObject boutton_jouer;
+    public GameObject boutton_quitter;
+    private string langage="";
+    //public GameObject boutton;
+    public int test = 0;
+    public GameObject CanvaCourrant;
+    public GameObject nouveauCanva;
+    public Dropdown drop;
+    public Button boutton_retour;
 public void Start()
 {
-	 CanvaCourrant.SetActive(true); 
-	nouveauCanva.SetActive(false);
-	Screen.fullScreen = true; 
-	buttonResol.gameObject.SetActive(false); 
-drop.options.Clear();
+	    CanvaCourrant.SetActive(true); 
+	    nouveauCanva.SetActive(false);
+	    Screen.fullScreen = true; 
+	    buttonResol.gameObject.SetActive(false); 
+        drop.options.Clear();
         drop.options.Add(new Dropdown.OptionData("Fullscreen"));
         drop.options.Add(new Dropdown.OptionData("Fenêtre"));
         drop.options.Add(new Dropdown.OptionData("1920x1080"));
@@ -34,11 +34,9 @@ drop.options.Clear();
     // Start is called before the first frame update
     public void Jouer(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-       
     }
     public void Quitter(){
         Application.Quit();
-         
     }
     public void Param(){
 	    buttonResol.gameObject.SetActive(true); 
@@ -85,10 +83,10 @@ public void OnScreenModeChanged(int value)
                 break;
         }
     }
-public void Retour(){
- 	CanvaCourrant.SetActive(true); 
-		nouveauCanva.SetActive(false); 
-}
+        public void Retour(){
+ 	        CanvaCourrant.SetActive(true); 
+		    nouveauCanva.SetActive(false); 
+        }
 	}
 
 
