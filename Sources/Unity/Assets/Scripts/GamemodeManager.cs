@@ -37,7 +37,7 @@ public class GamemodeManager : MonoBehaviour
         GameObject player1CameraThirdPerson = GameObject.Find("CamThirdPerson");
         player1CameraThirdPerson.GetComponent<Camera>().rect = new Rect(0f, 0f, 0.5f, 1f);
         
-        GameObject player1CamBack = GameObject.Find("CamBackPerson");
+        GameObject player1CamBack = GameObject.Find("CamBack");
         player1CamBack.GetComponent<Camera>().rect = new Rect(0f, 0f, 0.5f, 1f);
         
         GameObject player2 = Resources.Load<GameObject>("PlayerCharacterRoot2");
