@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraView : MonoBehaviour
+public class MultiCameraView : MonoBehaviour
 {
     
     public Camera CamFirstPerson;
