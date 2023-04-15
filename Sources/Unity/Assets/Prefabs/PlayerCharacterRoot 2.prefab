@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1164954525915487474}
   - component: {fileID: 1164954525915487475}
   m_Layer: 0
-  m_Name: CamBack
+  m_Name: CamBack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1164954525962278079}
   - component: {fileID: 1164954525962278048}
   m_Layer: 0
-  m_Name: CamFirstPerson
+  m_Name: CamFirstPerson2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,6 +220,9 @@ MonoBehaviour:
   movementForce: 100
   feetTransform: {fileID: 1164954526389486144}
   rb: {fileID: 1164954526389486175}
+  playerModelAndCamera: {fileID: 0}
+  maxDegreesRotation: 100
+  angleToRotateVehicle: 30
   levitationHeight: 5
   levitationForce: 20
   roadLayer:
@@ -278,7 +281,7 @@ GameObject:
   - component: {fileID: 1164954526522416386}
   - component: {fileID: 1164954526522416387}
   m_Layer: 0
-  m_Name: CamThirdPerson
+  m_Name: CamThirdPerson2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,7 +356,7 @@ GameObject:
   - component: {fileID: 1164954526597667693}
   - component: {fileID: 1164954526597667692}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Camera2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,11 +9,13 @@ public class BonusTest : MonoBehaviour
     //public Bullet bulletProj;
     
     private void OnTriggerEnter(Collider other)
-    {
+    {   
+        //création d'une valeur aléatoire comprise entre 0 et 4;
+        
         int bonusType =  UnityEngine.Random.Range(0,4);
 
         
-        
+        //un asset qui correspond au cube de bonus a pour tag bonus cube, si le joueur rentre en collision avec en fonction de la valeur de bonusType un bonus ou un malus sera donné au joueur.
         if (other.CompareTag("BonusCube"))
         {
             
@@ -57,7 +59,7 @@ public class BonusTest : MonoBehaviour
 
             } */ 
                 
-       
+            //destruction du cube pour qu'il ne soit pas possible de reprendre le bonus juste après
             Destroy(other.gameObject);
         }
         
