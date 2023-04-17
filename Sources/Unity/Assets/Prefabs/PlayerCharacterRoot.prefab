@@ -54,7 +54,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -138,7 +138,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -182,9 +182,10 @@ GameObject:
   - component: {fileID: 1164954526389486174}
   - component: {fileID: 1164954526389486172}
   - component: {fileID: 1164954526389486171}
+  - component: {fileID: 816051989969142606}
   m_Layer: 0
   m_Name: PlayerCharacterRoot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,13 +214,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164954526389486145}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 2
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1164954526389486173
 MonoBehaviour:
@@ -252,7 +253,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164954526389486145}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5784de18402152469c395d737527068, type: 3}
   m_Name: 
@@ -268,7 +269,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164954526389486145}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8.437069, y: 7.3653994, z: 14.105545}
@@ -286,7 +287,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tour: {fileID: 0}
-  rbVehicule: {fileID: 0}
+  rbVehicule: {fileID: 1164954526389486175}
+--- !u!114 &816051989969142606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164954526389486145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990d56419f8c9334398b162d7b89d42a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCharacterController: {fileID: 1164954526389486173}
 --- !u!1 &1164954526522416389
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +355,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000

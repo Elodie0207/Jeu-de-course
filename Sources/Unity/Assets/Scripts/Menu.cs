@@ -42,7 +42,7 @@ public void Start()
 	    nouveauCanva.SetActive(false);
 		CanvaMap.SetActive(false);
 		CanvaVaisseau.SetActive(false);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     public void Quitter(){
         Application.Quit();

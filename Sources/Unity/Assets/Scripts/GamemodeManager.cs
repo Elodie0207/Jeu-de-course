@@ -41,7 +41,7 @@ public class GamemodeManager : MonoBehaviour
         player1CamBack.GetComponent<Camera>().rect = new Rect(0f, 0f, 0.5f, 1f);
         
         GameObject player2 = Resources.Load<GameObject>("PlayerCharacterRoot2");
-        GameObject insancePlayer2 = Instantiate(player2, new Vector3(-64f, 2.9f, 41.3f), Quaternion.identity);
+        GameObject insancePlayer2 = Instantiate(player2, new Vector3(-62.4f, 3f, 45.4f), Quaternion.identity);
         
         
 
