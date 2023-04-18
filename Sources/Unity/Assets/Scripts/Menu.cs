@@ -15,14 +15,17 @@ public class Menu : MonoBehaviour
     public GameObject nouveauCanva;
 	public GameObject CanvaMap;
     public GameObject CanvaVaisseau;
+	 public GameObject CanvaJoueur;
     public Dropdown drop;
     public Button boutton_retour;
+
 public void Start()
 {
 	    CanvaCourrant.SetActive(true); 
 	    nouveauCanva.SetActive(false);
 		CanvaMap.SetActive(false);
 		CanvaVaisseau.SetActive(false);
+		CanvaJoueur.SetActive(false);
 	    Screen.fullScreen = true; 
 	    buttonResol.gameObject.SetActive(false); 
         drop.options.Clear();
@@ -37,12 +40,9 @@ public void Start()
 }
     // Start is called before the first frame update
     public void Jouer(){
-		CanvaMap.SetActive(true);
 		CanvaCourrant.SetActive(false); 
-	    nouveauCanva.SetActive(false);
-		CanvaMap.SetActive(false);
-		CanvaVaisseau.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+		CanvaJoueur.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     public void Quitter(){
         Application.Quit();
@@ -52,6 +52,14 @@ public void Start()
         CanvaCourrant.SetActive(false); 
 		nouveauCanva.SetActive(true); 
     }
+	public void Solo(){
+CanvaMap.SetActive(true);
+CanvaJoueur.SetActive(false);
+}
+	public void Multi(){
+CanvaMap.SetActive(true);
+CanvaJoueur.SetActive(false);
+}
 	public void Langage(){
 		
 		if(langage==""){
