@@ -21,6 +21,7 @@ public class Menu : MonoBehaviour
 
 public void Start()
 {
+
 	    CanvaCourrant.SetActive(true); 
 	    nouveauCanva.SetActive(false);
 		CanvaMap.SetActive(false);
@@ -40,10 +41,13 @@ public void Start()
 }
     // Start is called before the first frame update
     public void Jouer(){
+Debug.Log("Le bouton Jouer a été cliqué");
+CanvaJoueur.SetActive(true);
 		CanvaCourrant.SetActive(false); 
-		CanvaJoueur.SetActive(true);
-        
+		
+   
     }
+
     public void Quitter(){
         Application.Quit();
     }
