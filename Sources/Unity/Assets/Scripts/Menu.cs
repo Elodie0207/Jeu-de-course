@@ -42,7 +42,7 @@ public void Start()
     public void Jouer(){
 		CanvaCourrant.SetActive(false); 
 		CanvaJoueur.SetActive(true);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        
     }
     public void Quitter(){
         Application.Quit();
