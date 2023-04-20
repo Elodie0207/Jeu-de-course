@@ -1,59 +1,98 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class IA : MonoBehaviour
 {
     NavMeshAgent agent;
-    public Transform move; 
-    public Transform next;
-    public Transform last;
+    public float movementForce = 15;
 
-    private int points = 0;
+    private int points;
 
+    public Transform[] wayPoints;
+    public int nbToursRestant;
+    private new Rigidbody rigidbody;
+    private IA IAscript;
     
     void Awake(){
         agent = GetComponent<NavMeshAgent>();
-        
     }
 
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Points"))
-        {
-            if (points < 3)
-            {
-                points += 1;
-            }
-           
-        }
-       
-        
+    private void Start()
+    {
+        rigidbody = gameObject.GetComponent<Rigidbody>();
+        IAscript = gameObject.GetComponent<IA>();
+        agent.destination = wayPoints[0].position;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        int bonusType =  Random.Range(0,4);
+        if (other.CompareTag("BonusCube"))
+        {
+            if (bonusType == 0)
+            {
+                StartCoroutine(IAscript.Nitro());
+                Debug.Log("Nitro");
+            }
+
+            if (bonusType == 1)
+            {
+                StartCoroutine(IAscript.SuperNitro());
+                Debug.Log("SuperNitro");
+            }
+
+            if (bonusType == 2)
+            {
+                StartCoroutine(IAscript.Gravity());
+                Debug.Log("SpeedMalus");
+            }
+            Destroy(other.gameObject);
+        }
+    }
+    
     void Update()
     {
-        print(points);
-        print(agent.destination);
-        if (points == 3)
+        float remainingDistance = agent.remainingDistance;
+        if (remainingDistance != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
         {
-            points = 0;
-            agent.destination = move.position;
+            points = (points + 1) % wayPoints.Length;
+            agent.destination = wayPoints[points].position;
+            print(points);
         }
-        else if (points==0)
-        {
-            agent.destination = move.position;
-        }
-        else if  (points==1)
-        {
-            agent.destination = next.position;
-            
-        }
-        else if (points==2){
-            agent.destination = last.position;
-        }
+    }
 
+    private void FixedUpdate()
+    {
+        rigidbody.AddForce(new Vector3(movementForce, 0f, 0f), ForceMode.Acceleration);
+    }
 
+    public IEnumerator Nitro(float count = 5f)
+    {
+        movementForce *= 2f;
+
+        yield return new WaitForSeconds(count);
+	    
+        movementForce *= 0.5f;
 
     }
     
+    public IEnumerator SuperNitro(float count = 10f)
+    {
+	    
+        movementForce *= 2f;
+		
+        yield return new WaitForSeconds(count);
+
+        movementForce *= 0.5f;
+    }
+    
+    public IEnumerator Gravity(float count = 5f)
+    {
+        movementForce *= 0.5f;
+	    
+        yield return new WaitForSeconds(count);
+	    
+        movementForce *= 2f;
+    }
+
 }
