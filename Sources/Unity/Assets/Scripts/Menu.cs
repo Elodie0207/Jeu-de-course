@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour
 	 public GameObject CanvaJoueur;
     public Dropdown drop;
     public Button boutton_retour;
+    public GamemodeManager ManagerMode;
 
 public void Start()
 {
@@ -59,10 +60,12 @@ CanvaJoueur.SetActive(true);
 	public void Solo(){
 CanvaMap.SetActive(true);
 CanvaJoueur.SetActive(false);
+ManagerMode.SingleMode();
 }
 	public void Multi(){
 CanvaMap.SetActive(true);
 CanvaJoueur.SetActive(false);
+ManagerMode.MultiplayerMode();
 }
 	public void Langage(){
 		

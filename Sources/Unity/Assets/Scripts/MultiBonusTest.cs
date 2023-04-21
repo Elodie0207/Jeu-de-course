@@ -12,7 +12,7 @@ public class MultiBonusTest : MonoBehaviour
     {   
         //création d'une valeur aléatoire comprise entre 0 et 4;
         
-        int bonusType =  UnityEngine.Random.Range(0,4);
+        int bonusType =  UnityEngine.Random.Range(0,3);
 
         
         //un asset qui correspond au cube de bonus a pour tag bonus cube, si le joueur rentre en collision avec en fonction de la valeur de bonusType un bonus ou un malus sera donné au joueur.

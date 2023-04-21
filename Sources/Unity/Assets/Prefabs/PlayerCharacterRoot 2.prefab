@@ -288,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tour: {fileID: 0}
   rbVehicule: {fileID: 1164954526389486175}
+  checkpoints: []
 --- !u!114 &5541967289162154685
 MonoBehaviour:
   m_ObjectHideFlags: 0

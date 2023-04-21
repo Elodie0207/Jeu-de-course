@@ -3,18 +3,12 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-//enum pour définir les différents mode de jeu
-public enum GameMode
-{
-    Single,
-    Multiplayer
-}
-
 public class GamemodeManager : MonoBehaviour
 {
+
+    public GameObject player2; 
     
-    //etat courant du jeu 
-    private static GameMode CurrentMode = GameMode.Single;
+    
 
     //l'état du jeu est en mode 1 joueur on charge juste la scène de base 
     public void SingleMode()
@@ -27,27 +21,44 @@ public class GamemodeManager : MonoBehaviour
     //instancier la prefab du deuxième joueur dans la scène pour avoir le deuxième joueur 
     public void MultiplayerMode()
     {
-        CurrentMode = GameMode.Multiplayer;
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        Debug.Log("Multiplayer mode started");
+       
         
-        GameObject player1CameraFirstPerson = GameObject.Find("CamFirstPerson");
-        player1CameraFirstPerson.GetComponent<Camera>().rect = new Rect(0f, 0f, 0.5f, 1f);
-        
-        GameObject player1CameraThirdPerson = GameObject.Find("CamThirdPerson");
-        player1CameraThirdPerson.GetComponent<Camera>().rect = new Rect(0f, 0f, 0.5f, 1f);
-        
-        GameObject player1CamBack = GameObject.Find("CamBack");
-        player1CamBack.GetComponent<Camera>().rect = new Rect(0f, 0f, 0.5f, 1f);
-        
-        GameObject player2 = Resources.Load<GameObject>("PlayerCharacterRoot2");
-        GameObject insancePlayer2 = Instantiate(player2, new Vector3(-62.4f, 3f, 45.4f), Quaternion.identity);
-        
-        
-
-
-
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1).completed += LoadSceneComplete;
     }
+       
+    private void LoadSceneComplete(AsyncOperation asyncOperation)
+    {
+        SplitCamera CameraSplit = FindObjectOfType<SplitCamera>();
+        
+        if (CameraSplit != null)
+        {
+            Debug.Log("SplitCamera found, enabling...");
+            CameraSplit.enabled = true;
+        }
+        else
+        {
+            Debug.LogError("SplitCamera not found!");
+        }
 
+        Debug.Log("Multiplayer mode finished");
+
+       
+
+
+        GameObject instancePlayer2 = Instantiate(player2, new Vector3(-62.4f, 3f, 15f), Quaternion.identity);
+    
+        if (instancePlayer2 != null)
+        {
+            Debug.LogError("instantiate player2");
+        }
+        
+         else
+        {
+            Debug.LogError("Could not instantiate player 2.");
+        }
+    
+        Debug.Log("Multiplayer mode finished");
+    }
 
 }
