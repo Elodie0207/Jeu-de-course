@@ -3185,7 +3185,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1975095241}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: Multi
         m_Mode: 1
@@ -4080,7 +4080,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1975095241}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: Solo
         m_Mode: 1
@@ -4396,7 +4396,7 @@ GameObject:
   - component: {fileID: 1866549694}
   - component: {fileID: 1866549693}
   m_Layer: 5
-  m_Name: Jouer
+  m_Name: Param
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4714,9 +4714,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e008a907015e4914cbe11df37412bbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonResol: {fileID: 753823442}
-  boutton_jouer: {fileID: 410497862}
-  boutton_quitter: {fileID: 1218294598}
+  buttonResol: {fileID: 1356073676}
+  boutton_jouer: {fileID: 366376413}
+  boutton_quitter: {fileID: 1497502360}
   test: 0
   CanvaCourrant: {fileID: 1740031487}
   nouveauCanva: {fileID: 1999756844}
