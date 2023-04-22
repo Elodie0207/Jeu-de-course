@@ -10,7 +10,6 @@ public class IA : MonoBehaviour
     private int points;
 
     public Transform[] wayPoints;
-    public int nbToursRestant;
     private new Rigidbody rigidbody;
     private IA IAscript;
     
