@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 1164954526389486172}
   - component: {fileID: 1164954526389486171}
   - component: {fileID: 816051989969142606}
+  - component: {fileID: 3692047577161349019}
   m_Layer: 0
   m_Name: PlayerCharacterRoot
   m_TagString: Player
@@ -288,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tour: {fileID: 0}
   rbVehicule: {fileID: 1164954526389486175}
+  checkpoints: []
 --- !u!114 &816051989969142606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +303,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 1164954526389486173}
+--- !u!114 &3692047577161349019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164954526389486145}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d80f4b655312c44f8b628ed60e2c1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CamFirstPerson: {fileID: 1164954525962278048}
+  CamThirdPerson: {fileID: 1164954526522416387}
+  CamBack: {fileID: 1164954525915487475}
 --- !u!1 &1164954526522416389
 GameObject:
   m_ObjectHideFlags: 0

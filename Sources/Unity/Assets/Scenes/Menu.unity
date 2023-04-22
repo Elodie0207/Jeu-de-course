@@ -186,6 +186,7 @@ MonoBehaviour:
   CanvaJoueur: {fileID: 915497402}
   drop: {fileID: 1166060659}
   boutton_retour: {fileID: 0}
+  ManagerMode: {fileID: 0}
 --- !u!1 &121272397
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +419,7 @@ MonoBehaviour:
   CanvaJoueur: {fileID: 915497402}
   drop: {fileID: 1166060659}
   boutton_retour: {fileID: 753823442}
+  ManagerMode: {fileID: 0}
 --- !u!1 &219885894
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,7 +3187,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1975095241}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: Multi
         m_Mode: 1
@@ -4080,7 +4082,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1975095241}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: Solo
         m_Mode: 1
@@ -4672,6 +4674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975095240}
   - component: {fileID: 1975095241}
+  - component: {fileID: 1975095242}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -4725,6 +4728,20 @@ MonoBehaviour:
   CanvaJoueur: {fileID: 915497402}
   drop: {fileID: 1166060659}
   boutton_retour: {fileID: 753823442}
+  ManagerMode: {fileID: 1975095242}
+--- !u!114 &1975095242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975095239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc114f9b9c969a44b09bc6be97847a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player2: {fileID: 1164954526389486145, guid: e40e78af54fef28438938d2c29270ac7, type: 3}
 --- !u!1 &1975289694
 GameObject:
   m_ObjectHideFlags: 0
