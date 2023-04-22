@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
     public Dropdown drop;
     public Button boutton_retour;
     public GamemodeManager ManagerMode;
-
+	private string map="";
 public void Start()
 {
 
@@ -87,6 +87,13 @@ ManagerMode.CurrentMode = GameMode.Multiplayer;
         }
 			
 	
+}
+public void OnImageClick(UnityEngine.UI.Button button){
+string objectName = button.gameObject.name;
+  map = objectName;
+CanvaMap.SetActive(false);
+		CanvaVaisseau.SetActive(true);
+Debug.Log(map);
 }
 public void OnScreenModeChanged(int value)
     {
