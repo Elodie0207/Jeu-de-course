@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Menu : MonoBehaviour
 { 
-	public Button buttonResol;
+	
     public GameObject boutton_jouer;
     public GameObject boutton_quitter;
     private string langage="";
@@ -29,7 +29,7 @@ public void Start()
 		CanvaVaisseau.SetActive(false);
 		CanvaJoueur.SetActive(false);
 	    Screen.fullScreen = true; 
-	    buttonResol.gameObject.SetActive(false); 
+	   
         drop.options.Clear();
         drop.options.Add(new Dropdown.OptionData("Fullscreen"));
         drop.options.Add(new Dropdown.OptionData("Fenêtre"));
@@ -44,16 +44,16 @@ public void Start()
     public void Jouer(){
 Debug.Log("Le bouton Jouer a été cliqué");
 CanvaJoueur.SetActive(true);
+   
 		CanvaCourrant.SetActive(false); 
 		
-   
     }
 
     public void Quitter(){
         Application.Quit();
     }
     public void Param(){
-	    buttonResol.gameObject.SetActive(true); 
+	   
         CanvaCourrant.SetActive(false); 
 		nouveauCanva.SetActive(true); 
     }
