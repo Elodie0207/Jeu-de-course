@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+public enum GameMode
+{
+    Single,
+    Multiplayer
+}
 public class GamemodeManager : MonoBehaviour
 {
 
     public GameObject player2; 
-    
+    public GameMode CurrentMode = GameMode.Single;
     
 
     //l'état du jeu est en mode 1 joueur on charge juste la scène de base 

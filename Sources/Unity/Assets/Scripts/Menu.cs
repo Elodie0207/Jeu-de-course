@@ -60,12 +60,14 @@ CanvaJoueur.SetActive(true);
 	public void Solo(){
 CanvaMap.SetActive(true);
 CanvaJoueur.SetActive(false);
-ManagerMode.SingleMode();
+
+//ManagerMode.SingleMode();
 }
 	public void Multi(){
 CanvaMap.SetActive(true);
 CanvaJoueur.SetActive(false);
-ManagerMode.MultiplayerMode();
+ManagerMode.CurrentMode = GameMode.Multiplayer;
+//ManagerMode.MultiplayerMode();
 }
 	public void Langage(){
 		
