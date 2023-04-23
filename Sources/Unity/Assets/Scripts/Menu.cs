@@ -20,6 +20,7 @@ public class Menu : MonoBehaviour
     public Button boutton_retour;
     public GamemodeManager ManagerMode;
 	private string map="";
+private string vaisseau="";
 public void Start()
 {
 
@@ -93,7 +94,15 @@ string objectName = button.gameObject.name;
   map = objectName;
 CanvaMap.SetActive(false);
 		CanvaVaisseau.SetActive(true);
+PlayerPrefs.SetString("map",map);
 Debug.Log(map);
+}
+
+public void Chargement(UnityEngine.UI.Button button){
+ string objectName = button.gameObject.name;
+  vaisseau = objectName;
+PlayerPrefs.SetString("vaisseau",vaisseau);
+ SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 }
 public void OnScreenModeChanged(int value)
     {

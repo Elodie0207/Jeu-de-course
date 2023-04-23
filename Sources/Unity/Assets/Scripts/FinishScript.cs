@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class FinishScript : MonoBehaviour
 {
@@ -13,11 +14,16 @@ public class FinishScript : MonoBehaviour
     public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
     private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
     private int nbcheckpointsPasser = 0;
-
+   /* public RawImage rawImage;
+    public VideoPlayer videoPlayer;
+    public RawImage rawImage2;
+    public VideoPlayer videoPlayer2;*/
     void Start()
     {
         // Initialiser le tableau des checkpoints franchis
         checkpointsPasser = new bool[checkpoints.Length];
+        /*videoPlayer.enabled = false;
+        videoPlayer2.enabled = false;*/
     }
 
     void OnTriggerEnter(Collider other)
@@ -30,6 +36,9 @@ public class FinishScript : MonoBehaviour
 
             if (nbTours == 3)
             {
+                /*videoPlayer = gameObject.GetComponent<VideoPlayer>();
+                rawImage = gameObject.GetComponent<RawImage>();
+                videoPlayer.Play();*/
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             }
             else
