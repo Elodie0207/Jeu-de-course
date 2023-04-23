@@ -10,7 +10,7 @@ public class FinishScript : MonoBehaviour
     public GameObject tour;
     public Rigidbody rbVehicule;
     private int nbTours = 0;
-    private bool estEnCourse = false;
+   
     public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
     private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
     private int nbcheckpointsPasser = 0;
@@ -28,10 +28,10 @@ public class FinishScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && nbcheckpointsPasser == checkpoints.Length && estEnCourse == false)
+        if (other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && nbcheckpointsPasser == checkpoints.Length )
         {
             Debug.Log("Finish");
-            estEnCourse = true;
+            
             nbTours++;
 
             if (nbTours == 3)
@@ -53,8 +53,9 @@ public class FinishScript : MonoBehaviour
             }
             nbcheckpointsPasser = 0;
         }
-        else if (other.tag == "Checkpoint" && estEnCourse == false)
+        else if (other.tag == "Checkpoint")
         {
+ 			
             for (int i = 0; i < checkpoints.Length; i++)
             {
                 if (other.gameObject == checkpoints[i] && checkpointsPasser[i] == false)
@@ -75,9 +76,6 @@ public class FinishScript : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
 
-        if (rbVehicule.transform.forward.x <= 0 && estEnCourse == true)
-        {
-            estEnCourse = false;
-        }
+       
     }
 }
