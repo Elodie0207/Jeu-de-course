@@ -9,6 +9,7 @@ public class FinishScript : MonoBehaviour
 {
     public GameObject tour;
     public Rigidbody rbVehicule;
+<<<<<<< Updated upstream
     public int nbTours = 0;
     public int score = 0;
     public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
@@ -18,17 +19,34 @@ public class FinishScript : MonoBehaviour
     public VideoPlayer videoPlayer;
     public RawImage rawImage2;
     public VideoPlayer videoPlayer2;*/
+=======
+    private int nbTours = 0;
+	public GameObject canvas;
+   	private Image image;
+    public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
+    private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
+    private int nbcheckpointsPasser = 0;
+   	public float waitTime = 5f;
+	public  bool cheat=false;
+	public bool fin=false; 
+
+>>>>>>> Stashed changes
     void Start()
     {
         // Initialiser le tableau des checkpoints franchis
         checkpointsPasser = new bool[checkpoints.Length];
-        /*videoPlayer.enabled = false;
-        videoPlayer2.enabled = false;*/
+		 image =canvas.GetComponentInChildren<Image>();
+    	
+    // Masquer l'image
+    	image.gameObject.SetActive(false);
+		
     }
+
+  
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && nbcheckpointsPasser == checkpoints.Length )
+        if (other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && nbcheckpointsPasser == checkpoints.Length || other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && cheat==true)
         {
             Debug.Log("Finish");
             
@@ -36,10 +54,12 @@ public class FinishScript : MonoBehaviour
 
             if (nbTours == 3)
             {
-                /*videoPlayer = gameObject.GetComponent<VideoPlayer>();
-                rawImage = gameObject.GetComponent<RawImage>();
-                videoPlayer.Play();*/
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+				Debug.Log("ah");
+        	// Activer l'image
+        	image.gameObject.SetActive(true);
+
+       	 	// Démarrer une coroutine pour attendre 5 secondes
+        	StartCoroutine(WaitForNextScene());
             }
             else
             {
@@ -68,14 +88,17 @@ public class FinishScript : MonoBehaviour
             }
         }
     }
+	
+  void Update(){
+ cheat = FindObjectOfType<Autres>().cheatcode;
+}
+private IEnumerator WaitForNextScene()
+{
+    // Attendre 5 secondes
+    yield return new WaitForSeconds(waitTime);
 
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        }
+    // Passer à la ligne suivante
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+}
 
-       
-    }
 }
