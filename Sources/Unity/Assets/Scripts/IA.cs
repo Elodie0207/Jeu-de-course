@@ -2,14 +2,21 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum IADifficulty
+{
+    Facile,
+    Normal,
+    Difficile,
+}
+
 public class IA : MonoBehaviour
 {
     NavMeshAgent agent;
     public float movementForce = 15;
+    public Transform[] wayPoints;
+    public IADifficulty iadifficulty;
 
     private int points;
-
-    public Transform[] wayPoints;
     private new Rigidbody rigidbody;
     private IA IAscript;
     
@@ -22,6 +29,22 @@ public class IA : MonoBehaviour
         rigidbody = gameObject.GetComponent<Rigidbody>();
         IAscript = gameObject.GetComponent<IA>();
         agent.destination = wayPoints[0].position;
+        
+        switch (iadifficulty)
+        {
+            case IADifficulty.Facile:
+                agent.speed = 35;
+                break;
+            
+            case IADifficulty.Normal:
+                agent.speed = 60;
+                break;
+            
+            case IADifficulty.Difficile:
+                agent.speed = 100;
+                break;
+        }
+        print("vitesse : "+agent.speed);
     }
     private void OnTriggerEnter(Collider other)
     {

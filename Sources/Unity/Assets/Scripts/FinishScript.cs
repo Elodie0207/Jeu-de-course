@@ -76,6 +76,7 @@ public class FinishScript : MonoBehaviour
                     checkpointsPasser[i] = true;
                     nbcheckpointsPasser++;
                     break;
+                    
                 }
             }
         }
