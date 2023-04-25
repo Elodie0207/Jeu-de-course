@@ -62,6 +62,8 @@ public class GamemodeManager : MonoBehaviour
         {
             Debug.LogError("Could not instantiate player 2.");
         }
+        
+        
     
         Debug.Log("Multiplayer mode finished");
     }

@@ -9,11 +9,11 @@ public class FinishScript : MonoBehaviour
 {
     public GameObject tour;
     public Rigidbody rbVehicule;
-    private int nbTours = 0;
-   
+    public int nbTours = 0;
+    public int score = 0;
     public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
     private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
-    private int nbcheckpointsPasser = 0;
+    public int nbcheckpointsPasser = 0;
    /* public RawImage rawImage;
     public VideoPlayer videoPlayer;
     public RawImage rawImage2;

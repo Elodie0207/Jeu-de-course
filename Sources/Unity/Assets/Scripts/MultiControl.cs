@@ -127,37 +127,35 @@ public class MultiControl : MonoBehaviour
         }
     }
     
-    
-
-   public IEnumerator Nitro(float count = 5f)
+    public IEnumerator Nitro(float count = 5f)
     {
 
-	    movementForce *= 2f;
+	    movementForce = 350;
 
 	    yield return new WaitForSeconds(count);
 	    
-	    movementForce *= 0.5f;
+	    movementForce = 250;
 
     }
     
-    public IEnumerator SuperNitro(float count = 10f)
+    public IEnumerator SuperNitro(float count = 8f)
     {
 	    
-	    movementForce *= 2f;
+	    movementForce = 350;
 		
 	    yield return new WaitForSeconds(count);
 
-	    movementForce *= 0.5f;
+	    movementForce = 250;
 	    
     }
     
     public IEnumerator Gravity(float count = 5f)
     {
-	    movementForce *= 0.5f;
+	    movementForce = 125;
 	    
 	    yield return new WaitForSeconds(count);
 	    
-	    movementForce *= 2f;
+	    movementForce = 250;
 	   
     }
 }
