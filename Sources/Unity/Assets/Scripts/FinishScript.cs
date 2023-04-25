@@ -9,28 +9,20 @@ public class FinishScript : MonoBehaviour
 {
     public GameObject tour;
     public Rigidbody rbVehicule;
-<<<<<<< Updated upstream
+
     public int nbTours = 0;
     public int score = 0;
-    public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
-    private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
     public int nbcheckpointsPasser = 0;
-   /* public RawImage rawImage;
-    public VideoPlayer videoPlayer;
-    public RawImage rawImage2;
-    public VideoPlayer videoPlayer2;*/
-=======
-    private int nbTours = 0;
 	public GameObject canvas;
    	private Image image;
     public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
     private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
-    private int nbcheckpointsPasser = 0;
+  
    	public float waitTime = 5f;
 	public  bool cheat=false;
 	public bool fin=false; 
 
->>>>>>> Stashed changes
+
     void Start()
     {
         // Initialiser le tableau des checkpoints franchis
