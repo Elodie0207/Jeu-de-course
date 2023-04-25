@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,17 +10,27 @@ public enum IADifficulty
     Difficile,
 }
 
+[System.Serializable]
+public class WayPointList
+{
+    public List<Transform> wayPointsList = new List<Transform>();
+}
+
 public class IA : MonoBehaviour
 {
     NavMeshAgent agent;
     public float movementForce = 15;
+    
     public Transform[] wayPoints;
     public IADifficulty iadifficulty;
-
+    [SerializeField] private List<WayPointList> ways;
+    
     private int points;
     private new Rigidbody rigidbody;
     private IA IAscript;
-    
+    private int levelDifficulty = 0;
+
+    private List<Transform> way;
     void Awake(){
         agent = GetComponent<NavMeshAgent>();
     }
@@ -28,23 +39,26 @@ public class IA : MonoBehaviour
     {
         rigidbody = gameObject.GetComponent<Rigidbody>();
         IAscript = gameObject.GetComponent<IA>();
-        agent.destination = wayPoints[0].position;
-        
+
         switch (iadifficulty)
         {
             case IADifficulty.Facile:
                 agent.speed = 35;
+                levelDifficulty = 0;
                 break;
             
             case IADifficulty.Normal:
                 agent.speed = 60;
+                levelDifficulty = 1; 
                 break;
             
             case IADifficulty.Difficile:
                 agent.speed = 100;
+                levelDifficulty = 2; 
                 break;
         }
-        print("vitesse : "+agent.speed);
+        
+        agent.destination = ways[levelDifficulty].wayPointsList[0].position;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -77,9 +91,8 @@ public class IA : MonoBehaviour
         float remainingDistance = agent.remainingDistance;
         if (remainingDistance != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
         {
-            points = (points + 1) % wayPoints.Length;
-            agent.destination = wayPoints[points].position;
-            print(points);
+            points = (points + 1) % ways[levelDifficulty].wayPointsList.Count;
+            agent.destination = ways[levelDifficulty].wayPointsList[points].position;
         }
     }
 
