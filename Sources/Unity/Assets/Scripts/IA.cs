@@ -21,9 +21,10 @@ public class IA : MonoBehaviour
     NavMeshAgent agent;
     public float movementForce = 15;
     
-    public Transform[] wayPoints;
+    //public Transform[] wayPoints;
     public IADifficulty iadifficulty;
     [SerializeField] private List<WayPointList> ways;
+    public Transform IAroot;
     
     private int points;
     private new Rigidbody rigidbody;
@@ -89,11 +90,11 @@ public class IA : MonoBehaviour
     void Update()
     {
         float remainingDistance = agent.remainingDistance;
-        if (remainingDistance != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
+        if (remainingDistance != Mathf.Infinity  && agent.remainingDistance < 0.5f)
         {
-            points = (points + 1) % ways[levelDifficulty].wayPointsList.Count;
-            agent.destination = ways[levelDifficulty].wayPointsList[points].position;
+            GotoNextPoint();
         }
+        
     }
 
     private void FixedUpdate()
@@ -130,4 +131,15 @@ public class IA : MonoBehaviour
         movementForce *= 2f;
     }
 
+    void GotoNextPoint()
+    {
+        if (ways[levelDifficulty].wayPointsList.Count == 0)
+            return;
+        
+        points = (points + 1) % ways[levelDifficulty].wayPointsList.Count;
+        print(points);
+        
+        agent.destination = ways[levelDifficulty].wayPointsList[points].position;
+        print(ways[levelDifficulty].wayPointsList[points].position);
+    }
 }
