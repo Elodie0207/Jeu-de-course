@@ -15,6 +15,7 @@ public class ChoixMap : MonoBehaviour
         string map = PlayerPrefs.GetString("map");
         Debug.Log(map);
         
+
         Piste1.SetActive(false); 
         Piste2.SetActive(true);
         Piste3.SetActive(false);
