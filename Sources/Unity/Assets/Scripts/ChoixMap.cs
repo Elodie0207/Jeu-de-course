@@ -15,12 +15,13 @@ public class ChoixMap : MonoBehaviour
         string map = PlayerPrefs.GetString("map");
         Debug.Log(map);
         
-        Piste1.SetActive(true); 
-        Piste2.SetActive(false);
+        Piste1.SetActive(false); 
+        Piste2.SetActive(true);
         Piste3.SetActive(false);
         Piste4.SetActive(false);
-         
-       /*if (map == "Map1")
+
+      if (map == "Map1")
+
         {
             Piste1.SetActive(true); 
             Piste2.SetActive(false);
