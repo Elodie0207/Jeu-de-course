@@ -1715,9 +1715,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BlueLagoon
+  m_Text: 'OrnitoBeh
 
-    Vitesse: 3/5
+    Vitesse: 4/5
 
     Poids: ?'
 --- !u!222 &751989486
@@ -2695,7 +2695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BlueLagoon
+  m_Text: 'Vaiseb
 
     Vitesse: 3/5
 
