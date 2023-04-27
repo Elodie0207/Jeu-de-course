@@ -4,59 +4,65 @@ using UnityEngine;
 
 public class ChoixVaisseau : MonoBehaviour
 {
-    public GameObject Vaisseau1;
-    public GameObject Vaisseau2;
-    public GameObject Vaisseau3;
-    public GameObject Vaisseau4;
+    public GameObject Vaiseb;
+    public GameObject BlueLagoon;
+    public GameObject Ornitobeh;
+    public GameObject StarHess;
+	public Chrono_Depart Script;
     //public GameObject Piste5;
 
     void Start()
     {
         string vaisseau = PlayerPrefs.GetString("vaisseau");
         Debug.Log(vaisseau);
-        Vaisseau1.SetActive(false); 
-        Vaisseau2.SetActive(false);
-        Vaisseau3.SetActive(false);
-        Vaisseau4.SetActive(false);
+        Vaiseb.SetActive(false); 
+        BlueLagoon.SetActive(false);
+        Ornitobeh.SetActive(false);
+        StarHess.SetActive(false);
+
         if (vaisseau == "Vaiseb")
         {
-            Vaisseau1.SetActive(true); 
-            Vaisseau2.SetActive(false);
-            Vaisseau3.SetActive(false);
-            Vaisseau4.SetActive(false);
+            Vaiseb.SetActive(true); 
+            BlueLagoon.SetActive(false);
+            Ornitobeh.SetActive(false);
+            StarHess.SetActive(false);
+			Script.Vaisseau=Vaiseb;
             //Piste5.SetActive(false);
         }
         else if (vaisseau == "BlueLagoon")
         {
-            Vaisseau1.SetActive(false); 
-            Vaisseau2.SetActive(false);
-            Vaisseau3.SetActive(true);
-            Vaisseau4.SetActive(false);
+            Vaiseb.SetActive(false); 
+            BlueLagoon.SetActive(true);
+            Ornitobeh.SetActive(false);
+            StarHess.SetActive(false);
+Script.Vaisseau=BlueLagoon;
             // Piste5.SetActive(false);
         }
         else if (vaisseau == "Ornitobeh")
         {
-            Vaisseau1.SetActive(false); 
-            Vaisseau2.SetActive(false);
-            Vaisseau3.SetActive(false);
-            Vaisseau4.SetActive(true);
+            Vaiseb.SetActive(false); 
+            BlueLagoon.SetActive(false);
+            Ornitobeh.SetActive(true);
+            StarHess.SetActive(false);
+Script.Vaisseau=Ornitobeh;
             //Piste5.SetActive(false);
         }
        
         else if (vaisseau == "StarHess")
         {
-            Vaisseau1.SetActive(false); 
-            Vaisseau2.SetActive(true);
-            Vaisseau3.SetActive(false);
-            Vaisseau4.SetActive(false);
+            Vaiseb.SetActive(false); 
+            BlueLagoon.SetActive(false);
+            Ornitobeh.SetActive(false);
+            StarHess.SetActive(true);
+Script.Vaisseau=StarHess;
             //Piste5.SetActive(false);
         }
         /* else if (map == "Map5")
          {
-             Vaisseau1.SetActive(false); 
-             Vaisseau2.SetActive(false);
-             Vaisseau3.SetActive(false);
-             Vaisseau4.SetActive(false);
+             Vaiseb.SetActive(false); 
+             BlueLagoon.SetActive(false);
+             Ornitobeh.SetActive(false);
+             StarHess.SetActive(false);
              Piste5.SetActive(true);
          }*/
     }

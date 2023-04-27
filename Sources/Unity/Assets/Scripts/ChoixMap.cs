@@ -8,6 +8,7 @@ public class ChoixMap : MonoBehaviour
     public GameObject Piste2;
     public GameObject Piste3;
     public GameObject Piste4;
+
     //public GameObject Piste5;
 
     void Start()
@@ -15,13 +16,18 @@ public class ChoixMap : MonoBehaviour
         string map = PlayerPrefs.GetString("map");
         Debug.Log(map);
         
+<<<<<<< Updated upstream
 
         Piste1.SetActive(false); 
         Piste2.SetActive(true);
+=======
+        Piste1.SetActive(true); 
+        Piste2.SetActive(false);
+>>>>>>> Stashed changes
         Piste3.SetActive(false);
         Piste4.SetActive(false);
 
-      if (map == "Map1")
+      /*if (map == "Map1")
 
         {
             Piste1.SetActive(true); 
