@@ -1,59 +1,85 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RaceManager : MonoBehaviour {
 
+    // List des FinishScript pour chaque coureur
     public List<FinishScript> racers;
+
+    // List pour stocker les positions des coureurs
     public List<int> positions;
-    public List<int> scores = new List<int>{10, 7, 5, 3, 2};
     
-    public UpdateScore updateRankAndScores;
+    
 
     void Update () {
-       
+        
+        // Appelle la fonction de mise à jour des positions des coureurs
+        UpdateRacerPositions();
+        
+    }
+
+    // Fonction de mise à jour des positions des coureurs
+    private void UpdateRacerPositions() {
+        Debug.Log("UpdateRacerPositions() called.");
         positions.Clear();
         foreach (FinishScript racer in racers) {
-            int positionScore = 0;
-            if (positions.Count < scores.Count) { 
-                positionScore = scores[positions.Count];
-            }
             int position = 1;
             foreach (FinishScript otherRacer in racers) {
                 if (otherRacer.nbTours > racer.nbTours) {
                     position++;
-                } else if (otherRacer.nbTours == racer.nbTours && otherRacer.nbcheckpointsPasser > racer.nbcheckpointsPasser) {
+                } else if (otherRacer.nbTours == racer.nbTours && otherRacer.GetComponent<TrackPosition>().object1Position.z > racer.GetComponent<TrackPosition>().object1Position.z) {
                     position++;
-                } else if (otherRacer.nbTours == racer.nbTours && otherRacer.nbcheckpointsPasser == racer.nbcheckpointsPasser) {
-                    Vector3 otherRacerPosition = otherRacer.GetComponent<TrackPosition>().object1Position;
-                    Vector3 racerPosition = racer.GetComponent<TrackPosition>().object1Position;
-                    if (otherRacerPosition.z > racerPosition.z) {
-                        position++;
-                    }
                 }
             }
             positions.Add(position);
-            //ajoute le score en fonction de la position
-            racer.score += positionScore;
-        }
-        
-        List<FinishScript> sortedRacers = racers.OrderBy(racer => positions[racers.IndexOf(racer)]).ToList();
-
-        // créer des listes de positions et de scores triées dans le même ordre
-        List<int> sortedPositions = new List<int>();
-        List<int> sortedScores = new List<int>();
-        for (int i = 0; i < sortedRacers.Count; i++) {
-            sortedPositions.Add(positions[racers.IndexOf(sortedRacers[i])]);
-            sortedScores.Add(sortedRacers[i].score);
+            Debug.Log(racer.name + " est en " + position + "ème position.");
         }
 
-        // mettre à jour les éléments texte dans la scène
-        updateRankAndScores.UpdateRankAndScoreUI(sortedPositions, sortedScores);
+        // Met à jour la variable "positions" en temps réel
+        for (int i = 0; i < positions.Count; i++) {
+            positions[i] = positions.Count(p => p < positions[i]) + 1;
+        }
+
+        // Ajoute le score des joueurs en fonction de leur position
+        for (int i = 0; i < racers.Count; i++) {
+            
+            int score = 0;
+            
+            switch (positions[i]) {
+                case 1:
+                    score = 10;
+                    break;
+                case 2:
+                    score = 7;
+                    break;
+                case 3:
+                    score = 5;
+                    break;
+                case 4:
+                    score = 3;
+                    break;
+                case 5:
+                    score = 2;
+                    break;
+            }
+            
+            racers[i].score = score;
+        }
+
+    }
+    public int getRacerPosition(FinishScript racer)
+    {
+        // Trie la liste des joueurs en fonction de leur score
+        List<FinishScript> sortedRacers = racers.OrderByDescending(r => r.score).ToList();
+
+        // Trouve l'index du joueur dans la liste triée
+        int position = sortedRacers.IndexOf(racer);
+
+        // Ajoute 1 pour obtenir la position du joueur dans la course
+        return position + 1;
     }
 }
-
-
-
-
-
-

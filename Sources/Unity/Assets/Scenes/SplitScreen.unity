@@ -225,6 +225,17 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1164954526389486175, guid: e40e78af54fef28438938d2c29270ac7, type: 3}
   m_PrefabInstance: {fileID: 483744}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &483746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1164954526389486171, guid: e40e78af54fef28438938d2c29270ac7, type: 3}
+  m_PrefabInstance: {fileID: 483744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951542268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2889311
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +722,17 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1164954526389486175, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
   m_PrefabInstance: {fileID: 350762273}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &350762276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+  m_PrefabInstance: {fileID: 350762273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350762277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &350762277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1164954526389486145, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
@@ -1524,6 +1546,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036662838}
   m_CullTransparentMesh: 1
+--- !u!1 &2085613455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085613457}
+  - component: {fileID: 2085613456}
+  m_Layer: 0
+  m_Name: RaceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2085613456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085613455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87f36e059c15bf42bf43fbb77c954e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  racers:
+  - {fileID: 350762276}
+  - {fileID: 483746}
+  positions: 
+  scores: 0a00000007000000050000000300000002000000
+--- !u!4 &2085613457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085613455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -203.00473, y: 69.244736, z: 74.88405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2480953970471492285
 PrefabInstance:
   m_ObjectHideFlags: 0

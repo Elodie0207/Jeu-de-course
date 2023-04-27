@@ -18,7 +18,7 @@ public class TrackPosition : MonoBehaviour
         object1Position = object1.transform.position;
         //object2Position = object2.transform.position;
 
-        Debug.Log("Object 1 position: " + object1Position);
+        //Debug.Log("Object 1 position: " + object1Position);
         //Debug.Log("Object 2 position: " + object2Position);
         
     }

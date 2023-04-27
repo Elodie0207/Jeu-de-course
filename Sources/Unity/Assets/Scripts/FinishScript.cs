@@ -8,13 +8,14 @@ using UnityEngine.Video;
 public class FinishScript : MonoBehaviour
 {
     public GameObject tour;
-    public Rigidbody rbVehicule;
+    public Rigidbody rbVehicule; 
+    public Canvas ScoreBoard;
 
     public int nbTours = 0;
     public int score = 0;
     public int nbcheckpointsPasser = 0;
 	public GameObject canvas;
-   	private Image image;
+   	//private Image image;
     public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
     private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
   
@@ -27,11 +28,12 @@ public class FinishScript : MonoBehaviour
     {
         // Initialiser le tableau des checkpoints franchis
         checkpointsPasser = new bool[checkpoints.Length];
-		 image =canvas.GetComponentInChildren<Image>();
+		 //image =canvas.GetComponentInChildren<Image>();
     	
     // Masquer l'image
-    	image.gameObject.SetActive(false);
-		
+    	//image.gameObject.SetActive(false);
+        ScoreBoard.enabled = false;
+
     }
 
   
@@ -48,7 +50,8 @@ public class FinishScript : MonoBehaviour
             {
 				Debug.Log("ah");
         	// Activer l'image
-        	image.gameObject.SetActive(true);
+        	//image.gameObject.SetActive(true);
+            ScoreBoard.enabled=true;
 
        	 	// Démarrer une coroutine pour attendre 5 secondes
         	StartCoroutine(WaitForNextScene());
