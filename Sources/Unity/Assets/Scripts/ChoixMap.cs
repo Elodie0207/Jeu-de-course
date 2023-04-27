@@ -19,12 +19,8 @@ public class ChoixMap : MonoBehaviour
         Piste2.SetActive(false);
         Piste3.SetActive(false);
         Piste4.SetActive(false);
-<<<<<<< Updated upstream
          
        /*if (map == "Map1")
-=======
-      /* if (map == "Map1")
->>>>>>> Stashed changes
         {
             Piste1.SetActive(true); 
             Piste2.SetActive(false);

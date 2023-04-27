@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 816051989969142606}
   - component: {fileID: 3692047577161349019}
   m_Layer: 0
-  m_Name: Vaiseb
+  m_Name: PlayerCharacterRoot
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,7 +289,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tour: {fileID: 0}
   rbVehicule: {fileID: 1164954526389486175}
+  nbTours: 0
+  score: 0
+  nbcheckpointsPasser: 0
+  canvas: {fileID: 0}
   checkpoints: []
+  waitTime: 5
+  cheat: 0
+  fin: 0
 --- !u!114 &816051989969142606
 MonoBehaviour:
   m_ObjectHideFlags: 0
