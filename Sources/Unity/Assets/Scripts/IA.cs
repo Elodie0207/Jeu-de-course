@@ -140,6 +140,5 @@ public class IA : MonoBehaviour
         print(points);
         
         agent.destination = ways[levelDifficulty].wayPointsList[points].position;
-        print(ways[levelDifficulty].wayPointsList[points].position);
     }
 }
