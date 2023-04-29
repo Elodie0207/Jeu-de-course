@@ -777,7 +777,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pods
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: b000248bfd93b4440ac70a0f66b582f3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b000248bfd93b4440ac70a0f66b582f3, type: 3}
 --- !u!4 &5980778248786064038 stripped
 Transform:

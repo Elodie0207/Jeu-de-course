@@ -8,64 +8,87 @@ public enum GameMode
     Single,
     Multiplayer
 }
+
 public class GamemodeManager : MonoBehaviour
 {
-
-    public GameObject player2; 
-    public GameMode CurrentMode = GameMode.Single;
     
-
+    public GameMode CurrentMode;
+   
+    
     //l'état du jeu est en mode 1 joueur on charge juste la scène de base 
     public void SingleMode()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+       
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1).completed += LoadSceneComplete;
+
     }
-    
+
     //l'état du jeu est en multijoueur dans ce cas la après le chargement de la scène on va:
     //modifier la largeur des différentes caméra du premier joueur pour avoir un écran splitté
     //instancier la prefab du deuxième joueur dans la scène pour avoir le deuxième joueur 
     public void MultiplayerMode()
     {
         Debug.Log("Multiplayer mode started");
-       
-        
+
+
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1).completed += LoadSceneComplete;
+        
+        
     }
-       
+
     private void LoadSceneComplete(AsyncOperation asyncOperation)
     {
-        SplitCamera CameraSplit = FindObjectOfType<SplitCamera>();
-        
-        if (CameraSplit != null)
+        SplitCamera[] SplitCamerasList = FindObjectsOfType<SplitCamera>();
+
+        if (CurrentMode == GameMode.Multiplayer)
         {
-            Debug.Log("SplitCamera found, enabling...");
-            CameraSplit.enabled = true;
-        }
-        else
-        {
-            Debug.LogError("SplitCamera not found!");
+            foreach (SplitCamera CameraSplit in SplitCamerasList)
+            {
+                CameraSplit.enabled = true;
+            }
         }
 
-        Debug.Log("Multiplayer mode finished");
+        else if (CurrentMode == GameMode.Single)
+        {
 
-       
+            GameObject MultiPrefab = GameObject.Find("MULTI");
 
 
-        GameObject instancePlayer2 = Instantiate(player2, new Vector3(-62.4f, 3f, 15f), Quaternion.identity);
-    
+            if (MultiPrefab != null)
+            {
+                MultiPrefab.SetActive(false); // Désactiver l'objet "Multi"
+            }
+
+            foreach (SplitCamera CameraSplit in SplitCamerasList)
+            {
+                CameraSplit.enabled = false;
+            }
+
+
+        }
+
+
+
+        /*GameObject instancePlayer2 = Instantiate(player2, new Vector3(-62.4f, 3f, 15f), Quaternion.identity);
+
         if (instancePlayer2 != null)
         {
             Debug.LogError("instantiate player2");
         }
-        
-         else
+
+        else
         {
             Debug.LogError("Could not instantiate player 2.");
         }
-        
-        
-    
+
+
+
         Debug.Log("Multiplayer mode finished");
+    }*/
+
+
+
+
     }
 
 }

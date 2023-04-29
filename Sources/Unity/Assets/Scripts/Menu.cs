@@ -61,6 +61,7 @@ CanvaJoueur.SetActive(true);
 	public void Solo(){
 CanvaMap.SetActive(true);
 CanvaJoueur.SetActive(false);
+ManagerMode.CurrentMode = GameMode.Single;
 
 //ManagerMode.SingleMode();
 }
@@ -99,10 +100,26 @@ Debug.Log(map);
 }
 
 public void Chargement(UnityEngine.UI.Button button){
- string objectName = button.gameObject.name;
-  vaisseau = objectName;
-PlayerPrefs.SetString("vaisseau",vaisseau);
- SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+	
+	string objectName = button.gameObject.name;
+    vaisseau = objectName;
+	PlayerPrefs.SetString("vaisseau",vaisseau);
+
+	if(ManagerMode.CurrentMode == GameMode.Single)
+	{
+		ManagerMode.SingleMode();
+		
+	}
+	
+	else if(ManagerMode.CurrentMode == GameMode.Multiplayer)
+	{
+		
+		ManagerMode.MultiplayerMode();
+		
+	}
+
+
+//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 }
 public void OnScreenModeChanged(int value)
     {
