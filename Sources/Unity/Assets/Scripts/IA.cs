@@ -45,20 +45,21 @@ public class IA : MonoBehaviour
         {
             case IADifficulty.Facile:
                 agent.speed = 35;
-                levelDifficulty = 0;
+                
+                levelDifficulty = Random.Range(0, 2);
                 break;
             
             case IADifficulty.Normal:
                 agent.speed = 60;
-                levelDifficulty = 1; 
+                levelDifficulty = Random.Range(2, 4);
                 break;
             
             case IADifficulty.Difficile:
                 agent.speed = 100;
-                levelDifficulty = 2; 
+                levelDifficulty  = Random.Range(4, 6);
                 break;
         }
-        
+        print("level :"+levelDifficulty);
         agent.destination = ways[levelDifficulty].wayPointsList[0].position;
     }
     private void OnTriggerEnter(Collider other)
@@ -89,8 +90,7 @@ public class IA : MonoBehaviour
     
     void Update()
     {
-        float remainingDistance = agent.remainingDistance;
-        if (remainingDistance != Mathf.Infinity  && agent.remainingDistance < 0.5f)
+        if (agent.remainingDistance < 2f)
         {
             GotoNextPoint();
         }
@@ -102,6 +102,17 @@ public class IA : MonoBehaviour
         rigidbody.AddForce(new Vector3(movementForce, 0f, 0f), ForceMode.Acceleration);
     }
 
+    void GotoNextPoint()
+    {
+        if (ways[levelDifficulty].wayPointsList.Count == 0)
+            return;
+        
+        points = (points + 1) % ways[levelDifficulty].wayPointsList.Count;
+        //print(points);
+        
+        agent.destination = ways[levelDifficulty].wayPointsList[points].position;
+    }
+    
     public IEnumerator Nitro(float count = 5f)
     {
         movementForce *= 2f;
@@ -130,15 +141,5 @@ public class IA : MonoBehaviour
 	    
         movementForce *= 2f;
     }
-
-    void GotoNextPoint()
-    {
-        if (ways[levelDifficulty].wayPointsList.Count == 0)
-            return;
-        
-        points = (points + 1) % ways[levelDifficulty].wayPointsList.Count;
-        print(points);
-        
-        agent.destination = ways[levelDifficulty].wayPointsList[points].position;
-    }
+    
 }

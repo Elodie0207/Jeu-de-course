@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2677159271182525866}
   - component: {fileID: 2294053872979688474}
   - component: {fileID: 2069096260305954976}
+  - component: {fileID: 1592293357221843406}
   m_Layer: 0
   m_Name: IA
   m_TagString: Untagged
@@ -71,7 +72,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 15
-  wayPoints: []
+  iadifficulty: 0
+  ways: []
+  IAroot: {fileID: 0}
 --- !u!54 &2294053872979688474
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -96,11 +99,36 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2677159271182525776}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 12.314579, y: 2.0576122, z: 10.115689}
   m_Center: {x: -1.3645096, y: 0.11750043, z: 0.94432044}
+--- !u!114 &1592293357221843406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677159271182525776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tour: {fileID: 0}
+  rbVehicule: {fileID: 2294053872979688474}
+  ScoreBoard: {fileID: 0}
+  nbTours: 0
+  score: 0
+  nbcheckpointsPasser: 0
+  canvas: {fileID: 0}
+  checkpoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  waitTime: 5
+  cheat: 0
+  fin: 0
 --- !u!1 &4984790864430725084
 GameObject:
   m_ObjectHideFlags: 0
