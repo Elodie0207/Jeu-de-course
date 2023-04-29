@@ -86,7 +86,7 @@ public class FinishScript : MonoBehaviour
     }
 	
   void Update(){
- //cheat = FindObjectOfType<Autres>().cheatcode;
+ cheat = FindObjectOfType<Autres>().cheatcode;
 }
 private IEnumerator WaitForNextScene()
 {
