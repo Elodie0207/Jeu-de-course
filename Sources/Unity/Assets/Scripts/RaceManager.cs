@@ -14,7 +14,11 @@ public class RaceManager : MonoBehaviour {
     public List<int> positions;
     
     
-
+    void Start() {
+        // Enlève les FinishScript des joueurs désactivés de la liste "racers"
+        racers.RemoveAll(racer => racer.gameObject.activeSelf == false);
+    }
+    
     void Update () {
         
         // Appelle la fonction de mise à jour des positions des coureurs
