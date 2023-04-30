@@ -15,6 +15,7 @@ public class FinishScript : MonoBehaviour
     public int score = 0;
     public int nbcheckpointsPasser = 0;
 	public GameObject canvas;
+    public RaceManager RaceManager;
    	//private Image image;
     public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
     private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
@@ -51,6 +52,7 @@ public class FinishScript : MonoBehaviour
 				Debug.Log("ah");
         	// Activer l'image
         	//image.gameObject.SetActive(true);
+            RaceManager.UpdateScore();
             ScoreBoard.enabled=true;
 
        	 	// Démarrer une coroutine pour attendre 5 secondes

@@ -61,6 +61,10 @@ public class RaceManager : MonoBehaviour {
             positions[i] = positions.Count(p => p < positions[i]) + 1;
         }
 
+    }
+
+    public void UpdateScore()
+    {
         // Ajoute le score des joueurs en fonction de leur position
         for (int i = 0; i < racers.Count; i++) {
             
@@ -84,10 +88,10 @@ public class RaceManager : MonoBehaviour {
                     break;
             }
             
-            racers[i].score = score;
+            racers[i].score += score;
         }
-
     }
+
     public int getRacerPosition(FinishScript racer)
     {
         // Trie la liste des joueurs en fonction de leur score
