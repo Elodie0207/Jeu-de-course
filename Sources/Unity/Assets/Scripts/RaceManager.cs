@@ -15,10 +15,23 @@ public class RaceManager : MonoBehaviour {
     
     
     void Start() {
+        
+        // Désactive les FinishScripts et PlayerUI des joueurs inactifs
+        foreach (FinishScript racer in racers) {
+            if (!racer.gameObject.activeSelf) {
+                racer.enabled = false;
+                PlayerUI playerUI = racer.GetComponent<PlayerUI>();
+                if (playerUI != null) {
+                    playerUI.enabled = false;
+                }
+               
+            }
+        }
+
         // Enlève les FinishScript des joueurs désactivés de la liste "racers"
-        racers.RemoveAll(racer => racer.gameObject.activeSelf == false);
+        racers.RemoveAll(racer => !racer.gameObject.activeSelf);
     }
-    
+
     void Update () {
         
         // Appelle la fonction de mise à jour des positions des coureurs

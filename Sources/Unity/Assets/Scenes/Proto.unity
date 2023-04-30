@@ -17515,6 +17515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cubico
       objectReference: {fileID: 0}
+    - target: {fileID: 2991140401514356773, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: canvas
       value: 
