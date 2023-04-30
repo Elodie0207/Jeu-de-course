@@ -28,7 +28,7 @@ public class RaceManager : MonoBehaviour {
 
     // Fonction de mise à jour des positions des coureurs
     private void UpdateRacerPositions() {
-        Debug.Log("UpdateRacerPositions() called.");
+       // Debug.Log("UpdateRacerPositions() called.");
         positions.Clear();
         foreach (FinishScript racer in racers) {
             int position = 1;
@@ -40,7 +40,7 @@ public class RaceManager : MonoBehaviour {
                 }
             }
             positions.Add(position);
-            Debug.Log(racer.name + " est en " + position + "ème position.");
+           // Debug.Log(racer.name + " est en " + position + "ème position.");
         }
 
         // Met à jour la variable "positions" en temps réel

@@ -59,7 +59,7 @@ public class IA : MonoBehaviour
                 levelDifficulty  = Random.Range(4, 6);
                 break;
         }
-        print("level :"+levelDifficulty);
+        //print("level :"+levelDifficulty);
         agent.destination = ways[levelDifficulty].wayPointsList[0].position;
     }
     private void OnTriggerEnter(Collider other)

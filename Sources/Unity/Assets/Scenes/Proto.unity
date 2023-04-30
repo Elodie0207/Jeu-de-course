@@ -1709,6 +1709,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568422586}
     m_Modifications:
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: ScoreBoard
+      value: 
+      objectReference: {fileID: 516507660}
     - target: {fileID: 2069096260305954976, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: m_Size.y
       value: 3.0547576
@@ -1757,6 +1765,10 @@ PrefabInstance:
       propertyPath: IAroot
       value: 
       objectReference: {fileID: 233655964}
+    - target: {fileID: 2677159271182525866, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2677159271182525866, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: iadifficulty
       value: 2

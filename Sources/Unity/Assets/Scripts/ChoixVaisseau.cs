@@ -35,7 +35,7 @@ public class ChoixVaisseau : MonoBehaviour
             BlueLagoon.SetActive(true);
             Ornitobeh.SetActive(false);
             StarHess.SetActive(false);
-Script.Vaisseau=BlueLagoon;
+            Script.Vaisseau=BlueLagoon;
             // Piste5.SetActive(false);
         }
         else if (vaisseau == "Ornitobeh")
@@ -44,7 +44,7 @@ Script.Vaisseau=BlueLagoon;
             BlueLagoon.SetActive(false);
             Ornitobeh.SetActive(true);
             StarHess.SetActive(false);
-Script.Vaisseau=Ornitobeh;
+            Script.Vaisseau=Ornitobeh;
             //Piste5.SetActive(false);
         }
        
@@ -54,7 +54,7 @@ Script.Vaisseau=Ornitobeh;
             BlueLagoon.SetActive(false);
             Ornitobeh.SetActive(false);
             StarHess.SetActive(true);
-Script.Vaisseau=StarHess;
+            Script.Vaisseau=StarHess;
             //Piste5.SetActive(false);
         }
         /* else if (map == "Map5")
@@ -67,9 +67,4 @@ Script.Vaisseau=StarHess;
          }*/
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
