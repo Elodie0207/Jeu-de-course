@@ -56,7 +56,7 @@ public class FinishScript : MonoBehaviour
 
             if (nbTours == 3)
             {
-                
+                Debug.Log("ok");
                 fin = true;
                 Debug.Log(fin);
                 tour.GetComponent<Text>().text = "0";
