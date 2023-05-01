@@ -91,8 +91,8 @@ ManagerMode.CurrentMode = GameMode.Multiplayer;
 			
 	
 }
-public void OnImageClick(UnityEngine.UI.Button button){
-string objectName = button.gameObject.name;
+public void OnImageClick(){
+
   map = "Map1";
 CanvaMap.SetActive(false);
 		CanvaVaisseau.SetActive(true);
