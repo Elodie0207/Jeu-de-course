@@ -25,6 +25,7 @@ public class IA : MonoBehaviour
     public IADifficulty iadifficulty;
     [SerializeField] private List<WayPointList> ways;
     public Transform IAroot;
+    private float maxDegreesRotation = 30f;
     
     private int points;
     private new Rigidbody rigidbody;
@@ -90,6 +91,17 @@ public class IA : MonoBehaviour
     
     void Update()
     {
+        //recup direct° ia
+        Vector3 movementDirection = agent.destination - transform.position;
+
+        // calculer angle de rota
+        float angleToRotateVehicle = Mathf.Clamp(Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up), -12f, 12f);
+        //Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up);
+
+        // pivote IA
+        Quaternion targetRotation = Quaternion.Euler(0f, 0f, -angleToRotateVehicle);
+        IAroot.localRotation = Quaternion.RotateTowards(IAroot.localRotation, targetRotation, maxDegreesRotation * Time.deltaTime);
+        
         if (agent.remainingDistance < 2f)
         {
             GotoNextPoint();

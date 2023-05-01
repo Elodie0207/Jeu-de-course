@@ -67,7 +67,6 @@ public class FinishScript : MonoBehaviour
             //ScoreBoard.enabled=true;
             
        	 	// Démarrer une coroutine pour attendre 5 secondes
-        	
             
             }
             else
@@ -139,7 +138,6 @@ private IEnumerator WaitForNextScene()
     {
         map = "fin";
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-
     }
    
     
