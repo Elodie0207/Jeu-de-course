@@ -11,7 +11,7 @@ public class Autres : MonoBehaviour
     private InputField inputField;
     private string userInput; // Variable pour stocker le texte saisi par l'utilisateur
     public  bool cheatcode = false;
-   
+    private bool isPaused = false;
     void Start()
     {
         inputField = inputFieldObj.GetComponent<InputField>(); // Obtenez la référence à InputField
@@ -21,7 +21,20 @@ public class Autres : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.K))
+if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (isPaused)
+            {
+                Time.timeScale = 1;
+                isPaused = false;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                isPaused = true;
+            }
+        }        
+if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.K))
         {
             // Activez InputField et donnez-lui le focus
             inputField.gameObject.SetActive(true);

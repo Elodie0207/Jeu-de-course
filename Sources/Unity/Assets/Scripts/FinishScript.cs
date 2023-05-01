@@ -61,6 +61,7 @@ public class FinishScript : MonoBehaviour
                 Debug.Log(fin);
                 tour.GetComponent<Text>().text = "0";
                 nbTours = 0;
+				cheat=false; 
             RaceManager.UpdateScore();
             image.gameObject.SetActive(true);
             StartCoroutine(Wait());
@@ -111,10 +112,10 @@ private IEnumerator WaitForNextScene()
     
     if (map == "Map1")
     {
-        map = "Map2";
+        map = "Map3";
         piste1.SetActive(false);
-        piste2.SetActive(true);
-        piste3.SetActive(false);
+        //piste2.SetActive();
+        piste3.SetActive(true);
         piste4.SetActive(false);
         
     }
