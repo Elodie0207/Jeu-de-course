@@ -6,8 +6,11 @@ using UnityEngine.AI;
 public class Chrono_Depart : MonoBehaviour
 {
     public GameObject Count;
-    public GameObject Vaisseau;
-	//public GameObject IA;
+    public GameObject Vaisseau; 
+    public GameObject IA1;
+	public GameObject IA2;
+	public GameObject IA3;
+	
 	 public Text timer;
 	private bool commencer=false; 
 	private float Debut;
@@ -16,7 +19,9 @@ public class Chrono_Depart : MonoBehaviour
     {
         StartCoroutine(Chrono());
         Vaisseau.GetComponent<CharacterController>().enabled=false;
-        //IA.GetComponent<NavMeshAgent>().speed=0;
+        IA1.GetComponent<NavMeshAgent>().speed=0;
+        IA2.GetComponent<NavMeshAgent>().speed=0;
+        IA3.GetComponent<NavMeshAgent>().speed=0;
  		if (commencer==true){
 		 
 		}
@@ -48,7 +53,9 @@ public class Chrono_Depart : MonoBehaviour
 	        CharControl.enabled = true;
         }
         //Vaisseau.GetComponent<CharacterController>().enabled=true;
-		//IA.GetComponent<NavMeshAgent>().speed=25;
+		IA1.GetComponent<NavMeshAgent>().speed=25;
+		IA2.GetComponent<NavMeshAgent>().speed=25;
+		IA3.GetComponent<NavMeshAgent>().speed=25;
 		if(Count.GetComponent<Text>().text=="GO"){
 		commencer=true; 
 		Debut = Time.time;
