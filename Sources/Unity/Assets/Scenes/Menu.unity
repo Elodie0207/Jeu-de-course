@@ -1586,7 +1586,7 @@ MonoBehaviour:
 
     Vitesse: 4/5
 
-    Poids: ?'
+    Poids: 30'
 --- !u!222 &751989486
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2351,7 +2351,7 @@ MonoBehaviour:
 
     Vitesse: 3/5
 
-    Poids: ?'
+    Poids: 20'
 --- !u!222 &1057014615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4043,7 +4043,7 @@ MonoBehaviour:
 
     Vitesse: 3/5
 
-    Poids: ?'
+    Poids: 20'
 --- !u!222 &1520441849
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4756,7 +4756,7 @@ MonoBehaviour:
 
     Vitesse: 5/5
 
-    Poids: ?'
+    Poids: 30'
 --- !u!222 &1872079684
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5606,7 +5606,7 @@ MonoBehaviour:
 
     Vitesse: 4/5
 
-    Poids: ?'
+    Poids: 20'
 --- !u!222 &2103698962
 CanvasRenderer:
   m_ObjectHideFlags: 0
