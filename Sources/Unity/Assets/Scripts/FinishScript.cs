@@ -29,7 +29,7 @@ public class FinishScript : MonoBehaviour
     GameObject piste4 ;
    
     void Start()
-    {
+    {tour.GetComponent<Text>().text = "0";
          map = PlayerPrefs.GetString("map");
         checkpointsPasser = new bool[checkpoints.Length];
         ScoreBoard.enabled = false;
@@ -55,7 +55,8 @@ public class FinishScript : MonoBehaviour
                 
                 fin = true;
                 Debug.Log(fin);
-                
+                tour.GetComponent<Text>().text = "0";
+                nbTours = 0;
             RaceManager.UpdateScore();
             ScoreBoard.enabled=true;
 
@@ -104,7 +105,8 @@ private IEnumerator WaitForNextScene()
     ScoreBoard.enabled=false;
     
     if (map == "Map1")
-    {
+    { 
+        
         map = "Map2";
         piste1.SetActive(false);
         piste2.SetActive(true);
