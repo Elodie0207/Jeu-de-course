@@ -41,6 +41,8 @@ void Start(){
 
         // Activation de la carte à charger
         mapToLoad.SetActive(true);
+        
+        
 
         // Ajout du nom de la carte à la liste des cartes chargées
         listeMaps[currentMapIndex] = mapToLoad.name;

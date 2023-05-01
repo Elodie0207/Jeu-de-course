@@ -56,7 +56,12 @@ public class Chrono_Depart : MonoBehaviour
        
         //Vaisseau.SetActive(true);
     }
-
+    public void ResetChrono()
+    {
+	    Debut = Time.time;
+	    commencer = true;
+	    StartCoroutine(Chrono());
+    }
 	void Update(){
 	if(commencer==true){
 		
