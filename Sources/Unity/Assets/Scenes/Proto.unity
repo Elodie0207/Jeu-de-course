@@ -5872,6 +5872,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: Maps
+      value: 
+      objectReference: {fileID: 1976743494}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 880759346}
@@ -6414,11 +6418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639544, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44
+      value: 153
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639544, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -662
+      value: -660
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639544, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16817,9 +16821,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976743494}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -353.91946, y: 196.17178, z: 145.71658}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -48.249645, y: 6.831133, z: 35.178253}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -18772,6 +18776,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: Maps
+      value: 
+      objectReference: {fileID: 1976743494}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 880759348}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 880759346}
@@ -18906,9 +18918,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 191079991}
     m_Modifications:
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: Maps
+      value: 
+      objectReference: {fileID: 1976743494}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: tour
       value: 
       objectReference: {fileID: 5620267112528405942}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 880759348}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: canvas
       value: 

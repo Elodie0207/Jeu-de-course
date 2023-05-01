@@ -27,7 +27,9 @@ public class FinishScript : MonoBehaviour
     GameObject piste2 ;
     GameObject piste3 ;
     GameObject piste4 ;
-   
+
+    public Image image;
+    
     void Start()
     {
         tour.GetComponent<Text>().text = "0";
@@ -39,6 +41,7 @@ public class FinishScript : MonoBehaviour
         piste2 = Maps.GetComponent<ChoixMap>().Piste2;
         piste3 = Maps.GetComponent<ChoixMap>().Piste3;
         piste4 = Maps.GetComponent<ChoixMap>().Piste4;
+        image.gameObject.SetActive(false);
     }
 
   
@@ -59,10 +62,12 @@ public class FinishScript : MonoBehaviour
                 tour.GetComponent<Text>().text = "0";
                 nbTours = 0;
             RaceManager.UpdateScore();
-            ScoreBoard.enabled=true;
-
+            image.gameObject.SetActive(true);
+            StartCoroutine(Wait());
+            //ScoreBoard.enabled=true;
+            
        	 	// Démarrer une coroutine pour attendre 5 secondes
-        	StartCoroutine(WaitForNextScene());
+        	
             
             }
             else
@@ -137,6 +142,17 @@ private IEnumerator WaitForNextScene()
 
     }
    
+    
+}
+private IEnumerator Wait()
+{
+    // Attendre 5 secondes
+    yield return new WaitForSeconds(waitTime);
+
+    // Passer à la ligne suivante
+    ScoreBoard.enabled=true;
+    image.gameObject.SetActive(false);
+    StartCoroutine(WaitForNextScene());
     
 }
 
