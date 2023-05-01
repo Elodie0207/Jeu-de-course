@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class Chrono_Depart : MonoBehaviour
 {
     public GameObject Count;
-  
     public GameObject Vaisseau;
 	//public GameObject IA;
 	 public Text timer;
@@ -24,6 +23,7 @@ private float Debut;
     }
 
     IEnumerator Chrono(){
+	    CharacterController[] CharList = FindObjectsOfType<CharacterController>();
         yield return new WaitForSeconds(0.3f);
         Count.GetComponent<Text>().text="3";
         Count.SetActive(true);
@@ -43,7 +43,11 @@ private float Debut;
           yield return new WaitForSeconds(1);
         Count.GetComponent<Text>().text="GO";
         Count.SetActive(false);
-        Vaisseau.GetComponent<CharacterController>().enabled=true;
+        foreach (CharacterController CharControl in CharList)
+        {
+	        CharControl.enabled = true;
+        }
+        //Vaisseau.GetComponent<CharacterController>().enabled=true;
 		//IA.GetComponent<NavMeshAgent>().speed=25;
 		if(Count.GetComponent<Text>().text=="GO"){
 		 commencer=true; 

@@ -15,7 +15,7 @@ public class GamemodeManager : MonoBehaviour
     public GameMode CurrentMode;
    
     
-    //l'état du jeu est en mode 1 joueur on charge juste la scène de base 
+    //Lancement de la scène quand le mode de jeu est en solo
     public void SingleMode()
     {
        
@@ -23,9 +23,7 @@ public class GamemodeManager : MonoBehaviour
 
     }
 
-    //l'état du jeu est en multijoueur dans ce cas la après le chargement de la scène on va:
-    //modifier la largeur des différentes caméra du premier joueur pour avoir un écran splitté
-    //instancier la prefab du deuxième joueur dans la scène pour avoir le deuxième joueur 
+    //lancement du jeu quand le jeu est en multijoueur
     public void MultiplayerMode()
     {
         Debug.Log("Multiplayer mode started");
@@ -36,6 +34,7 @@ public class GamemodeManager : MonoBehaviour
         
     }
 
+    //méthode qui va permettre de faire les modifications nécéssaires en fonction du mode de jeu comme le splitScreen ou la présence d'un deuxième joueur dans la scène
     private void LoadSceneComplete(AsyncOperation asyncOperation)
     {
         SplitCamera[] SplitCamerasList = FindObjectsOfType<SplitCamera>();
