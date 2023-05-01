@@ -43,6 +43,7 @@ public void Start()
 }
     // Start is called before the first frame update
     public void Jouer(){
+	    
 Debug.Log("Le bouton Jouer a été cliqué");
 CanvaJoueur.SetActive(true);
    
@@ -92,7 +93,7 @@ ManagerMode.CurrentMode = GameMode.Multiplayer;
 }
 public void OnImageClick(UnityEngine.UI.Button button){
 string objectName = button.gameObject.name;
-  map = objectName;
+  map = "Map1";
 CanvaMap.SetActive(false);
 		CanvaVaisseau.SetActive(true);
 PlayerPrefs.SetString("map",map);
@@ -117,8 +118,7 @@ public void Chargement(UnityEngine.UI.Button button){
 		ManagerMode.MultiplayerMode();
 		
 	}
-
-
+	
 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 }
 public void OnScreenModeChanged(int value)

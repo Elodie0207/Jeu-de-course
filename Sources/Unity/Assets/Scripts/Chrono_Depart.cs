@@ -8,7 +8,7 @@ public class Chrono_Depart : MonoBehaviour
     public GameObject Count;
   
     public GameObject Vaisseau;
-	public GameObject IA;
+	//public GameObject IA;
 	 public Text timer;
 	private bool commencer=false; 
 private float Debut;
@@ -17,7 +17,7 @@ private float Debut;
     {
         StartCoroutine(Chrono());
         Vaisseau.GetComponent<CharacterController>().enabled=false;
-        IA.GetComponent<NavMeshAgent>().speed=0;
+        //IA.GetComponent<NavMeshAgent>().speed=0;
  		if (commencer==true){
 		 
 		}
@@ -44,7 +44,7 @@ private float Debut;
         Count.GetComponent<Text>().text="GO";
         Count.SetActive(false);
         Vaisseau.GetComponent<CharacterController>().enabled=true;
-		IA.GetComponent<NavMeshAgent>().speed=25;
+		//IA.GetComponent<NavMeshAgent>().speed=25;
 		if(Count.GetComponent<Text>().text=="GO"){
 		 commencer=true; 
 Debut = Time.time;

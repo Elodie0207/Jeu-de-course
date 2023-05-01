@@ -11,30 +11,33 @@ public class FinishScript : MonoBehaviour
     public Rigidbody rbVehicule; 
     public Canvas ScoreBoard;
 
+    public GameObject Maps; 
     public int nbTours = 0;
     public int score = 0;
     public int nbcheckpointsPasser = 0;
 	public GameObject canvas;
     public RaceManager RaceManager;
-   	//private Image image;
     public GameObject[] checkpoints; // Tableau de tous les checkpoints à passer
     private bool[] checkpointsPasser; // Tableau pour suivre les checkpoints franchis
-  
-   	public float waitTime = 5f;
+    public float waitTime = 10f;
 	public  bool cheat=false;
-	public bool fin=false; 
-
-
+	public bool fin=false;
+    private string map;
+    GameObject piste1 ;
+    GameObject piste2 ;
+    GameObject piste3 ;
+    GameObject piste4 ;
+   
     void Start()
     {
-        // Initialiser le tableau des checkpoints franchis
+         map = PlayerPrefs.GetString("map");
         checkpointsPasser = new bool[checkpoints.Length];
-		 //image =canvas.GetComponentInChildren<Image>();
-    	
-    // Masquer l'image
-    	//image.gameObject.SetActive(false);
         ScoreBoard.enabled = false;
-
+        Maps.GetComponent<ChoixMap>();
+        piste1 = Maps.GetComponent<ChoixMap>().Piste1;
+        piste2 = Maps.GetComponent<ChoixMap>().Piste2;
+       piste3 = Maps.GetComponent<ChoixMap>().Piste3;
+       piste4 = Maps.GetComponent<ChoixMap>().Piste4;
     }
 
   
@@ -49,14 +52,16 @@ public class FinishScript : MonoBehaviour
 
             if (nbTours == 3)
             {
-				Debug.Log("ah");
-        	// Activer l'image
-        	//image.gameObject.SetActive(true);
+                
+                fin = true;
+                Debug.Log(fin);
+                
             RaceManager.UpdateScore();
             ScoreBoard.enabled=true;
 
        	 	// Démarrer une coroutine pour attendre 5 secondes
         	StartCoroutine(WaitForNextScene());
+            
             }
             else
             {
@@ -96,7 +101,41 @@ private IEnumerator WaitForNextScene()
     yield return new WaitForSeconds(waitTime);
 
     // Passer à la ligne suivante
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    ScoreBoard.enabled=false;
+    
+    if (map == "Map1")
+    {
+        map = "Map2";
+        piste1.SetActive(false);
+        piste2.SetActive(true);
+        piste3.SetActive(false);
+        piste4.SetActive(false);
+    }
+    else if (map == "Map2")
+    {
+        map = "Map3";
+        piste1.SetActive(false);
+        piste2.SetActive(false);
+        piste3.SetActive(true);
+        piste4.SetActive(false);
+    }
+    else if (map == "Map3")
+    {
+        map = "Map4";
+        piste1.SetActive(false);
+        piste2.SetActive(false);
+        piste3.SetActive(false);
+        piste4.SetActive(true);
+    }
+    else if (map == "Map4")
+    {
+        map = "fin";
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+    }
+   
+    
 }
+
 
 }

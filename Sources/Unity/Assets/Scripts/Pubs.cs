@@ -20,7 +20,7 @@ public class Pubs : MonoBehaviour
         fin = FindObjectOfType<FinishScript>().fin;
         if (fin)
         {
-            Debug.Log("ah");
+           
             // Activer l'image
            
         }

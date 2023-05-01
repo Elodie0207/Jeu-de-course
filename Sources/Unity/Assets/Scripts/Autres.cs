@@ -11,10 +11,12 @@ public class Autres : MonoBehaviour
     private InputField inputField;
     private string userInput; // Variable pour stocker le texte saisi par l'utilisateur
     public  bool cheatcode = false;
+   
     void Start()
     {
         inputField = inputFieldObj.GetComponent<InputField>(); // Obtenez la référence à InputField
         inputField.gameObject.SetActive(false); // Désactivez-le au démarrage
+        
     }
 
     void Update()
