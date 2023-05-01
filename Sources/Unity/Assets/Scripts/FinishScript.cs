@@ -29,15 +29,16 @@ public class FinishScript : MonoBehaviour
     GameObject piste4 ;
    
     void Start()
-    {tour.GetComponent<Text>().text = "0";
+    {
+        tour.GetComponent<Text>().text = "0";
          map = PlayerPrefs.GetString("map");
         checkpointsPasser = new bool[checkpoints.Length];
         ScoreBoard.enabled = false;
         Maps.GetComponent<ChoixMap>();
         piste1 = Maps.GetComponent<ChoixMap>().Piste1;
         piste2 = Maps.GetComponent<ChoixMap>().Piste2;
-       piste3 = Maps.GetComponent<ChoixMap>().Piste3;
-       piste4 = Maps.GetComponent<ChoixMap>().Piste4;
+        piste3 = Maps.GetComponent<ChoixMap>().Piste3;
+        piste4 = Maps.GetComponent<ChoixMap>().Piste4;
     }
 
   
@@ -105,13 +106,13 @@ private IEnumerator WaitForNextScene()
     ScoreBoard.enabled=false;
     
     if (map == "Map1")
-    { 
-        
+    {
         map = "Map2";
         piste1.SetActive(false);
         piste2.SetActive(true);
         piste3.SetActive(false);
         piste4.SetActive(false);
+        
     }
     else if (map == "Map2")
     {

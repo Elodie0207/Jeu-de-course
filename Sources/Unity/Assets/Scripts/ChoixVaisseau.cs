@@ -9,7 +9,6 @@ public class ChoixVaisseau : MonoBehaviour
     public GameObject Ornitobeh;
     public GameObject StarHess;
 	public Chrono_Depart Script;
-    //public GameObject Piste5;
 
     void Start()
     {
@@ -27,7 +26,6 @@ public class ChoixVaisseau : MonoBehaviour
             Ornitobeh.SetActive(false);
             StarHess.SetActive(false);
 			Script.Vaisseau=Vaiseb;
-            //Piste5.SetActive(false);
         }
         else if (vaisseau == "BlueLagoon")
         {
@@ -36,7 +34,6 @@ public class ChoixVaisseau : MonoBehaviour
             Ornitobeh.SetActive(false);
             StarHess.SetActive(false);
             Script.Vaisseau=BlueLagoon;
-            // Piste5.SetActive(false);
         }
         else if (vaisseau == "Ornitobeh")
         {
@@ -45,7 +42,6 @@ public class ChoixVaisseau : MonoBehaviour
             Ornitobeh.SetActive(true);
             StarHess.SetActive(false);
             Script.Vaisseau=Ornitobeh;
-            //Piste5.SetActive(false);
         }
        
         else if (vaisseau == "StarHess")
@@ -55,16 +51,8 @@ public class ChoixVaisseau : MonoBehaviour
             Ornitobeh.SetActive(false);
             StarHess.SetActive(true);
             Script.Vaisseau=StarHess;
-            //Piste5.SetActive(false);
         }
-        /* else if (map == "Map5")
-         {
-             Vaiseb.SetActive(false); 
-             BlueLagoon.SetActive(false);
-             Ornitobeh.SetActive(false);
-             StarHess.SetActive(false);
-             Piste5.SetActive(true);
-         }*/
+        
     }
 
 }

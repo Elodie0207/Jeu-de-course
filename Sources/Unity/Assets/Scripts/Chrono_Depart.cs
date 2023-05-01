@@ -10,7 +10,7 @@ public class Chrono_Depart : MonoBehaviour
 	//public GameObject IA;
 	 public Text timer;
 	private bool commencer=false; 
-private float Debut;
+	private float Debut;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,8 +50,8 @@ private float Debut;
         //Vaisseau.GetComponent<CharacterController>().enabled=true;
 		//IA.GetComponent<NavMeshAgent>().speed=25;
 		if(Count.GetComponent<Text>().text=="GO"){
-		 commencer=true; 
-Debut = Time.time;
+		commencer=true; 
+		Debut = Time.time;
 }
        
         //Vaisseau.SetActive(true);
@@ -60,7 +60,7 @@ Debut = Time.time;
 	void Update(){
 	if(commencer==true){
 		
-	float time = Time.time - Debut;
+		float time = Time.time - Debut;
         string secondes = (time % 60).ToString("f1");
         string minutes = ((int)time / 60).ToString();
         timer.text = minutes + ":" + secondes;
