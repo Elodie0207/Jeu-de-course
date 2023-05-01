@@ -42,6 +42,8 @@ public class FinishScript : MonoBehaviour
         piste3 = Maps.GetComponent<ChoixMap>().Piste3;
         piste4 = Maps.GetComponent<ChoixMap>().Piste4;
         image.gameObject.SetActive(false);
+cheat=false; 
+		nbTours=0;
     }
 
   
@@ -101,6 +103,7 @@ public class FinishScript : MonoBehaviour
 	
   void Update(){
  cheat = FindObjectOfType<Autres>().cheatcode;
+Debug.Log(map);
 }
 private IEnumerator WaitForNextScene()
 {
@@ -112,30 +115,27 @@ private IEnumerator WaitForNextScene()
     
     if (map == "Map1")
     {
+cheat=false; 
+	Debug.Log(nbTours);
+Debug.Log(cheat);
         map = "Map3";
-tour.GetComponent<Text>().text = "0";
- nbTours = 0;
+	tour.GetComponent<Text>().text = "0";
+ 	nbTours = 0;
         piste1.SetActive(false);
         //piste2.SetActive();
         piste3.SetActive(true);
         piste4.SetActive(false);
         
     }
-    else if (map == "Map2")
-    {
-        map = "Map3";
-tour.GetComponent<Text>().text = "0";
- nbTours = 0;
-        piste1.SetActive(false);
-        piste2.SetActive(false);
-        piste3.SetActive(true);
-        piste4.SetActive(false);
-    }
+    
     else if (map == "Map3")
     {
+	cheat=false; 
+	
+	Debug.Log(cheat);
         map = "Map4";
-tour.GetComponent<Text>().text = "0";
- nbTours = 0;
+	tour.GetComponent<Text>().text = "0";
+ 	nbTours = 0;
         piste1.SetActive(false);
         piste2.SetActive(false);
         piste3.SetActive(false);
@@ -143,10 +143,13 @@ tour.GetComponent<Text>().text = "0";
     }
     else if (map == "Map4")
     {
+	cheat=false; 
+	Debug.Log(nbTours);
+	Debug.Log(cheat);
         map = "fin";
-tour.GetComponent<Text>().text = "0";
- nbTours = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+	tour.GetComponent<Text>().text = "0";
+ 	nbTours = 0;
+     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
    
     
@@ -155,7 +158,7 @@ private IEnumerator Wait()
 {
     // Attendre 5 secondes
     yield return new WaitForSeconds(waitTime);
-	cheat=false; 
+	
     // Passer à la ligne suivante
     ScoreBoard.enabled=true;
     image.gameObject.SetActive(false);
