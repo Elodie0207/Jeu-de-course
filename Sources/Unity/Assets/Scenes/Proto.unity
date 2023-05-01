@@ -3566,7 +3566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: movementForce
-      value: 250
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: roadLayer.m_Bits
@@ -3579,6 +3579,10 @@ PrefabInstance:
     - target: {fileID: 1164954526389486174, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164954526389486175, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486175, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: m_Constraints
@@ -21938,6 +21942,14 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 2.617909
       objectReference: {fileID: 0}
+    - target: {fileID: 2360081524081423213, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: movementForce
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360081524081423215, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: m_Mass
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423216, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -22237,6 +22249,14 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.6128634
       objectReference: {fileID: 0}
+    - target: {fileID: 2075909564905639525, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: movementForce
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075909564905639527, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: m_Mass
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639527, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -22400,6 +22420,14 @@ PrefabInstance:
       propertyPath: checkpoints.Array.data[1]
       value: 
       objectReference: {fileID: 131448614}
+    - target: {fileID: 8325108201388896676, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325108201388896678, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: movementForce
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8325108201388896698, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: m_Name
       value: STARHESS

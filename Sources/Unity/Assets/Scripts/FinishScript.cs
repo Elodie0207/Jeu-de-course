@@ -61,7 +61,7 @@ public class FinishScript : MonoBehaviour
                 Debug.Log(fin);
                 tour.GetComponent<Text>().text = "0";
                 nbTours = 0;
-				cheat=false; 
+				
             RaceManager.UpdateScore();
             image.gameObject.SetActive(true);
             StartCoroutine(Wait());
@@ -113,6 +113,8 @@ private IEnumerator WaitForNextScene()
     if (map == "Map1")
     {
         map = "Map3";
+tour.GetComponent<Text>().text = "0";
+ nbTours = 0;
         piste1.SetActive(false);
         //piste2.SetActive();
         piste3.SetActive(true);
@@ -122,6 +124,8 @@ private IEnumerator WaitForNextScene()
     else if (map == "Map2")
     {
         map = "Map3";
+tour.GetComponent<Text>().text = "0";
+ nbTours = 0;
         piste1.SetActive(false);
         piste2.SetActive(false);
         piste3.SetActive(true);
@@ -130,6 +134,8 @@ private IEnumerator WaitForNextScene()
     else if (map == "Map3")
     {
         map = "Map4";
+tour.GetComponent<Text>().text = "0";
+ nbTours = 0;
         piste1.SetActive(false);
         piste2.SetActive(false);
         piste3.SetActive(false);
@@ -138,6 +144,8 @@ private IEnumerator WaitForNextScene()
     else if (map == "Map4")
     {
         map = "fin";
+tour.GetComponent<Text>().text = "0";
+ nbTours = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
    
@@ -147,7 +155,7 @@ private IEnumerator Wait()
 {
     // Attendre 5 secondes
     yield return new WaitForSeconds(waitTime);
-
+	cheat=false; 
     // Passer à la ligne suivante
     ScoreBoard.enabled=true;
     image.gameObject.SetActive(false);
