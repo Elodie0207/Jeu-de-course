@@ -91,21 +91,19 @@ public class IA : MonoBehaviour
     
     void Update()
     {
-        //recup direct° ia
-        Vector3 movementDirection = agent.destination - transform.position;
+         Vector3 movementDirection = agent.destination - transform.position;
+    float angleToRotateVehicle = Mathf.Clamp(Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up), -12f, 12f);
+    Quaternion targetRotation = Quaternion.Euler(0f, 0f, -angleToRotateVehicle);
+    IAroot.localRotation = Quaternion.RotateTowards(IAroot.localRotation, targetRotation, maxDegreesRotation * Time.deltaTime);
 
-        // calculer angle de rota
-        float angleToRotateVehicle = Mathf.Clamp(Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up), -12f, 12f);
-        //Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up);
-
-        // pivote IA
-        Quaternion targetRotation = Quaternion.Euler(0f, 0f, -angleToRotateVehicle);
-        IAroot.localRotation = Quaternion.RotateTowards(IAroot.localRotation, targetRotation, maxDegreesRotation * Time.deltaTime);
-        
-        if (agent.remainingDistance < 2f)
-        {
-            GotoNextPoint();
-        }
+     if (agent.remainingDistance < 2f && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.hasPath)
+    {
+        GotoNextPoint();
+    }
+    else if (!agent.hasPath)
+    {
+        agent.destination = ways[levelDifficulty].wayPointsList[points].position;
+    }
         
     }
 
@@ -116,13 +114,15 @@ public class IA : MonoBehaviour
 
     void GotoNextPoint()
     {
-        if (ways[levelDifficulty].wayPointsList.Count == 0)
-            return;
-        
-        points = (points + 1) % ways[levelDifficulty].wayPointsList.Count;
-        //print(points);
-        
+         if (ways[levelDifficulty].wayPointsList.Count == 0)
+        return;
+
+    points = (points + 1) % ways[levelDifficulty].wayPointsList.Count;
+
+    if (agent.hasPath)
+    {
         agent.destination = ways[levelDifficulty].wayPointsList[points].position;
+    }
     }
     
     public IEnumerator Nitro(float count = 5f)
