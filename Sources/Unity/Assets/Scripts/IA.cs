@@ -44,7 +44,7 @@ public class IA : MonoBehaviour
         switch (iadifficulty)
         {
             case IADifficulty.Facile:
-                agent.speed = 10;
+                agent.speed = 120;
                 levelDifficulty = Random.Range(0, 2);
                 break;
 
