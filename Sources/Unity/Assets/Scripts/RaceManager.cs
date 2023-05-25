@@ -13,6 +13,9 @@ public class RaceManager : MonoBehaviour {
     // List pour stocker les positions des coureurs
     public List<int> positions;
     
+    public Text[] nameTexts;
+    public Text[] positionTexts;
+    public Text[] scoreTexts;
     
     void Start() {
         
@@ -20,14 +23,9 @@ public class RaceManager : MonoBehaviour {
         foreach (FinishScript racer in racers) {
             if (!racer.gameObject.activeSelf) {
                 racer.enabled = false;
-                PlayerUI playerUI = racer.GetComponent<PlayerUI>();
-                if (playerUI != null) {
-                    playerUI.enabled = false;
-                }
-               
             }
         }
-
+        
         // Enlève les FinishScript des joueurs désactivés de la liste "racers"
         racers.RemoveAll(racer => !racer.gameObject.activeSelf);
     }
@@ -64,13 +62,19 @@ public class RaceManager : MonoBehaviour {
     }
 
     public void UpdateScore()
-    {
-        // Ajoute le score des joueurs en fonction de leur position
-        for (int i = 0; i < racers.Count; i++) {
-            
+    {   
+        // Trie les joueurs en fonction de leur position
+        FinishScript[] sortedRacers = racers.OrderBy(r => positions[racers.IndexOf(r)]).ToArray();
+
+        for (int i = 0; i < sortedRacers.Length; i++)
+        {
+            FinishScript racer = sortedRacers[i];
+            int racerIndex = racers.IndexOf(racer);
+
             int score = 0;
-            
-            switch (positions[i]) {
+
+            switch (positions[racerIndex])
+            {
                 case 1:
                     score = 10;
                     break;
@@ -87,11 +91,18 @@ public class RaceManager : MonoBehaviour {
                     score = 2;
                     break;
             }
-            
-            racers[i].score += score;
-        }
-    }
 
+            racer.score += score;
+
+            nameTexts[i].text = racer.name;
+            positionTexts[i].text = positions[racerIndex].ToString();
+            scoreTexts[i].text = racer.score.ToString();
+        }
+
+
+
+    }
+    
     public int getRacerPosition(FinishScript racer)
     {
         // Trie la liste des joueurs en fonction de leur score
