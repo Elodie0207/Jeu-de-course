@@ -89,22 +89,24 @@ public class IA : MonoBehaviour
         }
     }
 
-    private void Update()
+   private void Update()
+{
+    if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
     {
-        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
-        {
-            if (agent.remainingDistance < 2f)
+        if (agent.remainingDistance < 2f)
         {
             GotoNextPoint();
         }
-            
-}
+    }
+    
+    if (agent.remainingDistance > 2f) // Vérifier si la distance restante est supérieure à une valeur seuil
+    {
         Vector3 movementDirection = agent.steeringTarget - transform.position;
         float angleToRotateVehicle = Mathf.Clamp(Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up), -12f, 12f);
         Quaternion targetRotation = Quaternion.Euler(0f, 0f, -angleToRotateVehicle);
         IAroot.localRotation = Quaternion.RotateTowards(IAroot.localRotation, targetRotation, maxDegreesRotation * Time.deltaTime);
     }
-
+}
     void GotoNextPoint()
     {
         if (ways[levelDifficulty].wayPointsList.Count == 0)
