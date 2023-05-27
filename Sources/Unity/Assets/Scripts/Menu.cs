@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
 	
     public GameObject boutton_jouer;
     public GameObject boutton_quitter;
-    private string langage="";
+    //private string langage="";
     //public GameObject boutton;
     public int test = 0;
     public GameObject CanvaCourrant;
@@ -44,14 +44,18 @@ public void Start()
     // Start is called before the first frame update
     public void Jouer(){
 	    
-Debug.Log("Le bouton Jouer a été cliqué");
-CanvaJoueur.SetActive(true);
+		Debug.Log("Le bouton Jouer a été cliqué");
+		CanvaJoueur.SetActive(true);
    
 		CanvaCourrant.SetActive(false); 
 		
     }
 
     public void Quitter(){
+	    if (PlayerPrefs.HasKey("CurrentLanguage"))
+	    {
+		    PlayerPrefs.DeleteKey("CurrentLanguage");
+	    }
         Application.Quit();
     }
     public void Param(){
@@ -72,25 +76,7 @@ CanvaJoueur.SetActive(false);
 ManagerMode.CurrentMode = GameMode.Multiplayer;
 //ManagerMode.MultiplayerMode();
 }
-	public void Langage(){
-		
-		if(langage==""){
-			langage="fr";
-		}
-
-		if(langage=="fr"){
-           	boutton_jouer.GetComponent<Text>().text = "Jouer";
-            boutton_quitter.GetComponent<Text>().text = "Quitter";
-            langage = "en";
-        }
-        else if(langage=="en"){
-            boutton_jouer.GetComponent<Text>().text = "Play";
-           boutton_quitter.GetComponent<Text>().text = "Quit";
-            langage="fr";
-        }
-			
 	
-}
 public void OnImageClick(){
 
   map = "Map1";

@@ -1,0 +1,18 @@
+﻿{
+  "Jouer":"Jouer",
+  "Quitter":"Quitter",
+  "Param":"Paramètres",
+  "FullScreen":"Plein écran",
+  "Windowed":"Fenétré",
+  "Retour":"Retour",
+  "Solo":"Solo",
+  "Multijoueurs":"Mutlijoueur",
+  "VoiciLesMap":"Voici votre parcours",
+  "ChoisirVaisseau":"Choisissez votre vaisseau",
+  "Vitesse":"Vitesse",
+  "Poids":"Poids",
+  "Rang":"Rang",
+  "Nom":"Nom",
+  "Score":"Score",
+  "ChoixJoueur": "Selectionnez le mode de jeu"
+}

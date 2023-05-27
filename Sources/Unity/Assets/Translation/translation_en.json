@@ -1,0 +1,18 @@
+﻿{
+  "Jouer" : "Play",
+  "Quitter" : "Quit",
+  "Param" : "Settings",
+  "FullScreen" : "Full Screen",
+  "Windowed" : "Windowed",
+  "Retour" : "Return",
+  "Solo" : "Solo",
+  "Multijoueurs" : "Multiplayer",
+  "VoiciLesMap" : "Here  are your race circuits",
+  "ChoisirVaisseau" : "Choose your vehicle",
+  "Vitesse" : "Speed",
+  "Poids" : "Weight",
+  "Rang" : "Rank",
+  "Nom" : "Name",
+  "Score" : "Score",
+  "ChoixJoueur": "Select the game mode"
+}
