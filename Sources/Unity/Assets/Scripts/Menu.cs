@@ -53,7 +53,6 @@
 			
 	    }
 
-<<<<<<< Updated upstream
 	    public void Quitter(){
 		    if (PlayerPrefs.HasKey("CurrentLanguage"))
 		    {
@@ -84,10 +83,6 @@
 
 	  map = "Map1";
 		CanvaMap.SetActive(false);
-=======
-  map = "Map3";
-CanvaMap.SetActive(false);
->>>>>>> Stashed changes
 		CanvaVaisseau.SetActive(true);
 		PlayerPrefs.SetString("map",map);
 		//Debug.Log(map);

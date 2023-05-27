@@ -44,17 +44,17 @@ public class IA : MonoBehaviour
         switch (iadifficulty)
         {
             case IADifficulty.Facile:
-                agent.speed = 20;
+                agent.speed = 120;
                 levelDifficulty = Random.Range(0, 2);
                 break;
 
             case IADifficulty.Normal:
-                agent.speed = 25;
+                agent.speed = 90;
                 levelDifficulty = Random.Range(2, 4);
                 break;
 
             case IADifficulty.Difficile:
-                agent.speed = 30;
+                agent.speed = 100;
                 levelDifficulty = Random.Range(4, 6);
                 break;
         }
@@ -98,11 +98,14 @@ public class IA : MonoBehaviour
             GotoNextPoint();
         }
     }
-     Vector3 movementDirection = agent.steeringTarget - transform.position;
-        float angleToRotateVehicle = Mathf.Clamp(Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up), -20f, 20f);
+    
+    if (agent.remainingDistance > 2f) // Vérifier si la distance restante est supérieure à une valeur seuil
+    {
+        Vector3 movementDirection = agent.steeringTarget - transform.position;
+        float angleToRotateVehicle = Mathf.Clamp(Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up), -12f, 12f);
         Quaternion targetRotation = Quaternion.Euler(0f, 0f, -angleToRotateVehicle);
         IAroot.localRotation = Quaternion.RotateTowards(IAroot.localRotation, targetRotation, maxDegreesRotation * Time.deltaTime);
-   
+    }
 }
     void GotoNextPoint()
     {
