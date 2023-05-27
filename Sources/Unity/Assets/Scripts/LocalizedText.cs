@@ -12,11 +12,15 @@ public class LocalizedText : MonoBehaviour
         textComponent = GetComponent<Text>();
     }
 
+    private void Start()
+    {
+        translationManager.Instance.LanguageChanged += UpdateText;
+    }
+
     private void OnEnable()
     {
         if (gameObject.activeSelf)
         {    
-            translationManager.Instance.LanguageChanged += UpdateText;
             UpdateText();
         }
     }
@@ -27,22 +31,13 @@ public class LocalizedText : MonoBehaviour
         {    
             translationManager.Instance.LanguageChanged -= UpdateText;
         }  
-        
     }
 
     public void UpdateText()
     {
-        if (translationManager.Instance == null)
+        if (translationManager.Instance != null && textComponent != null)
         {
-            Debug.LogWarning("translationManager.Instance is null in LocalizedText");
-            return;
+            textComponent.text = translationManager.Instance.GetTranslation(translationKey);
         }
-        if (textComponent == null)
-        {
-            Debug.LogWarning("Text component is null in LocalizedText");
-            return;
-        }
-
-        textComponent.text = translationManager.Instance.GetTranslation(translationKey);
     }
 }
