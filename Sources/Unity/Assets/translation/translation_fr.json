@@ -14,5 +14,10 @@
   "Rang":"Rang",
   "Nom":"Nom",
   "Score":"Score",
-  "ChoixJoueur": "Selectionnez le mode de jeu"
+  "ChoixJoueur": "Selectionnez le mode de jeu",
+  "BlueLagoon": "BlueLagoon\nVitesse: 5/5\nPoids: 30",
+  "Cubico": "Cubico\nVitesse: 3/5\nPoids: 20",
+  "StarHess": "StarHess\nVitesse: 4/5\nPoids: 20",
+  "Vaiseb": "Vaiseb\nVitesse: 3/5\nPoids: 20",
+  "OrnitoBeh": "OrnitoBeh\nVitesse: 4/5\nPoids: 30"
 }

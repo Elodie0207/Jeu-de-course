@@ -1596,6 +1596,7 @@ GameObject:
   - component: {fileID: 751989484}
   - component: {fileID: 751989486}
   - component: {fileID: 751989485}
+  - component: {fileID: 751989487}
   m_Layer: 5
   m_Name: Ornitobeh
   m_TagString: Untagged
@@ -1669,6 +1670,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751989483}
   m_CullTransparentMesh: 1
+--- !u!114 &751989487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751989483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9f792dd312fbe4584ddd2fc741173a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationKey: OrnitoBeh
 --- !u!1 &753823440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,6 +2395,7 @@ GameObject:
   - component: {fileID: 1057014616}
   - component: {fileID: 1057014615}
   - component: {fileID: 1057014614}
+  - component: {fileID: 1057014617}
   m_Layer: 5
   m_Name: Vaiseb
   m_TagString: Untagged
@@ -2454,6 +2469,19 @@ RectTransform:
   m_AnchoredPosition: {x: 479, y: -103}
   m_SizeDelta: {x: 308.629, y: 205.77}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1057014617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057014613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9f792dd312fbe4584ddd2fc741173a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationKey: Vaiseb
 --- !u!1 &1061376244
 GameObject:
   m_ObjectHideFlags: 0
@@ -4087,6 +4115,7 @@ GameObject:
   - component: {fileID: 1520441850}
   - component: {fileID: 1520441849}
   - component: {fileID: 1520441848}
+  - component: {fileID: 1520441851}
   m_Layer: 5
   m_Name: Cubico
   m_TagString: Untagged
@@ -4160,6 +4189,19 @@ RectTransform:
   m_AnchoredPosition: {x: 467, y: 109}
   m_SizeDelta: {x: 308.629, y: 205.77}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1520441851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520441847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9f792dd312fbe4584ddd2fc741173a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationKey: Cubico
 --- !u!1 &1538335910
 GameObject:
   m_ObjectHideFlags: 0
@@ -4808,6 +4850,7 @@ GameObject:
   - component: {fileID: 1872079682}
   - component: {fileID: 1872079684}
   - component: {fileID: 1872079683}
+  - component: {fileID: 1872079685}
   m_Layer: 5
   m_Name: BlueLagoon
   m_TagString: Untagged
@@ -4881,6 +4924,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872079681}
   m_CullTransparentMesh: 1
+--- !u!114 &1872079685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872079681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9f792dd312fbe4584ddd2fc741173a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationKey: BlueLagoon
 --- !u!1 &1924924233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,6 +5761,7 @@ GameObject:
   - component: {fileID: 2103698963}
   - component: {fileID: 2103698962}
   - component: {fileID: 2103698961}
+  - component: {fileID: 2103698964}
   m_Layer: 5
   m_Name: StarHess
   m_TagString: Untagged
@@ -5778,6 +5835,19 @@ RectTransform:
   m_AnchoredPosition: {x: 198.99997, y: 27}
   m_SizeDelta: {x: 308.629, y: 205.77}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2103698964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103698960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9f792dd312fbe4584ddd2fc741173a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationKey: StarHess
 --- !u!1 &2125459656
 GameObject:
   m_ObjectHideFlags: 0

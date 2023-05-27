@@ -16,14 +16,14 @@ public class translationManager : MonoBehaviour
 
     private void Awake()
     {
-        // Vérifier s'il existe déjà une instance du translationManager
+        // creer instance
         if (Instance == null)
         {
             Instance = this;
         }
         else
         {
-            // S'il y a déjà une instance, détruire cet objet en double
+            // detruire instance et la recreer
             Destroy(gameObject);
             return;
         }
@@ -77,15 +77,18 @@ public class translationManager : MonoBehaviour
 
     public string GetTranslation(string key)
     {
+        if (translations == null)
+        {
+            return key;
+        }
+
         if (translations.TryGetValue(key, out string translation))
         {
             return translation;
         }
-        else
-        {
-            Debug.LogWarning("La traduction pour " + key + " n'a pas été trouvée");
-            return key;
-        }
+
+        Debug.LogWarning("La traduction pour " + key + " n'a pas été trouvée");
+        return key;
     }
 
     // Changer la langue courante

@@ -103,7 +103,7 @@ cheat=false;
 	
   void Update(){
  cheat = FindObjectOfType<Autres>().cheatcode;
-Debug.Log(map);
+//Debug.Log(map);
 }
 private IEnumerator WaitForNextScene()
 {
