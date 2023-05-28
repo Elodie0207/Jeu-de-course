@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 333000175}
   - component: {fileID: 333000174}
   m_Layer: 5
-  m_Name: Cubico
+  m_Name: M_Cubico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3696,7 +3696,7 @@ GameObject:
   - component: {fileID: 1208846606}
   - component: {fileID: 1208846605}
   m_Layer: 5
-  m_Name: BlueLagoon
+  m_Name: M_BlueLagoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5635,7 +5635,7 @@ GameObject:
   - component: {fileID: 1795555640}
   - component: {fileID: 1795555639}
   m_Layer: 5
-  m_Name: Ornitobeh
+  m_Name: M_Ornitobeh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5869,7 +5869,7 @@ GameObject:
   - component: {fileID: 1828878284}
   - component: {fileID: 1828878283}
   m_Layer: 5
-  m_Name: StarHess
+  m_Name: M_StarHess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7131,7 +7131,7 @@ GameObject:
   - component: {fileID: 2048425682}
   - component: {fileID: 2048425681}
   m_Layer: 5
-  m_Name: Vaiseb
+  m_Name: M_Vaiseb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6062,7 +6062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 170
-  movementForce: 15
+  movementForce: 150
   feetTransform: {fileID: 388712536}
   rb: {fileID: 388712543}
   playerModelAndCamera: {fileID: 388712537}
@@ -24370,7 +24370,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680717132}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20078771adcf70e4d833e45ba21536f4, type: 3}
   m_Name: 
