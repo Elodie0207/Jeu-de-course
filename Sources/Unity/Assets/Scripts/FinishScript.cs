@@ -27,7 +27,7 @@ public class FinishScript : MonoBehaviour
     GameObject piste2 ;
     GameObject piste3 ;
     GameObject piste4 ;
-
+	GameObject piste5;
     public Image image;
     
     void Start()
@@ -41,6 +41,7 @@ public class FinishScript : MonoBehaviour
         piste2 = Maps.GetComponent<ChoixMap>().Piste2;
         piste3 = Maps.GetComponent<ChoixMap>().Piste3;
         piste4 = Maps.GetComponent<ChoixMap>().Piste4;
+piste5 = Maps.GetComponent<ChoixMap>().Piste5;
         image.gameObject.SetActive(false);
 cheat=false; 
 		nbTours=0;
@@ -154,7 +155,20 @@ Debug.Log(cheat);
         piste3.SetActive(false);
         piste4.SetActive(true);
     }
-    else if (map == "Map4")
+else if (map == "Map4")
+    {
+	cheat=false; 
+	
+	Debug.Log(cheat);
+        map = "Map5";
+	tour.GetComponent<Text>().text = "0";
+ 	nbTours = 0;
+        piste1.SetActive(false);
+        piste2.SetActive(false);
+        piste3.SetActive(false);
+        piste4.SetActive(true);
+    }
+    else if (map == "Map5")
     {
 	cheat=false; 
 	Debug.Log(nbTours);

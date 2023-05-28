@@ -8,7 +8,7 @@ public class ChoixMap : MonoBehaviour
     public GameObject Piste2;
     public GameObject Piste3;
     public GameObject Piste4;
-	
+	public GameObject Piste5;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class ChoixMap : MonoBehaviour
         Piste2.SetActive(false);
         Piste3.SetActive(false);
         Piste4.SetActive(false);
-        
+        Piste5.SetActive(false);
         if (map == "Map1")
         {
            
@@ -27,6 +27,7 @@ public class ChoixMap : MonoBehaviour
             Piste2.SetActive(false);
             Piste3.SetActive(false);
             Piste4.SetActive(false);
+Piste5.SetActive(false);
         }
         else if (map == "Map2")
         {
@@ -35,6 +36,7 @@ public class ChoixMap : MonoBehaviour
             Piste2.SetActive(true);
             Piste3.SetActive(false);
             Piste4.SetActive(false);
+Piste5.SetActive(false);
         }
         else if (map == "Map3")
         {
@@ -43,6 +45,7 @@ public class ChoixMap : MonoBehaviour
             Piste2.SetActive(false);
             Piste3.SetActive(true);
             Piste4.SetActive(false);
+Piste5.SetActive(false);
         }
         else if (map == "Map4")
         {
@@ -51,6 +54,16 @@ public class ChoixMap : MonoBehaviour
             Piste2.SetActive(false);
             Piste3.SetActive(false);
             Piste4.SetActive(true);
+Piste5.SetActive(false);
+        }
+ else if (map == "Map5")
+        {
+          
+            Piste1.SetActive(false); 
+            Piste2.SetActive(false);
+            Piste3.SetActive(false);
+            Piste4.SetActive(false);
+Piste5.SetActive(true);
         }
     }
 
