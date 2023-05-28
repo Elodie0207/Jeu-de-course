@@ -50,12 +50,14 @@ public class GamemodeManager : MonoBehaviour
         else if (CurrentMode == GameMode.Single)
         {
 
-            GameObject MultiPrefab = GameObject.Find("MULTI");
+            GameObject[] multiplayerObjects = GameObject.FindGameObjectsWithTag("Player");
 
-
-            if (MultiPrefab != null)
+            foreach (GameObject multiplayerObject in multiplayerObjects)
             {
-                MultiPrefab.SetActive(false); // Désactiver l'objet "Multi"
+                if (multiplayerObject.name.StartsWith("M_"))
+                {
+                    multiplayerObject.SetActive(false);
+                }
             }
 
             foreach (SplitCamera CameraSplit in SplitCamerasList)
