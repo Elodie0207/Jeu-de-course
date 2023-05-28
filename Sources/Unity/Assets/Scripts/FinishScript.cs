@@ -44,6 +44,7 @@ public class FinishScript : MonoBehaviour
         image.gameObject.SetActive(false);
 cheat=false; 
 		nbTours=0;
+
     }
 
   
@@ -118,16 +119,28 @@ private IEnumerator WaitForNextScene()
 cheat=false; 
 	Debug.Log(nbTours);
 Debug.Log(cheat);
+        map = "Map2";
+	tour.GetComponent<Text>().text = "0";
+ 	nbTours = 0;
+        piste1.SetActive(false);
+        piste2.SetActive(true);
+        piste3.SetActive(false);
+        piste4.SetActive(false);
+        
+    }
+    else if (map == "Map2")
+    {
+	cheat=false; 
+	
+	Debug.Log(cheat);
         map = "Map3";
 	tour.GetComponent<Text>().text = "0";
  	nbTours = 0;
         piste1.SetActive(false);
-        //piste2.SetActive();
+        piste2.SetActive(false);
         piste3.SetActive(true);
         piste4.SetActive(false);
-        
     }
-    
     else if (map == "Map3")
     {
 	cheat=false; 
@@ -162,7 +175,9 @@ private IEnumerator Wait()
     // Passer à la ligne suivante
     ScoreBoard.enabled=true;
     image.gameObject.SetActive(false);
+
     StartCoroutine(WaitForNextScene());
+ Debug.Log(map);
     
 }
 

@@ -96,7 +96,7 @@ ManagerMode.CurrentMode = GameMode.Multiplayer;
 }
 public void OnImageClick(){
 
-  map = "Map1";
+  map = "Map2";
 CanvaMap.SetActive(false);
 		CanvaVaisseau.SetActive(true);
 PlayerPrefs.SetString("map",map);
