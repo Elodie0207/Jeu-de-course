@@ -11933,11 +11933,11 @@ PrefabInstance:
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
-      objectReference: {fileID: 335936785}
+      objectReference: {fileID: 2111449165}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[1]
       value: 
-      objectReference: {fileID: 416253884}
+      objectReference: {fileID: 1691505204}
     - target: {fileID: 2069096260305954976, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: m_Size.y
       value: 3.0547576
@@ -23467,8 +23467,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 154.84889, y: 213.08852, z: 10.054766}
-  m_Center: {x: -185.40128, y: 2.9403, z: 267.80786}
+  m_Size: {x: 116.349075, y: 213.08852, z: 10.054784}
+  m_Center: {x: -204.65282, y: 2.940298, z: 267.60483}
 --- !u!1001 &1696319810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25621,11 +25621,11 @@ PrefabInstance:
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
-      objectReference: {fileID: 5533765709276203825}
+      objectReference: {fileID: 2111449165}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[1]
       value: 
-      objectReference: {fileID: 131448614}
+      objectReference: {fileID: 1691505204}
     - target: {fileID: 2069096260305954976, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: m_Size.y
       value: 3.0547576
@@ -26953,11 +26953,11 @@ PrefabInstance:
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
-      objectReference: {fileID: 335936785}
+      objectReference: {fileID: 2111449165}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[1]
       value: 
-      objectReference: {fileID: 416253884}
+      objectReference: {fileID: 1691505204}
     - target: {fileID: 2069096260305954976, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: m_Size.y
       value: 3.9417865
