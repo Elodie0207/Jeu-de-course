@@ -59,11 +59,16 @@ public class GamemodeManager : MonoBehaviour
                     multiplayerObject.SetActive(false);
                 }
             }
+            
 
             foreach (SplitCamera CameraSplit in SplitCamerasList)
             {
                 CameraSplit.enabled = false;
             }
+            
+            MultiChoixVaisseau NoMulti = FindObjectOfType<MultiChoixVaisseau>();
+
+            NoMulti.enabled = false;
 
 
         }
