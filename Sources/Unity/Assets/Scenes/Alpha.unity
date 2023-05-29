@@ -6456,7 +6456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Count: {fileID: 331632850}
   Vaisseau: {fileID: 328647791}
-  IA1: {fileID: 0}
+  IA1: {fileID: 1869579640}
   IA2: {fileID: 1338757396}
   IA3: {fileID: 1419195372}
   timer: {fileID: 1323164346}
@@ -47405,7 +47405,7 @@ PrefabInstance:
     - target: {fileID: 6228253219831077289, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: IA1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1869579640}
     - target: {fileID: 6228253219831077289, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: IA2
       value: 
