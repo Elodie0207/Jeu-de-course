@@ -18,7 +18,9 @@ public class CharacterController : MonoBehaviour
 	public float levitationHeight = 5.0f;
 	public float levitationForce = 20.0f;
 	public LayerMask roadLayer;
-	private float startY;
+	public float startY;
+	public float startX;
+	public float startZ;
 
 	private RaycastHit hit;
 	private bool levitationBool = true;
@@ -26,12 +28,18 @@ public class CharacterController : MonoBehaviour
 	private bool isRotatingLeft;
 	private bool isRotatingRight;
 	private Vector3 movementIntent;
-
+	public FinishScript finishScript;
+	
 
 	void Start()
 	{
 		rb.useGravity = false;
 		startY = transform.position.y;
+		startX = transform.position.x;
+		startZ = transform.position.z;
+		Debug.Log("startX: " + startX);
+		Debug.Log("startY: " + startY);
+		Debug.Log("startZ: " + startZ);
 	}
 
     
@@ -39,13 +47,16 @@ public class CharacterController : MonoBehaviour
     {
 	    float yPosition = feetTransform.position.y;
 		movementIntent = Vector3.zero;
-		/*if (yPosition < -10)
+		if (yPosition < -10)
 		{
-			Vector3 newPosition = new Vector3(-44.73f, 6.17f, 37.9f);
-
 			
-			feetTransform.position = newPosition;
-		}*/
+			Vector3 lastCheckpointPosition = finishScript.GetLastCheckpointPosition();
+			feetTransform.position = lastCheckpointPosition;
+			
+			
+			
+		}
+
 		
         if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
         {

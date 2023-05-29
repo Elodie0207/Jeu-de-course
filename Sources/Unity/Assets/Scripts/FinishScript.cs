@@ -23,13 +23,14 @@ public class FinishScript : MonoBehaviour
     public bool cheat = false;
     public bool fin = false;
     public string map;
+
     GameObject piste1;
     GameObject piste2;
     GameObject piste3;
     GameObject piste4;
     GameObject piste5;
     public Image image;
-
+	private Vector3 lastCheckpointPosition;
     void Start()
     {
         tour.GetComponent<Text>().text = "0";
@@ -77,6 +78,7 @@ public class FinishScript : MonoBehaviour
                 checkpointsPasser[i] = false;
             }
             nbcheckpointsPasser = 0;
+			
         }
         else if (other.tag == "Checkpoint")
         {
@@ -88,13 +90,17 @@ public class FinishScript : MonoBehaviour
                     Debug.Log("Checkpoint " + (i + 1));
                     checkpointsPasser[i] = true;
                     nbcheckpointsPasser++;
+				lastCheckpointPosition = other.transform.position;
                     break;
 
                 }
             }
         }
     }
-
+	public Vector3 GetLastCheckpointPosition()
+{
+    return lastCheckpointPosition;
+}
     void Update()
     {
         cheat = FindObjectOfType<Autres>().cheatcode;
