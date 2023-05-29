@@ -66,9 +66,12 @@ public class GamemodeManager : MonoBehaviour
                 CameraSplit.enabled = false;
             }
             
-            MultiChoixVaisseau NoMulti = FindObjectOfType<MultiChoixVaisseau>();
+            MultiChoixVaisseau[] NoMulti = FindObjectsOfType<MultiChoixVaisseau>();
 
-            NoMulti.enabled = false;
+            foreach (MultiChoixVaisseau Choix in NoMulti)
+            {
+                Choix.enabled = false;
+            }
 
 
         }
