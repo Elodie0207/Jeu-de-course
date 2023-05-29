@@ -28,7 +28,7 @@ public class CharacterController : MonoBehaviour
 	private bool isRotatingLeft;
 	private bool isRotatingRight;
 	private Vector3 movementIntent;
-	public FinishScript finishScript;
+	
 	
 
 	void Start()
@@ -47,7 +47,7 @@ public class CharacterController : MonoBehaviour
     {
 	    float yPosition = feetTransform.position.y;
 		movementIntent = Vector3.zero;
-		if (yPosition < -10)
+			/*if (yPosition < -10)
 		{
 			
 			Vector3 lastCheckpointPosition = finishScript.GetLastCheckpointPosition();
@@ -55,7 +55,7 @@ public class CharacterController : MonoBehaviour
 			
 			
 			
-		}
+		}*/
 
 		
         if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))

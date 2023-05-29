@@ -90,7 +90,7 @@ public class FinishScript : MonoBehaviour
                     Debug.Log("Checkpoint " + (i + 1));
                     checkpointsPasser[i] = true;
                     nbcheckpointsPasser++;
-				lastCheckpointPosition = other.transform.position;
+					lastCheckpointPosition = other.transform.position;
                     break;
 
                 }
