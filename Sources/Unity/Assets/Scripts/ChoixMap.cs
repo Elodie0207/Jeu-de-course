@@ -15,56 +15,13 @@ public class ChoixMap : MonoBehaviour
         string map = PlayerPrefs.GetString("map");
         //Debug.Log(map);
        
-        Piste1.SetActive(true); 
+       	Piste1.SetActive(true); 
         Piste2.SetActive(false);
         Piste3.SetActive(false);
         Piste4.SetActive(false);
         Piste5.SetActive(false);
-        if (map == "Map1")
-        {
-           
-            Piste1.SetActive(true); 
-            Piste2.SetActive(false);
-            Piste3.SetActive(false);
-            Piste4.SetActive(false);
-Piste5.SetActive(false);
-        }
-        else if (map == "Map2")
-        {
-           
-            Piste1.SetActive(false); 
-            Piste2.SetActive(true);
-            Piste3.SetActive(false);
-            Piste4.SetActive(false);
-Piste5.SetActive(false);
-        }
-        else if (map == "Map3")
-        {
-          
-            Piste1.SetActive(false); 
-            Piste2.SetActive(false);
-            Piste3.SetActive(true);
-            Piste4.SetActive(false);
-Piste5.SetActive(false);
-        }
-        else if (map == "Map4")
-        {
-          
-            Piste1.SetActive(false); 
-            Piste2.SetActive(false);
-            Piste3.SetActive(false);
-            Piste4.SetActive(true);
-Piste5.SetActive(false);
-        }
- else if (map == "Map5")
-        {
-          
-            Piste1.SetActive(false); 
-            Piste2.SetActive(false);
-            Piste3.SetActive(false);
-            Piste4.SetActive(false);
-Piste5.SetActive(true);
-        }
+
+       
     }
 
     
