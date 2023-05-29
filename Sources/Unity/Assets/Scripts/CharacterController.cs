@@ -18,9 +18,7 @@ public class CharacterController : MonoBehaviour
 	public float levitationHeight = 5.0f;
 	public float levitationForce = 20.0f;
 	public LayerMask roadLayer;
-	public float startY;
-	public float startX;
-	public float startZ;
+
 
 	private RaycastHit hit;
 	private bool levitationBool = true;
@@ -34,12 +32,7 @@ public class CharacterController : MonoBehaviour
 	void Start()
 	{
 		rb.useGravity = false;
-		startY = transform.position.y;
-		startX = transform.position.x;
-		startZ = transform.position.z;
-		Debug.Log("startX: " + startX);
-		Debug.Log("startY: " + startY);
-		Debug.Log("startZ: " + startZ);
+		
 	}
 
     
