@@ -16,6 +16,8 @@ public class MultiControl : MonoBehaviour
 	public float levitationHeight = 5.0f;
 	public float levitationForce = 20.0f;
 	public LayerMask roadLayer;
+
+	public GameObject trComplet;
 	private float startY;
 
 	private RaycastHit hit;
@@ -30,6 +32,7 @@ public class MultiControl : MonoBehaviour
 	{
 		rb.useGravity = false;
 		startY = transform.position.y;
+		trComplet.SetActive(true);
 	}
 
     
