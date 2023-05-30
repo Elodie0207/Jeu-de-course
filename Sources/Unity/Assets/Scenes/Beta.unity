@@ -700,15 +700,15 @@ PrefabInstance:
     - target: {fileID: 6228253219831077289, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: IA1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 666233561}
     - target: {fileID: 6228253219831077289, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: IA2
       value: 
-      objectReference: {fileID: 1338757396}
+      objectReference: {fileID: 1512286854}
     - target: {fileID: 6228253219831077289, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: IA3
       value: 
-      objectReference: {fileID: 1419195372}
+      objectReference: {fileID: 1218245905}
     - target: {fileID: 6228253219831077289, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: Count
       value: 
@@ -3841,15 +3841,15 @@ PrefabInstance:
     - target: {fileID: 371330534390553442, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: IA1
       value: 
-      objectReference: {fileID: 1869579640}
+      objectReference: {fileID: 666233561}
     - target: {fileID: 371330534390553442, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: IA2
       value: 
-      objectReference: {fileID: 1338757396}
+      objectReference: {fileID: 1512286854}
     - target: {fileID: 371330534390553442, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: IA3
       value: 
-      objectReference: {fileID: 1419195372}
+      objectReference: {fileID: 1218245905}
     - target: {fileID: 371330534390553442, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: Count
       value: 
@@ -5678,15 +5678,15 @@ PrefabInstance:
     - target: {fileID: 7665300471072580769, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: IA1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 666233561}
     - target: {fileID: 7665300471072580769, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: IA2
       value: 
-      objectReference: {fileID: 1338757396}
+      objectReference: {fileID: 1512286854}
     - target: {fileID: 7665300471072580769, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: IA3
       value: 
-      objectReference: {fileID: 1419195372}
+      objectReference: {fileID: 1218245905}
     - target: {fileID: 7665300471072580769, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: Count
       value: 
@@ -16141,6 +16141,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5999373373956982661, guid: 03da12e19404334448423d1605743e6b, type: 3}
   m_PrefabInstance: {fileID: 666233558}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &666233561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2677159271182525776, guid: 03da12e19404334448423d1605743e6b, type: 3}
+  m_PrefabInstance: {fileID: 666233558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &667102974
 GameObject:
   m_ObjectHideFlags: 0
@@ -24241,6 +24246,18 @@ PrefabInstance:
       propertyPath: IA
       value: 
       objectReference: {fileID: 1869579640}
+    - target: {fileID: 6858182555233291005, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: IA1
+      value: 
+      objectReference: {fileID: 666233561}
+    - target: {fileID: 6858182555233291005, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: IA2
+      value: 
+      objectReference: {fileID: 1512286854}
+    - target: {fileID: 6858182555233291005, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: IA3
+      value: 
+      objectReference: {fileID: 1218245905}
     - target: {fileID: 6858182555233291005, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: Count
       value: 
@@ -32741,15 +32758,15 @@ PrefabInstance:
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: IA1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 666233561}
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: IA2
       value: 
-      objectReference: {fileID: 1338757396}
+      objectReference: {fileID: 1512286854}
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: IA3
       value: 
-      objectReference: {fileID: 1419195372}
+      objectReference: {fileID: 1218245905}
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: timer
       value: 
