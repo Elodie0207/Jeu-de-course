@@ -7721,6 +7721,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 55.999977
       objectReference: {fileID: 0}
+    - target: {fileID: 1537742572850298767, guid: 377e8fd6b4a428741806aa3fd5b9e4c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89ef2162f9290234b921bbc55f0ac4a4, type: 3}
     - target: {fileID: 1537742572850298801, guid: 377e8fd6b4a428741806aa3fd5b9e4c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7769,10 +7773,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 51.999977
       objectReference: {fileID: 0}
+    - target: {fileID: 1537742573182889683, guid: 377e8fd6b4a428741806aa3fd5b9e4c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7a62eae29c1ecf344a164865f780dd22, type: 3}
     - target: {fileID: 1537742573182889685, guid: 377e8fd6b4a428741806aa3fd5b9e4c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1975095241}
+    - target: {fileID: 1537742573252466790, guid: 377e8fd6b4a428741806aa3fd5b9e4c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a75348d8fb3403c48831691b34f5cb39, type: 3}
     - target: {fileID: 1537742573252466791, guid: 377e8fd6b4a428741806aa3fd5b9e4c2, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -7965,6 +7977,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -24.69519
       objectReference: {fileID: 0}
+    - target: {fileID: 1537742574256253476, guid: 377e8fd6b4a428741806aa3fd5b9e4c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d012e2f5b0565d8488650a088923dc74, type: 3}
     - target: {fileID: 1537742574256253477, guid: 377e8fd6b4a428741806aa3fd5b9e4c2, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
