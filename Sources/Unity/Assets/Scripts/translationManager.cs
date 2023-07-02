@@ -35,7 +35,6 @@ public class translationManager : MonoBehaviour
     private void Start()
     {
         LoadLanguage();
-        //LoadTranslations();
     }
     private void LoadLanguage()
     {
@@ -59,19 +58,17 @@ public class translationManager : MonoBehaviour
 
     private void LoadTranslations()
     {
-        string translationFolderPath = @"Assets\Translation";
-        string languageFile = "translation_" + currentLanguage + ".json";
-        string filePath = Path.Combine(translationFolderPath, languageFile);
+        string languageFile = "translation_" + currentLanguage;
+        TextAsset textAsset = Resources.Load<TextAsset>("Translation/" + languageFile);
 
-        if (File.Exists(filePath))
+        if (textAsset != null)
         {
-            string jsonContent = File.ReadAllText(filePath);
-
+            string jsonContent = textAsset.text;
             translations = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonContent);
         }
         else
         {
-            Debug.LogError("Fichier non trouvé: " + filePath);
+            Debug.LogError("Fichier non trouvé: " + languageFile);
         }
     }
 
