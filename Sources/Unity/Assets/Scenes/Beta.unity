@@ -559,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423213, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423216, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: m_RootOrder
@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 139827369}
   rb: {fileID: 139827376}
   playerModelAndCamera: {fileID: 139827370}
@@ -2162,7 +2162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 144017632}
   rb: {fileID: 144017639}
   playerModelAndCamera: {fileID: 144017633}
@@ -2775,6 +2775,7 @@ Transform:
   - {fileID: 2030173516}
   - {fileID: 1801227840}
   - {fileID: 1158962317}
+  - {fileID: 1980603475}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3916,7 +3917,7 @@ PrefabInstance:
       objectReference: {fileID: 970173344}
     - target: {fileID: 8325108201388896678, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 8325108201388896698, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: m_Name
@@ -4353,7 +4354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 218814819}
   rb: {fileID: 218814827}
   playerModelAndCamera: {fileID: 218814820}
@@ -5557,7 +5558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639525, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639527, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_IsKinematic
@@ -6044,7 +6045,7 @@ PrefabInstance:
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -6055,7 +6056,7 @@ PrefabInstance:
       objectReference: {fileID: 1691505204}
     - target: {fileID: 8325108201388896678, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 8325108201388896698, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: m_Name
@@ -6134,6 +6135,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8325108201388896698, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
   m_PrefabInstance: {fileID: 295083249}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &295083252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+  m_PrefabInstance: {fileID: 295083249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295083251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &300746027
 GameObject:
   m_ObjectHideFlags: 0
@@ -6679,7 +6691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: roadLayer.m_Bits
@@ -6889,7 +6901,7 @@ PrefabInstance:
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -6920,7 +6932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423213, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423216, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: m_RootOrder
@@ -7110,6 +7122,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2360081524081423217, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
   m_PrefabInstance: {fileID: 333794739}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &333794744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+  m_PrefabInstance: {fileID: 333794739}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333794743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &335936785
 GameObject:
   m_ObjectHideFlags: 0
@@ -7720,7 +7743,7 @@ Transform:
   - {fileID: 970173345}
   - {fileID: 1061541696}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &378488062
 GameObject:
@@ -8186,7 +8209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 388712536}
   rb: {fileID: 388712543}
   playerModelAndCamera: {fileID: 388712537}
@@ -8613,7 +8636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 403247613}
   rb: {fileID: 403247619}
   playerModelAndCamera: {fileID: 403247614}
@@ -10244,7 +10267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 433493125}
   rb: {fileID: 433493133}
   playerModelAndCamera: {fileID: 433493126}
@@ -10372,7 +10395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423213, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423216, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: m_RootOrder
@@ -10778,6 +10801,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440970163}
   m_Mesh: {fileID: -773349249428157623, guid: efe0162ec2261af479855dc6b38a102f, type: 3}
+--- !u!114 &445018641 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+  m_PrefabInstance: {fileID: 705585954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705585957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &446172626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4430022019434878471, guid: 7522360e02eb8aa4f854d39b1c37091a, type: 3}
@@ -10985,7 +11019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 449291516}
   rb: {fileID: 449291523}
   playerModelAndCamera: {fileID: 449291517}
@@ -11183,7 +11217,7 @@ PrefabInstance:
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -11361,7 +11395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 457822579}
   rb: {fileID: 457822583}
   playerModelAndCamera: {fileID: 457822580}
@@ -11655,7 +11689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639525, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639527, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_IsKinematic
@@ -13100,7 +13134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356793, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: Maps
@@ -13117,7 +13151,7 @@ PrefabInstance:
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -13543,7 +13577,7 @@ PrefabInstance:
       objectReference: {fileID: 779645098}
     - target: {fileID: 2075909564905639525, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639527, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_Mass
@@ -13878,7 +13912,7 @@ PrefabInstance:
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -13913,7 +13947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639525, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639527, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_IsKinematic
@@ -14064,6 +14098,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2075909564905639545, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
   m_PrefabInstance: {fileID: 563628343}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &563628346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+  m_PrefabInstance: {fileID: 563628343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563628345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &568200644
 GameObject:
   m_ObjectHideFlags: 0
@@ -15358,7 +15403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356793, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: Maps
@@ -16475,7 +16520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: roadLayer.m_Bits
@@ -16695,7 +16740,7 @@ PrefabInstance:
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer
       value: 
@@ -16850,7 +16895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b6d89c76eb1ec49a6c56ef702595ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MultiController: {fileID: 0}
+  MultiController: {fileID: 705585968}
 --- !u!114 &705585966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16893,7 +16938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 705585955}
   rb: {fileID: 705585959}
   playerModelAndCamera: {fileID: 705585956}
@@ -18990,6 +19035,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 869965033}
   object1Position: {x: 0, y: 0, z: 0}
+--- !u!114 &869965035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+  m_PrefabInstance: {fileID: 869965030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869965033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &870203147
 GameObject:
   m_ObjectHideFlags: 0
@@ -19801,7 +19857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 887337937}
   rb: {fileID: 887337944}
   playerModelAndCamera: {fileID: 887337938}
@@ -22333,7 +22389,7 @@ PrefabInstance:
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -22642,7 +22698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1116190283}
   rb: {fileID: 1116190290}
   playerModelAndCamera: {fileID: 1116190284}
@@ -23328,7 +23384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1125668860}
   rb: {fileID: 1125668867}
   playerModelAndCamera: {fileID: 1125668861}
@@ -23751,7 +23807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1126447714}
   rb: {fileID: 1126447721}
   playerModelAndCamera: {fileID: 1126447715}
@@ -24204,7 +24260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356793, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: Maps
@@ -29908,7 +29964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1390400202}
   rb: {fileID: 1390400206}
   playerModelAndCamera: {fileID: 1390400203}
@@ -31072,6 +31128,7 @@ GameObject:
   - component: {fileID: 1429641610}
   - component: {fileID: 1429641611}
   - component: {fileID: 1429641612}
+  - component: {fileID: 1429641613}
   m_Layer: 0
   m_Name: Init_vs
   m_TagString: Untagged
@@ -31128,6 +31185,48 @@ MonoBehaviour:
   Ornitobeh: {fileID: 1700802791}
   StarHess: {fileID: 457822582}
   Script: {fileID: 559156531}
+--- !u!114 &1429641613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429641609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87f36e059c15bf42bf43fbb77c954e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  racers:
+  - {fileID: 1855065801}
+  - {fileID: 563628346}
+  - {fileID: 295083252}
+  - {fileID: 333794744}
+  - {fileID: 1992945053}
+  - {fileID: 1451162585}
+  - {fileID: 1620643951}
+  - {fileID: 445018641}
+  - {fileID: 1905493254}
+  - {fileID: 869965035}
+  positions: 
+  nameTexts:
+  - {fileID: 516507661}
+  - {fileID: 516507663}
+  - {fileID: 145146525}
+  - {fileID: 486042638}
+  - {fileID: 2063234603}
+  positionTexts:
+  - {fileID: 1175614513}
+  - {fileID: 516507664}
+  - {fileID: 1837191467}
+  - {fileID: 1849778296}
+  - {fileID: 615173155}
+  scoreTexts:
+  - {fileID: 1175614512}
+  - {fileID: 516507662}
+  - {fileID: 1474382953}
+  - {fileID: 899293098}
+  - {fileID: 446172626}
 --- !u!1 &1430623919
 GameObject:
   m_ObjectHideFlags: 0
@@ -31554,7 +31653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1435981346}
   rb: {fileID: 1435981353}
   playerModelAndCamera: {fileID: 1435981347}
@@ -31925,6 +32024,17 @@ Transform:
   m_Father: {fileID: 1317740070}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1451162585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+  m_PrefabInstance: {fileID: 1700802782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700802791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1464652463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32125,7 +32235,7 @@ PrefabInstance:
       objectReference: {fileID: 416253884}
     - target: {fileID: 8325108201388896678, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 8325108201388896698, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: m_Name
@@ -32659,7 +32769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1497293791}
   rb: {fileID: 1497293798}
   playerModelAndCamera: {fileID: 1497293792}
@@ -34078,7 +34188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356793, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: Maps
@@ -34611,6 +34721,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1620643951 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+  m_PrefabInstance: {fileID: 457822578}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457822582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1629244814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34684,7 +34805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423213, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423216, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: m_RootOrder
@@ -35461,7 +35582,7 @@ PrefabInstance:
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -35790,7 +35911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1700802783}
   rb: {fileID: 1700802792}
   playerModelAndCamera: {fileID: 1700802786}
@@ -36164,7 +36285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1709194777}
   rb: {fileID: 1709194785}
   playerModelAndCamera: {fileID: 1709194778}
@@ -36639,7 +36760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1730937711}
   rb: {fileID: 1730937718}
   playerModelAndCamera: {fileID: 1730937712}
@@ -37014,7 +37135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1734144435}
   rb: {fileID: 1734144442}
   playerModelAndCamera: {fileID: 1734144436}
@@ -37364,7 +37485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1740613941}
   rb: {fileID: 1740613948}
   playerModelAndCamera: {fileID: 1740613942}
@@ -38879,7 +39000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1801227840}
   rb: {fileID: 1801227848}
   playerModelAndCamera: {fileID: 1801227842}
@@ -39582,7 +39703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 1839862810}
   rb: {fileID: 1839862817}
   playerModelAndCamera: {fileID: 1839862811}
@@ -39842,7 +39963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: roadLayer.m_Bits
@@ -39969,7 +40090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486145, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: m_Name
-      value: PlayerCharacterRoot
+      value: VAISEB
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486145, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: m_IsActive
@@ -40014,7 +40135,7 @@ PrefabInstance:
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: RaceManager
       value: 
-      objectReference: {fileID: 1980603474}
+      objectReference: {fileID: 1429641613}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer
       value: 
@@ -40061,7 +40182,7 @@ PrefabInstance:
       objectReference: {fileID: 1855065801}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486173, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: roadLayer.m_Bits
@@ -40145,6 +40266,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1855065802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855065795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355bdb5fcf1c5b54c86ee6ebe2149a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object1: {fileID: 1855065795}
+  object1Position: {x: 0, y: 0, z: 0}
 --- !u!1 &1855216660
 GameObject:
   m_ObjectHideFlags: 0
@@ -41734,6 +41869,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 1905493252}
   object1Position: {x: 0, y: 0, z: 0}
+--- !u!114 &1905493254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+  m_PrefabInstance: {fileID: 1905493249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905493252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1912615017 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 993b77e1401a5674785ba440b676db72, type: 3}
@@ -43640,7 +43786,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1976743496
 MonoBehaviour:
@@ -43785,13 +43931,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980603473}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.462458, y: -70.16829, z: -568.3275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 191079991}
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1990773973
 GameObject:
@@ -43883,6 +44029,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 45.917698, y: 11.445549, z: 1}
   m_Center: {x: 0.6892528, y: 5.2227745, z: -8.041603e-10}
+--- !u!114 &1992945053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+  m_PrefabInstance: {fileID: 1116190282}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116190289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08df2ee21e17dd74380026f266809274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2000587841
 GameObject:
   m_ObjectHideFlags: 0
@@ -44168,7 +44325,7 @@ PrefabInstance:
       objectReference: {fileID: 1158558758}
     - target: {fileID: 8325108201388896678, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 8325108201388896698, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: m_Name
@@ -44790,7 +44947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 2030173516}
   rb: {fileID: 637250775}
   playerModelAndCamera: {fileID: 637250771}
@@ -45261,7 +45418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 75
+  movementForce: 170
   feetTransform: {fileID: 2044074734}
   rb: {fileID: 2044074741}
   playerModelAndCamera: {fileID: 2044074735}
@@ -46227,6 +46384,10 @@ PrefabInstance:
     - target: {fileID: 2991140401514356773, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991140401514356793, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: movementForce
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: Maps
@@ -47369,7 +47530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423213, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2360081524081423215, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: m_Mass
@@ -47689,7 +47850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639525, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2075909564905639527, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: m_Mass
@@ -47889,7 +48050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8325108201388896678, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: movementForce
-      value: 75
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 8325108201388896698, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: m_Name

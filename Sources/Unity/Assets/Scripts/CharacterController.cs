@@ -138,32 +138,32 @@ public class CharacterController : MonoBehaviour
    public IEnumerator Nitro(float count = 5f)
     {
 
-	    movementForce = 125;
+	    movementForce = 250;
 
 	    yield return new WaitForSeconds(count);
 	    
-	    movementForce = 75;
+	    movementForce = 170;
 
     }
     
     public IEnumerator SuperNitro(float count = 8f)
     {
 	    
-	    movementForce = 125;
+	    movementForce = 250;
 		
 	    yield return new WaitForSeconds(count);
 
-	    movementForce = 75;
+	    movementForce =170;
 	    
     }
     
     public IEnumerator Gravity(float count = 5f)
     {
-	    movementForce = 40;
+	    movementForce = 75;
 	    
 	    yield return new WaitForSeconds(count);
 	    
-	    movementForce = 75;
+	    movementForce = 170;
 	   
     }
 }
