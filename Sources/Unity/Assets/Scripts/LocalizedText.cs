@@ -40,4 +40,10 @@ public class LocalizedText : MonoBehaviour
             textComponent.text = translationManager.Instance.GetTranslation(translationKey);
         }
     }
+    
+    public void SetTranslationKey(string key)
+    {
+        translationKey = key;
+        UpdateText();
+    }
 }
