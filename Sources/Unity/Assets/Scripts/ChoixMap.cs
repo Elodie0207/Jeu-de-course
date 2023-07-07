@@ -16,9 +16,9 @@ public class ChoixMap : MonoBehaviour
         //Debug.Log(map);
        
        	Piste1.SetActive(false); 
-        Piste2.SetActive(true);
+        Piste2.SetActive(false);
         Piste3.SetActive(false);
-        Piste4.SetActive(false);
+        Piste4.SetActive(true);
        Piste5.SetActive(false);
 
        
