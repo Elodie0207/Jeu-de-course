@@ -573,7 +573,7 @@ public class Menu : MonoBehaviour
 						        
 						        PlayerPrefs.SetInt("premium",response.premium);
 						        
-						        if (response.isFisrt)
+						        if (PlayerPrefs.GetString("badge_premium") == "")
 						        {
 							        StartCoroutine(updateBadge("badge_premium"));
 						        }
