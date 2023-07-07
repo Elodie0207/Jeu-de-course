@@ -12,6 +12,7 @@ TagManager:
   - FinImpossile
   - SpeedBoost
   - Checkpoint
+  - Virage
   layers:
   - Default
   - TransparentFX

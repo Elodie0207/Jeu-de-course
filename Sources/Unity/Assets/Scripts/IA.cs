@@ -24,38 +24,40 @@ public class IA : MonoBehaviour
     public IADifficulty iadifficulty;
     [SerializeField] private List<WayPointList> ways;
     public Transform IAroot;
-    private float maxDegreesRotation = 30f;
+    private float maxDegreesRotation = 50f;
     private Quaternion targetRotation;
     private int points;
     private new Rigidbody rigidbody;
     private IA IAscript;
     private int levelDifficulty = 0;
-    public float rotationSpeed = 5f;
+    public float rotationSpeed = 500f;
     private List<Transform> way;
-
+	private float nearTurnDistance = 60f; // Distance pour considérer un virage proche
+    private float nearTurnSpeed = 2f;
+	
    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Start()
+       private void Start()
     {
         switch (iadifficulty)
         {
             case IADifficulty.Facile:
-                agent.speed = 20;
-                levelDifficulty = Random.Range(0, 2);
+                agent.speed = 50;
+                levelDifficulty = 1;
                 break;
 
             case IADifficulty.Normal:
-                agent.speed = 25;
-                levelDifficulty = Random.Range(2, 4);
+                agent.speed = 60;
+                levelDifficulty = Random.Range(2, 3);
                 break;
 
             case IADifficulty.Difficile:
-                agent.speed = 30;
-                levelDifficulty = Random.Range(4, 6);
+                agent.speed = 70;
+                levelDifficulty = 5;
                 break;
         }
 
@@ -89,35 +91,69 @@ public class IA : MonoBehaviour
         }
     }
 
-   private void Update()
+  private void Update()
 {
+    GameObject[] objs = GameObject.FindGameObjectsWithTag("Virage");
+
     if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
     {
-        if (agent.remainingDistance < 2f)
+        if (agent.remainingDistance < 5f)
         {
             GotoNextPoint();
         }
     }
-     Vector3 movementDirection = agent.steeringTarget - transform.position;
-        float angleToRotateVehicle = Mathf.Clamp(Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up), -20f, 20f);
-        Quaternion targetRotation = Quaternion.Euler(0f, 0f, -angleToRotateVehicle);
-        IAroot.localRotation = Quaternion.RotateTowards(IAroot.localRotation, targetRotation, maxDegreesRotation * Time.deltaTime);
-   
-}
-    void GotoNextPoint()
+
+   float rotationStep = rotationSpeed * Time.deltaTime;
+Vector3 targetDirection = agent.steeringTarget - transform.position;
+Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationStep);
+
+    float nearestDistance = float.MaxValue;
+    foreach (GameObject obj in objs)
     {
-        if (ways[levelDifficulty].wayPointsList.Count == 0)
-            return;
+        float distance = Vector3.Distance(agent.transform.position, obj.transform.position);
 
-        points++;
-        if (points >= ways[levelDifficulty].wayPointsList.Count)
+        if (distance < nearestDistance)
         {
-            points = 0;
+            nearestDistance = distance;
         }
-
-        Vector3 correctedPosition = ways[levelDifficulty].wayPointsList[points].position;
-        agent.SetDestination(correctedPosition);
     }
+
+    if (nearestDistance < nearTurnDistance)
+    {
+        agent.speed = 15f;
+    }
+    else
+    {
+        switch (iadifficulty)
+        {
+            case IADifficulty.Facile:
+                agent.speed = 50;
+                break;
+            case IADifficulty.Normal:
+                agent.speed = 60;
+                break;
+            case IADifficulty.Difficile:
+                agent.speed = 70;
+                break;
+        }
+    }
+}
+
+  void GotoNextPoint()
+{
+    if (ways == null || levelDifficulty >= ways.Count || ways[levelDifficulty] == null || ways[levelDifficulty].wayPointsList.Count == 0)
+        return;
+
+    points++;
+    if (points >= ways[levelDifficulty].wayPointsList.Count)
+    {
+        points = 0;
+    }
+
+    Vector3 correctedPosition = ways[levelDifficulty].wayPointsList[points].position;
+    agent.SetDestination(correctedPosition);
+}
 
     public IEnumerator Nitro(float count = 5f)
     {
@@ -140,5 +176,5 @@ public class IA : MonoBehaviour
         movementForce *= 2f;
     }
 
-    
+     
 }
