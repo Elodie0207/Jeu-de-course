@@ -26,6 +26,7 @@ public class MultiControl : MonoBehaviour
 	private bool isRotatingLeft;
 	private bool isRotatingRight;
 	private Vector3 movementIntent;
+	private bool isInverted = false;  
 
 
 	void Start()
@@ -48,37 +49,39 @@ public class MultiControl : MonoBehaviour
 			feetTransform.position = newPosition;
 		}
 		
-        if (Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.UpArrow))
-        {
-			movementIntent += Vector3.forward;
-        }
+		if (Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.UpArrow))
+		{
+			movementIntent += isInverted ? Vector3.back : Vector3.forward;
+		}
 
-        if (Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.DownArrow))
-        {
-			movementIntent += Vector3.back;
-        }
+		if (Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.DownArrow))
+		{
+			movementIntent += isInverted ? Vector3.forward : Vector3.back;
+		}
 
-        if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.LeftArrow))
-        {
-			isRotatingLeft = true;
-	        movementIntent += Vector3.left;
-        }
-        else
-        {
-	        isRotatingLeft = false;
-        }
-        
-        if (Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.RightArrow))
-        {
-	        isRotatingRight = true;
-	        movementIntent += Vector3.right;
-        }
-        else
-        {
-	        isRotatingRight = false;
-        }
-        movementIntent = movementIntent.normalized;
-	}
+		if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.LeftArrow))
+		{
+			isRotatingLeft = !isInverted;
+			isRotatingRight = isInverted;
+			movementIntent += isInverted ? Vector3.right : Vector3.left;
+		}
+		else
+		{
+			isRotatingLeft = false;
+		}
+	    
+		if (Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.RightArrow))
+		{
+			isRotatingRight = !isInverted;
+			isRotatingLeft = isInverted;
+			movementIntent += isInverted ? Vector3.left : Vector3.right;
+		}
+		else
+		{
+			isRotatingRight = false;
+		}
+		movementIntent = movementIntent.normalized;
+    }
 
     private void FixedUpdate()
     {
@@ -152,6 +155,8 @@ public class MultiControl : MonoBehaviour
 	    
     }
     
+
+    
     public IEnumerator Gravity(float count = 5f)
     {
 	    movementForce = 75;
@@ -161,6 +166,16 @@ public class MultiControl : MonoBehaviour
 	    movementForce = 170;
 	   
     }
+    
+    public IEnumerator Invert(float count = 5f)
+    {
+	    isInverted = true; // Inverser le contrôle.
+
+	    yield return new WaitForSeconds(count);
+
+	    isInverted = false; // Remettre le contrôle à la normale.
+    }
+
 }
 
 

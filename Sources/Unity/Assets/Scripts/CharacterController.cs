@@ -26,7 +26,7 @@ public class CharacterController : MonoBehaviour
 	private bool isRotatingLeft;
 	private bool isRotatingRight;
 	private Vector3 movementIntent;
-	
+	private bool isInverted = false;  
 	
 
 	void Start()
@@ -50,38 +50,40 @@ public class CharacterController : MonoBehaviour
 			
 		}*/
 
-		
-        if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
-        {
-			movementIntent += Vector3.forward;
-        }
+			if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
+			{
+				movementIntent += isInverted ? Vector3.back : Vector3.forward;
+			}
 
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-			movementIntent += Vector3.back;
-        }
+			if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+			{
+				movementIntent += isInverted ? Vector3.forward : Vector3.back;
+			}
 
-        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
-        {
-			isRotatingLeft = true;
-	        movementIntent += Vector3.left;
-        }
-        else
-        {
-	        isRotatingLeft = false;
-        }
-        
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-	        isRotatingRight = true;
-	        movementIntent += Vector3.right;
-        }
-        else
-        {
-	        isRotatingRight = false;
-        }
-        movementIntent = movementIntent.normalized;
-	}
+			if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
+			{
+				isRotatingLeft = !isInverted;
+				isRotatingRight = isInverted;
+				movementIntent += isInverted ? Vector3.right : Vector3.left;
+			}
+			else
+			{
+				isRotatingLeft = false;
+			}
+	    
+			if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+			{
+				isRotatingRight = !isInverted;
+				isRotatingLeft = isInverted;
+				movementIntent += isInverted ? Vector3.left : Vector3.right;
+			}
+			else
+			{
+				isRotatingRight = false;
+			}
+			movementIntent = movementIntent.normalized;
+    }
+
 
     private void FixedUpdate()
     {
@@ -166,4 +168,15 @@ public class CharacterController : MonoBehaviour
 	    movementForce = 170;
 	   
     }
+    
+    public IEnumerator Invert(float count = 5f)
+    {
+	    isInverted = true; // Inverser le contrôle.
+
+	    yield return new WaitForSeconds(count);
+
+	    isInverted = false; // Remettre le contrôle à la normale.
+    }
+
+    
 }

@@ -1662,7 +1662,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125697628}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2243,6 +2243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 139827378}
+  Manager: {fileID: 0}
 --- !u!114 &139827382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2535,6 +2536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 144017641}
+  Manager: {fileID: 0}
 --- !u!114 &144017643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4574,6 +4576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 218814831}
+  Manager: {fileID: 0}
 --- !u!114 &218814833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5830,7 +5833,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327247441}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6077,6 +6080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 328647796}
+  Manager: {fileID: 0}
 --- !u!4 &328647803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1164954526389486144, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
@@ -6318,6 +6322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 328687700}
+  Manager: {fileID: 0}
 --- !u!1 &329419428
 GameObject:
   m_ObjectHideFlags: 0
@@ -6729,7 +6734,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341103232}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7672,6 +7677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 388712549}
+  Manager: {fileID: 0}
 --- !u!114 &388712549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8067,6 +8073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 403247625}
+  Manager: {fileID: 0}
 --- !u!114 &403247625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9852,6 +9859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 433493136}
+  Manager: {fileID: 0}
 --- !u!114 &433493138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10626,6 +10634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 449291525}
+  Manager: {fileID: 0}
 --- !u!114 &449291527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10964,6 +10973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 457822588}
+  Manager: {fileID: 0}
 --- !u!114 &457822588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16531,6 +16541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 705585968}
+  Manager: {fileID: 0}
 --- !u!114 &705585966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17098,7 +17109,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765555994}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -17274,6 +17285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 328647796}
+  Manager: {fileID: 0}
 --- !u!54 &784030041 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1164954526389486175, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
@@ -19701,6 +19713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 887337946}
+  Manager: {fileID: 0}
 --- !u!114 &887337948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21966,7 +21979,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986034758}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -23346,6 +23359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1116190295}
+  Manager: {fileID: 0}
 --- !u!114 &1116190295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24025,6 +24039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1125668869}
+  Manager: {fileID: 0}
 --- !u!114 &1125668871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24448,6 +24463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1126447723}
+  Manager: {fileID: 0}
 --- !u!114 &1126447725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24658,7 +24674,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138563365}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -25334,7 +25350,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169824666}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -29021,7 +29037,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278644811}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -30806,6 +30822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1390400216}
+  Manager: {fileID: 0}
 --- !u!114 &1390400216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32558,6 +32575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1435981356}
+  Manager: {fileID: 0}
 --- !u!114 &1435981358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33871,6 +33889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1497293801}
+  Manager: {fileID: 0}
 --- !u!114 &1497293803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35198,7 +35217,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534483681}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -37157,6 +37176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1700802796}
+  Manager: {fileID: 0}
 --- !u!114 &1700802796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37569,6 +37589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1709194788}
+  Manager: {fileID: 0}
 --- !u!114 &1709194790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38055,6 +38076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1730937720}
+  Manager: {fileID: 0}
 --- !u!114 &1730937722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38430,6 +38452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1734144444}
+  Manager: {fileID: 0}
 --- !u!114 &1734144446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38742,6 +38765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1740613953}
+  Manager: {fileID: 0}
 --- !u!114 &1740613953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40233,7 +40257,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792160407}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -40487,6 +40511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1801227852}
+  Manager: {fileID: 0}
 --- !u!114 &1801227852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41273,6 +41298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 1839862819}
+  Manager: {fileID: 0}
 --- !u!114 &1839862821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41615,6 +41641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 328647796}
+  Manager: {fileID: 0}
 --- !u!114 &1853617211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41669,7 +41696,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854219833}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -41904,6 +41931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 1855065796}
+  Manager: {fileID: 0}
 --- !u!114 &1855065801 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
@@ -43566,7 +43594,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907295554}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -46621,6 +46649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 2030173524}
+  Manager: {fileID: 0}
 --- !u!114 &2030173524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47130,6 +47159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiController: {fileID: 2044074743}
+  Manager: {fileID: 0}
 --- !u!114 &2044074745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48042,7 +48072,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141290546}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

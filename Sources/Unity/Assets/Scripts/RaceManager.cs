@@ -91,4 +91,52 @@ public class RaceManager : MonoBehaviour
             scoreTexts[i].text = ScoreManager.Instance.GetScore(racer.name).ToString();
         }
     }
+
+    public IEnumerator Freeze(float count = 3f)
+    {
+        FinishScript firstRacer = racers[positions.IndexOf(1)];
+
+        CharacterController Controller = firstRacer.gameObject.GetComponent<CharacterController>();
+        MultiControl MultiController = null;
+        IA IAController = null;
+
+        if (Controller == null) 
+        {
+            MultiController = firstRacer.gameObject.GetComponent<MultiControl>();
+            if (MultiController == null)
+            {
+                IAController = firstRacer.gameObject.GetComponent<IA>();
+            }
+        }
+
+        if (Controller != null)
+        {
+            Controller.enabled = false;
+        }
+        else if (MultiController != null)
+        {
+            MultiController.enabled = false;
+        }
+        else if (IAController != null)
+        {
+            IAController.enabled = false;
+        }
+
+        yield return new WaitForSeconds(count);
+
+        if (Controller != null)
+        {
+            Controller.enabled = true;
+        }
+        else if (MultiController != null)
+        {
+            MultiController.enabled = true;
+        }
+        else if (IAController != null)
+        {
+            IAController.enabled = true;
+        }
+    }
+    
+    
 }
