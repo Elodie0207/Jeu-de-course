@@ -32,7 +32,8 @@ public class IA : MonoBehaviour
     private int levelDifficulty = 0;
     public float rotationSpeed = 5f;
     private List<Transform> way;
-
+private float nearTurnDistance = 60f; // Distance pour considérer un virage proche
+    private float nearTurnSpeed = 2f;
    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -44,17 +45,17 @@ public class IA : MonoBehaviour
         switch (iadifficulty)
         {
             case IADifficulty.Facile:
-                agent.speed = 120;
+                agent.speed = 70;
                 levelDifficulty = Random.Range(0, 2);
                 break;
 
             case IADifficulty.Normal:
-                agent.speed = 90;
+                agent.speed = 80;
                 levelDifficulty = Random.Range(2, 4);
                 break;
 
             case IADifficulty.Difficile:
-                agent.speed = 100;
+                agent.speed = 90;
                 levelDifficulty = Random.Range(4, 6);
                 break;
         }
@@ -91,6 +92,7 @@ public class IA : MonoBehaviour
 
    private void Update()
 {
+  GameObject[] objs = GameObject.FindGameObjectsWithTag("Virage");
     if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
     {
         if (agent.remainingDistance < 2f)
@@ -106,7 +108,38 @@ public class IA : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(0f, 0f, -angleToRotateVehicle);
         IAroot.localRotation = Quaternion.RotateTowards(IAroot.localRotation, targetRotation, maxDegreesRotation * Time.deltaTime);
     }
+  float nearestDistance = float.MaxValue;
+    foreach (GameObject obj in objs)
+    {
+        float distance = Vector3.Distance(agent.transform.position, obj.transform.position);
+
+        if (distance < nearestDistance)
+        {
+            nearestDistance = distance;
+        }
+    }
+
+    if (nearestDistance < nearTurnDistance)
+    {
+        agent.speed = 15f;
+    }
+ else
+    {
+        switch (iadifficulty)
+        {
+            case IADifficulty.Facile:
+                agent.speed = 70;
+                break;
+            case IADifficulty.Normal:
+                agent.speed = 80;
+                break;
+            case IADifficulty.Difficile:
+                agent.speed = 90;
+                break;
+        }
+    }
 }
+
     void GotoNextPoint()
     {
         if (ways[levelDifficulty].wayPointsList.Count == 0)
