@@ -32,6 +32,7 @@ public class Menu : MonoBehaviour
 	public TMP_InputField  identifiantFieldRegister;
 	public TMP_InputField  mdpFieldRegister;
 	public GameObject errorMessage;
+	public GameObject newBadgeMsg;
 	
 	public Toggle togglePremium;
 	public GameObject PremiumMessage;
@@ -52,6 +53,7 @@ public class Menu : MonoBehaviour
 			CanvaJoueur.SetActive(false);
 			canvaLogin.SetActive(false);
 			errorMessage.SetActive(false);
+			newBadgeMsg.SetActive(false);
 			canvaUser.SetActive(false);
 			canvaWatchPub.SetActive(false);
 		    Screen.fullScreen = true; 
@@ -164,6 +166,10 @@ public class Menu : MonoBehaviour
 		    }
 			public void Retour(GameObject canvaChildren)
 			{
+				if (canvaChildren.name == "Login")
+				{
+					errorMessage.SetActive(false);
+				}
 				CanvaCourrant.SetActive(true); 
 				canvaChildren.SetActive(false);
 			}
@@ -309,7 +315,10 @@ public class Menu : MonoBehaviour
 
 				        if (webRequest.result == UnityWebRequest.Result.ConnectionError )
 				        {
-					        Debug.Log("Erreur lors de la requête : " + webRequest.error);
+					        errorMessage.GetComponent<Text>().color = new Color(0.89f, 0.09f, 0.09f, 1f);
+					        LocalizedText localizedText = errorMessage.GetComponent<LocalizedText>();
+					        localizedText.SetTranslationKey("erreurServeur");
+					        errorMessage.SetActive(true);
 					        webRequest.Dispose();
 				        }
 				        else
@@ -343,10 +352,6 @@ public class Menu : MonoBehaviour
 								        string badgeJson = JsonUtility.ToJson(badge);
 								        PlayerPrefs.SetString(badge.name, badgeJson);
 							        }
-						        }
-						        else
-						        {
-							        Debug.Log("Pas de badge disponible");
 						        }
 						        
 						        PlayerPrefs.SetString("token",token);
@@ -649,6 +654,8 @@ public class Menu : MonoBehaviour
 							        imageColor.a = 1f;
 							        imageBadge.color = imageColor;
 							        PlayerPrefs.SetString("badge_like","badge_like");
+							        newBadgeMsg.SetActive(true);
+							        StartCoroutine(HideMSGBadge());
 						        }
 					        }
 				        }
@@ -740,7 +747,6 @@ public class Menu : MonoBehaviour
 				        string jsonResponse = webRequest.downloadHandler.text;
 					        
 				        ServerResponse.BadgeResponse nbPubResponse = JsonUtility.FromJson<ServerResponse.BadgeResponse>(jsonResponse);
-				        Debug.Log("repBadge : "+nbPubResponse.success);
 
 				        GameObject badge = badgeList.FirstOrDefault(b => b.name == nameBadge);
 
@@ -751,6 +757,8 @@ public class Menu : MonoBehaviour
 					        imageColor.a = 1f;
 					        imageBadge.color = imageColor;
 					        PlayerPrefs.SetString(nameBadge,nameBadge);
+					        newBadgeMsg.SetActive(true);
+					        StartCoroutine(HideMSGBadge());
 				        }
 				        else
 				        {
@@ -792,6 +800,12 @@ public class Menu : MonoBehaviour
 				        StartCoroutine(LikePub());
 				        break;
 		        }
+	        }
+	        
+	        private IEnumerator HideMSGBadge()
+	        {
+		        yield return new WaitForSeconds(5f);
+		        newBadgeMsg.SetActive(false);
 	        }
 	        
 	        void OnApplicationQuit()

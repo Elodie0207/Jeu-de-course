@@ -27,6 +27,7 @@
   "Inscription" : "S'inscrire",
   "inputVide" : "Veuillez remplir tout les champs",
   "internetErreur" : "Veuillez vérifier votre connexion à internet",
+  "erreurServeur" : "Erreur de connexion au serveur, Veuillez réessayer plus tard",
   "identifiantIncorrect" : "Identifiant incorrect",
   "erreurInscription" : "Une erreur est survenu lors de l'inscription",
   "erreurRequest" : "Une erreur est survenu",
@@ -35,5 +36,6 @@
   "supprPub" : "Envie de supprimer les pub ? Passez en premium pour seulement 3.99$\n Cliquer ici!!",
   "deconnexion" : "Se déconnecter",
   "watchPub" : "Regarder une publicité",
-  "premium" : "Premium"
+  "premium" : "Premium",
+  "wonBadge" : "Félicitation, vous avez gagner un badge"
 }

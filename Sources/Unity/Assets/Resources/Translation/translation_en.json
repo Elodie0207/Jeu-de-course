@@ -27,6 +27,7 @@
   "Inscription" : "Register",
   "inputVide" : "Please all the fields are required",
   "internetErreur" : "Please check your internet connection",
+  "erreurServeur" : "Server connection error, please try again later ",
   "identifiantIncorrect" : "Invalid credentials",
   "erreurInscription" : "Error occurred when registering",
   "erreurRequest" : "Error occurred",
@@ -35,5 +36,6 @@
   "supprPub" : "Want to delete ads? Switch to premium for only $3.99\n Click here!!!",
   "deconnexion" : "Logout",
   "watchPub" : "Watch an ad",
-  "premium" : "Premium"
+  "premium" : "Premium",
+  "wonBadge" : "Amazing! you won a new badge"
 }

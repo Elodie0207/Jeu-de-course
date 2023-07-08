@@ -126,7 +126,7 @@ public class LoadPub : MonoBehaviour
                 string jsonResponse = webRequest.downloadHandler.text;
 					        
                 pubResponse = JsonUtility.FromJson<ServerResponse.PubResponse>(jsonResponse);
-                Debug.Log("infos : "+jsonResponse);
+                //Debug.Log("infos : "+jsonResponse);
 					        
                 webRequest.Dispose();
             }
