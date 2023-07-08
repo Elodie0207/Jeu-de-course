@@ -1,6 +1,6 @@
 <?php
 
-require_once  __DIR__ . "/../library/get-database-connection.php";
+require_once __DIR__ . "/../folder_library/get-database-connection.php";
 
 class PubModel
 {

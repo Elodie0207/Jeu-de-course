@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . "/../../library/json-response.php";
+require __DIR__ . "/../../folder_library/json-response.php";
 require __DIR__ . "/../../models/users.php";
-require __DIR__ . "/../../library/request.php";
+require __DIR__ . "/../../folder_library/request.php";
 
 try {
     $json = Request::getJsonBody();

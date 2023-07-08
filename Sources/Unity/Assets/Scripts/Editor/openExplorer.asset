@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6224bdb69bc4ecf4d9ddbb2f79073328, type: 3}
+  m_Name: openExplorer
+  m_EditorClassIdentifier: 
+  importfileDrawer: C:\MOI\fond_win
+  destinationDrawer: Assets/Resources/PubImage
