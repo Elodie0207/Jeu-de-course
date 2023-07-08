@@ -11,7 +11,7 @@ public class MultiBonusTest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        int bonusType = UnityEngine.Random.Range(0, 4);
+        int bonusType = UnityEngine.Random.Range(0, 5);
 
         if (other.CompareTag("BonusCube"))
         {
