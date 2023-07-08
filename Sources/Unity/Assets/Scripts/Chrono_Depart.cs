@@ -28,6 +28,8 @@ public class Chrono_Depart : MonoBehaviour
     }
 
     IEnumerator Chrono(){
+	    
+	    List<NavMeshAgent> navMeshAgents = new List<NavMeshAgent>(FindObjectsOfType<NavMeshAgent>());
 	    CharacterController[] CharList = FindObjectsOfType<CharacterController>();
         yield return new WaitForSeconds(0.3f);
         Count.GetComponent<Text>().text="3";
@@ -52,10 +54,15 @@ public class Chrono_Depart : MonoBehaviour
         {
 	        CharControl.enabled = true;
         }
+        
+        foreach (NavMeshAgent agent in navMeshAgents)
+        {
+	        agent.enabled = true;
+        }
         //Vaisseau.GetComponent<CharacterController>().enabled=true;
-		IA1.GetComponent<NavMeshAgent>().enabled=true;
+		/*IA1.GetComponent<NavMeshAgent>().enabled=true;
 		IA2.GetComponent<NavMeshAgent>().enabled=true;
-		IA3.GetComponent<NavMeshAgent>().enabled=true;
+		IA3.GetComponent<NavMeshAgent>().enabled=true;*/
 		if(Count.GetComponent<Text>().text=="GO"){
 		commencer=true; 
 		Debut = Time.time;
