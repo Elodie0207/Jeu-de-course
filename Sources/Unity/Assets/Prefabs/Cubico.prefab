@@ -1,5 +1,85 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1930056861156134352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8770110840575365879}
+  - component: {fileID: 3520227468681641277}
+  - component: {fileID: 233133339772072115}
+  m_Layer: 5
+  m_Name: BonusText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8770110840575365879
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930056861156134352}
+  m_LocalRotation: {x: -0.0000000037252894, y: -0.0000000037252894, z: -4.6566118e-10, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.3805933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8632721545408928791}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 728.4873, y: -459.91376}
+  m_SizeDelta: {x: 455.2068, y: 158.1998}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3520227468681641277
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930056861156134352}
+  m_CullTransparentMesh: 1
+--- !u!114 &233133339772072115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930056861156134352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 89fe431141f83394b8ce815b3902ec76, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
 --- !u!1 &2658792525462955678
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +111,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8770110840575365879}
   - {fileID: 6526950491620275172}
   m_Father: {fileID: 2991140401514356772}
   m_RootOrder: 0
@@ -337,7 +418,6 @@ GameObject:
   - component: {fileID: 6858182555233291005}
   - component: {fileID: 3102962699610133992}
   - component: {fileID: 1522809355145409550}
-  - component: {fileID: 3476599516242252370}
   m_Layer: 0
   m_Name: Cubico
   m_TagString: Player
@@ -430,16 +510,20 @@ MonoBehaviour:
   tour: {fileID: 5029725588447268028}
   rbVehicule: {fileID: 2991140401514356795}
   ScoreBoard: {fileID: 0}
+  Maps: {fileID: 0}
   nbTours: 0
   score: 0
   nbcheckpointsPasser: 0
   canvas: {fileID: 0}
+  RaceManager: {fileID: 0}
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
   waitTime: 5
   cheat: 0
   fin: 0
+  map: 
+  image: {fileID: 0}
 --- !u!114 &762476219952518655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +553,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Count: {fileID: 0}
   Vaisseau: {fileID: 2991140401514356773}
-  IA: {fileID: 0}
+  IA1: {fileID: 0}
+  IA2: {fileID: 0}
+  IA3: {fileID: 0}
   timer: {fileID: 0}
 --- !u!114 &3102962699610133992
 MonoBehaviour:
@@ -484,6 +570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 2991140401514356793}
+  Manager: {fileID: 0}
+  bonusNameText: {fileID: 0}
 --- !u!114 &1522809355145409550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,21 +586,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 2991140401514356773}
   object1Position: {x: 0, y: 0, z: 0}
---- !u!114 &3476599516242252370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2991140401514356773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e0dfac9334918479adef590f94f665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  positionText: {fileID: 0}
-  scoreText: {fileID: 0}
 --- !u!1 &2991140401649483617
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +701,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8632721545408928791}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

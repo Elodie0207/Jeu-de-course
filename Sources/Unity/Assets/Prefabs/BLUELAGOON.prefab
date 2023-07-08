@@ -32,6 +32,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8059706640754679224}
+  - {fileID: 2571689101461669286}
   m_Father: {fileID: 2075909564905639544}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,6 +102,86 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &1374815260605790679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2571689101461669286}
+  - component: {fileID: 8422175490606592950}
+  - component: {fileID: 5856817520137996283}
+  m_Layer: 5
+  m_Name: BonusText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2571689101461669286
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374815260605790679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4791865296298816075}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 729.04333, y: -460.9001}
+  m_SizeDelta: {x: 455.2068, y: 158.1998}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8422175490606592950
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374815260605790679}
+  m_CullTransparentMesh: 1
+--- !u!114 &5856817520137996283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374815260605790679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 89fe431141f83394b8ce815b3902ec76, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
 --- !u!1 &2075909564293945498
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +451,6 @@ GameObject:
   - component: {fileID: 7665300471072580769}
   - component: {fileID: 2180382935588338612}
   - component: {fileID: 2337277576512870994}
-  - component: {fileID: 392633745988287502}
   m_Layer: 0
   m_Name: BLUELAGOON
   m_TagString: Player
@@ -463,16 +543,20 @@ MonoBehaviour:
   tour: {fileID: 8106649061853749984}
   rbVehicule: {fileID: 2075909564905639527}
   ScoreBoard: {fileID: 0}
+  Maps: {fileID: 0}
   nbTours: 0
   score: 0
   nbcheckpointsPasser: 0
   canvas: {fileID: 0}
+  RaceManager: {fileID: 0}
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
   waitTime: 5
   cheat: 0
   fin: 0
+  map: 
+  image: {fileID: 0}
 --- !u!114 &4600825651722697635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,7 +586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Count: {fileID: 0}
   Vaisseau: {fileID: 2075909564905639545}
-  IA: {fileID: 0}
+  IA1: {fileID: 0}
+  IA2: {fileID: 0}
+  IA3: {fileID: 0}
   timer: {fileID: 0}
 --- !u!114 &2180382935588338612
 MonoBehaviour:
@@ -517,6 +603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 2075909564905639525}
+  Manager: {fileID: 0}
+  bonusNameText: {fileID: 5856817520137996283}
 --- !u!114 &2337277576512870994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,21 +619,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 2075909564905639545}
   object1Position: {x: 0, y: 0, z: 0}
---- !u!114 &392633745988287502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075909564905639545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e0dfac9334918479adef590f94f665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  positionText: {fileID: 0}
-  scoreText: {fileID: 0}
 --- !u!1 &2075909565805942614
 GameObject:
   m_ObjectHideFlags: 0

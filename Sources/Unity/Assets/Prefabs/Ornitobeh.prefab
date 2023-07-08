@@ -1,5 +1,85 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1423974085173283737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4361244797097468242}
+  - component: {fileID: 4107858903749041682}
+  - component: {fileID: 1685342685361631473}
+  m_Layer: 5
+  m_Name: BonusText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4361244797097468242
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423974085173283737}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.6276145}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9119663339611688771}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 728.3385, y: -459.69427}
+  m_SizeDelta: {x: 455.2068, y: 158.1998}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4107858903749041682
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423974085173283737}
+  m_CullTransparentMesh: 1
+--- !u!114 &1685342685361631473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423974085173283737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 89fe431141f83394b8ce815b3902ec76, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
 --- !u!1 &2360081523319663198
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,7 +148,6 @@ GameObject:
   - component: {fileID: 6228253219831077289}
   - component: {fileID: 2471891110147671740}
   - component: {fileID: 2044635291420305242}
-  - component: {fileID: 4142545485307756806}
   m_Layer: 0
   m_Name: Ornitobeh
   m_TagString: Player
@@ -173,6 +252,7 @@ MonoBehaviour:
   waitTime: 5
   cheat: 0
   fin: 0
+  map: 
   image: {fileID: 0}
 --- !u!114 &276628233585362603
 MonoBehaviour:
@@ -203,6 +283,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Count: {fileID: 0}
   Vaisseau: {fileID: 2360081524081423217}
+  IA1: {fileID: 0}
+  IA2: {fileID: 0}
+  IA3: {fileID: 0}
   timer: {fileID: 0}
 --- !u!114 &2471891110147671740
 MonoBehaviour:
@@ -217,6 +300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 2360081524081423213}
+  Manager: {fileID: 0}
+  bonusNameText: {fileID: 1685342685361631473}
 --- !u!114 &2044635291420305242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,21 +316,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 2360081524081423217}
   object1Position: {x: 0, y: 0, z: 0}
---- !u!114 &4142545485307756806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2360081524081423217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e0dfac9334918479adef590f94f665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  positionText: {fileID: 0}
-  scoreText: {fileID: 0}
 --- !u!1 &2360081524216441909
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +600,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6041149097066799280}
+  - {fileID: 4361244797097468242}
   m_Father: {fileID: 2360081524081423216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
