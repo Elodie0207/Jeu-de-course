@@ -13386,15 +13386,15 @@ PrefabInstance:
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: IA1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1788407246}
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: IA2
       value: 
-      objectReference: {fileID: 1338757396}
+      objectReference: {fileID: 1516879503}
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: IA3
       value: 
-      objectReference: {fileID: 1419195372}
+      objectReference: {fileID: 287168880}
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: timer
       value: 
@@ -13402,7 +13402,7 @@ PrefabInstance:
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: Vaisseau
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1853617208}
     - target: {fileID: 7007429355814697397, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -31594,7 +31594,7 @@ PrefabInstance:
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: IA1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2033310725}
     - target: {fileID: 7007429355814697396, guid: b641fac122fe8074a99c400366d4004b, type: 3}
       propertyPath: IA2
       value: 

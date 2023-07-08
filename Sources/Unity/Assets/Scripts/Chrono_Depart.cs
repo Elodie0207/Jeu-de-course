@@ -19,9 +19,9 @@ public class Chrono_Depart : MonoBehaviour
     {
         StartCoroutine(Chrono());
         Vaisseau.GetComponent<CharacterController>().enabled=false;
-        IA1.GetComponent<NavMeshAgent>().speed=0;
-        IA2.GetComponent<NavMeshAgent>().speed=0;
-        IA3.GetComponent<NavMeshAgent>().speed=0;
+        IA1.GetComponent<NavMeshAgent>().enabled=false;
+        IA2.GetComponent<NavMeshAgent>().enabled=false;
+        IA3.GetComponent<NavMeshAgent>().enabled=false;
  		if (commencer==true){
 		 
 		}
@@ -53,9 +53,9 @@ public class Chrono_Depart : MonoBehaviour
 	        CharControl.enabled = true;
         }
         //Vaisseau.GetComponent<CharacterController>().enabled=true;
-		IA1.GetComponent<NavMeshAgent>().speed=25;
-		IA2.GetComponent<NavMeshAgent>().speed=25;
-		IA3.GetComponent<NavMeshAgent>().speed=25;
+		IA1.GetComponent<NavMeshAgent>().enabled=true;
+		IA2.GetComponent<NavMeshAgent>().enabled=true;
+		IA3.GetComponent<NavMeshAgent>().enabled=true;
 		if(Count.GetComponent<Text>().text=="GO"){
 		commencer=true; 
 		Debut = Time.time;
