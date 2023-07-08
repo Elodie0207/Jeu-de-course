@@ -37,8 +37,13 @@ class PubModel
     public static function create($pub)
     {
         $connection = getDatabaseConnection();
-        $createUserQuery = $connection->prepare("INSERT INTO pub(themeID, lien) VALUES(:theme, :lien);");
-        $createUserQuery->execute($pub);
+        $createUserQuery = $connection->prepare("INSERT INTO pub(themeID, lien,isBanniere,websiteLink) VALUES(:theme, :lien, :isBanniere, :websiteLink);");
+        $createUserQuery->execute([
+            "theme" => intval($pub["theme"]),
+            "lien" => $pub["lien"],
+            "isBanniere" => intval($pub["isBanniere"]),
+            "websiteLink" =>0
+        ]);
     }
 
 

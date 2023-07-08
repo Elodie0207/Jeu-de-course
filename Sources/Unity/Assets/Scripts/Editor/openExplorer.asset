@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   importfileDrawer: C:\MOI\fond_win
   destinationDrawer: Assets/Resources/PubImage
+  theme: 3

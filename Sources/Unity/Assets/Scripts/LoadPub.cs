@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
+//type de la pub
 public enum PubType
 {
     Banniere,
@@ -13,32 +14,37 @@ public class LoadPub : MonoBehaviour
     public PubType type;
     private ServerResponse.PubResponse pubResponse = new ServerResponse.PubResponse();
     
+    //lancer coroutine
     void OnEnable()
     {
         SwitchPub();
     }
     
-    
+    //coroutine pour load une bannierre avec token
     private IEnumerator LoadBannierre()
     {
+        //verif si on a internet
         if (Application.internetReachability != NetworkReachability.NotReachable)
         {
             string token = PlayerPrefs.GetString("token");
 
+            //crea de la requete 
             UnityWebRequest webRequest = UnityWebRequest.Get("http://localhost/srv_unity/get_1_banniere");
             webRequest.downloadHandler = new DownloadHandlerBuffer();
             webRequest.SetRequestHeader("Content-Type", "application/json");
             webRequest.SetRequestHeader("token", token);
 
+            //envoie requete
             yield return webRequest.SendWebRequest();
 
+            //verifie les erreurs
             if (webRequest.result == UnityWebRequest.Result.ConnectionError)
             {
-                Debug.Log("Erreur lors de la requête : " + webRequest.error);
                 webRequest.Dispose();
             }
             else
             {
+                //telecharge la reponse du srv
                 string jsonResponse = webRequest.downloadHandler.text;        
                 pubResponse = JsonUtility.FromJson<ServerResponse.PubResponse>(jsonResponse);
 
@@ -48,20 +54,21 @@ public class LoadPub : MonoBehaviour
 		        
     }
     
+    //coroutine pour load une bannierre sans token
     private IEnumerator LoadBannierreWithoutToken()
     {
         if (Application.internetReachability != NetworkReachability.NotReachable)
         {
-
+            //crea de la requete
             UnityWebRequest webRequest = UnityWebRequest.Get("http://localhost/srv_unity/get_1_banniere");
             webRequest.downloadHandler = new DownloadHandlerBuffer();
             webRequest.SetRequestHeader("Content-Type", "application/json");
 
+            //envoie requete
             yield return webRequest.SendWebRequest();
 
             if (webRequest.result == UnityWebRequest.Result.ConnectionError )
             {
-                Debug.Log("Erreur lors de la requête : " + webRequest.error);
                 webRequest.Dispose();
             }
             else
@@ -76,22 +83,23 @@ public class LoadPub : MonoBehaviour
 		        
     }
 
+    //load pub intertitiel avec token
     private IEnumerator Load1Pub()
     {
         if (Application.internetReachability != NetworkReachability.NotReachable)
         {
             string token = PlayerPrefs.GetString("token");
-
+            //crea de la requete
             UnityWebRequest webRequest = UnityWebRequest.Get("http://localhost/srv_unity/get_1_pub");
             webRequest.downloadHandler = new DownloadHandlerBuffer();
             webRequest.SetRequestHeader("Content-Type", "application/json");
             webRequest.SetRequestHeader("token", token);
 
+            //envoie requete
             yield return webRequest.SendWebRequest();
 
             if (webRequest.result == UnityWebRequest.Result.ConnectionError)
             {
-                Debug.Log("Erreur lors de la requête : " + webRequest.error);
                 webRequest.Dispose();
             }
             else
@@ -105,6 +113,7 @@ public class LoadPub : MonoBehaviour
 		        
     }
     
+    //load pub intertitiel sans token
     private IEnumerator LoadPubWithoutToken()
     {
         if (Application.internetReachability != NetworkReachability.NotReachable)
@@ -118,7 +127,6 @@ public class LoadPub : MonoBehaviour
 
             if (webRequest.result == UnityWebRequest.Result.ConnectionError )
             {
-                Debug.Log("Erreur lors de la requête : " + webRequest.error);
                 webRequest.Dispose();
             }
             else
@@ -126,18 +134,20 @@ public class LoadPub : MonoBehaviour
                 string jsonResponse = webRequest.downloadHandler.text;
 					        
                 pubResponse = JsonUtility.FromJson<ServerResponse.PubResponse>(jsonResponse);
-                //Debug.Log("infos : "+jsonResponse);
 					        
                 webRequest.Dispose();
             }
         }
 		        
     }
+    
+    //recup la reponse pour les autres script
     public ServerResponse.PubResponse GetPubResponse()
     {
         return pubResponse;
     }
 
+    //load coroutine selon si l'usr est connecté ou si le type de la pub
     public void SwitchPub()
     {
         if (type == PubType.Banniere)
