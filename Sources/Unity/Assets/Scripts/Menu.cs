@@ -14,6 +14,8 @@ public class Menu : MonoBehaviour
 	public GameObject bouttonLike;
     public GameObject canvaLogin;
     public GameObject canvaUser;
+    
+    //canvas principal
     public GameObject CanvaCourrant;
     public GameObject nouveauCanva;
 	public GameObject CanvaMap;
@@ -45,6 +47,8 @@ public class Menu : MonoBehaviour
 	
 	public void Start()
 	{
+		
+			//initialise les objets de la scene 
 			CanvaCourrant.SetActive(true); 
 		    nouveauCanva.SetActive(false);
 			CanvaMap.SetActive(false);
@@ -68,6 +72,8 @@ public class Menu : MonoBehaviour
 		        OnScreenModeChanged(drop.value);
 	        });
 
+	        
+	        //affiche nom utilisateur si connecté
 	        if (PlayerPrefs.GetString("token") != "")
 	        {
 		        bouttonLogin.GetComponentInChildren<Text>().text = PlayerPrefs.GetString("username");;
@@ -91,6 +97,7 @@ public class Menu : MonoBehaviour
 		ActiveBaniere();
 
     }
+    //selection du mode de jeu
 	public void Solo(){
 		ActiveBaniere();
 		CanvaMap.SetActive(true);
@@ -120,7 +127,7 @@ public class Menu : MonoBehaviour
 		
 	}
 
-
+	//chargement du mode de jue
 	public void Chargement(UnityEngine.UI.Button button){
 		
 		string objectName = button.gameObject.name;
@@ -223,7 +230,7 @@ public class Menu : MonoBehaviour
 			}
 
 
-
+			//afficher les bannierres
 			public void ActiveBaniere()
 			{
 				foreach (Image image in spotPub)
@@ -238,10 +245,6 @@ public class Menu : MonoBehaviour
 						if (imageSprite != null)
 						{
 							image.sprite = imageSprite;
-						}
-						else
-						{
-							Debug.Log("erreur Sprite : "+"PubImage/"+pubResponse.path);
 						}
 						image.enabled = true;
 
@@ -261,7 +264,7 @@ public class Menu : MonoBehaviour
 			        canvaLogin.SetActive(true);
 		        }
 		        else
-		        {
+		        {	//affiche banniere pub si usr non premium
 			        if (PlayerPrefs.GetInt("premium") == 1)
 			        {
 				        PremiumMessage.SetActive(false);
@@ -412,7 +415,6 @@ public class Menu : MonoBehaviour
 
 				        if (webRequest.result == UnityWebRequest.Result.ConnectionError )
 				        {
-					        Debug.Log("Erreur lors de la requête : " + webRequest.error);
 					        webRequest.Dispose();
 				        }
 				        else
@@ -482,7 +484,6 @@ public class Menu : MonoBehaviour
 
 				        if (webRequest.result == UnityWebRequest.Result.ConnectionError )
 				        {
-					        Debug.Log("Erreur lors de la requête : " + webRequest.error);
 					        webRequest.Dispose();
 				        }
 				        else
@@ -554,7 +555,6 @@ public class Menu : MonoBehaviour
 
 				        if (webRequest.result == UnityWebRequest.Result.ConnectionError )
 				        {
-					        Debug.Log("Erreur lors de la requête : " + webRequest.error);
 					        webRequest.Dispose();
 				        }
 				        else
@@ -607,6 +607,7 @@ public class Menu : MonoBehaviour
 		        }
 	        }
 	        
+	        //envoie requete pour liker un theme
 	        private IEnumerator LikePub()
 	        {
 		        if (Application.internetReachability != NetworkReachability.NotReachable)
@@ -632,7 +633,6 @@ public class Menu : MonoBehaviour
 
 			        if (webRequest.result == UnityWebRequest.Result.ConnectionError)
 			        {
-				        Debug.Log("Erreur lors de la requête : " + webRequest.error);
 				        webRequest.Dispose();
 			        }
 			        else
@@ -719,6 +719,7 @@ public class Menu : MonoBehaviour
 		        }
 	        }
 	        
+	        
 	        private IEnumerator updateBadge(string nameBadge)
 	        {
 		        if (Application.internetReachability != NetworkReachability.NotReachable)
@@ -772,6 +773,8 @@ public class Menu : MonoBehaviour
 			        }
 		        }
 	        }
+	        
+	        //lance la requete HTML
 	        public void CallRequest(int request)
 	        {
 		        if (loginCoroutineRunning)
@@ -804,12 +807,14 @@ public class Menu : MonoBehaviour
 		        }
 	        }
 	        
+	        //affiche/cache msg pour prevenir d'un nv badge
 	        private IEnumerator HideMSGBadge()
 	        {
 		        yield return new WaitForSeconds(5f);
 		        newBadgeMsg.SetActive(false);
 	        }
 	        
+	        //initialise var de l'utilisateur lorsqu'il quitte l'app
 	        void OnApplicationQuit()
 	        {
 		        PlayerPrefs.SetString("token","");
