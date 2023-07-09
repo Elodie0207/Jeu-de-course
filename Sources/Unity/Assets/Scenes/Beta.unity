@@ -19702,7 +19702,7 @@ MonoBehaviour:
   tour: {fileID: 5620267112528405942}
   rbVehicule: {fileID: 666233564}
   ScoreBoard: {fileID: 516507660}
-  podiumCanvas: {fileID: 0}
+  podiumCanvas: {fileID: 1110466564}
   Maps: {fileID: 1976743494}
   nbTours: 0
   score: 0
