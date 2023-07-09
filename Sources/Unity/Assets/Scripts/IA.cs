@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//on détermine les difficultés des ia 
 public enum IADifficulty
 {
     Facile,
@@ -42,6 +43,7 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
 
     private void Start()
     {
+//on met en place la vitesse et le chemin choisi par l'ia, ils ont le choix entre deux chemins à suivre
         switch (iadifficulty)
         {
             case IADifficulty.Facile:
@@ -64,6 +66,7 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
         GotoNextPoint();
     }
 
+//on permet aux ia de prendre les bonus
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("BonusCube"))
@@ -73,17 +76,17 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
             if (bonusType == 0)
             {
                 StartCoroutine(Nitro());
-                Debug.Log("Nitro");
+             
             }
             else if (bonusType == 1)
             {
                 StartCoroutine(SuperNitro());
-                Debug.Log("SuperNitro");
+              
             }
             else if (bonusType == 2)
             {
                 StartCoroutine(Gravity());
-                Debug.Log("Gravity");
+               
             }
 
             Destroy(other.gameObject);
@@ -93,6 +96,7 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
    private void Update()
 {
   GameObject[] objs = GameObject.FindGameObjectsWithTag("Virage");
+//on regarde la distance restante pour le prochain passage et on demande a l'ia de passer au suivant 
     if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
     {
         if (agent.remainingDistance < 2f)
@@ -101,7 +105,7 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
         }
     }
     
-    if (agent.remainingDistance > 2f) // Vérifier si la distance restante est supérieure à une valeur seuil
+    if (agent.remainingDistance > 2f) // Vérifier si la distance restante est supérieure à une valeur seuil et on génère une rotation identique au joueur 
     {
         Vector3 movementDirection = agent.steeringTarget - transform.position;
         float angleToRotateVehicle = Mathf.Clamp(Vector3.SignedAngle(transform.forward, movementDirection, Vector3.up), -12f, 12f);
@@ -109,6 +113,7 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
         IAroot.localRotation = Quaternion.RotateTowards(IAroot.localRotation, targetRotation, maxDegreesRotation * Time.deltaTime);
     }
   float nearestDistance = float.MaxValue;
+//On calcule la distance du joueur avec les prochains virages
     foreach (GameObject obj in objs)
     {
         float distance = Vector3.Distance(agent.transform.position, obj.transform.position);
@@ -118,13 +123,14 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
             nearestDistance = distance;
         }
     }
-
+//on diminue la vitesse de l'ia a 15 pour lui permettre de passer par les virages
     if (nearestDistance < nearTurnDistance)
     {
         agent.speed = 15f;
     }
  else
     {
+ //si il dépasse la distance donnée, il reprend sa vitesse initiale  
         switch (iadifficulty)
         {
             case IADifficulty.Facile:
@@ -139,7 +145,7 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
         }
     }
 }
-
+//cette fonction permet a l'ia de suivre des waypoints situés dans un tableau 
     void GotoNextPoint()
     {
         if (ways[levelDifficulty].wayPointsList.Count == 0)
@@ -154,7 +160,7 @@ private float nearTurnDistance = 60f; // Distance pour considérer un virage pro
         Vector3 correctedPosition = ways[levelDifficulty].wayPointsList[points].position;
         agent.SetDestination(correctedPosition);
     }
-
+//on ajoute les bonus que l'ia peut utiliser
     public IEnumerator Nitro(float count = 5f)
     {
         movementForce *= 2f;

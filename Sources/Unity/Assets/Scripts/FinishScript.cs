@@ -55,14 +55,15 @@ public class FinishScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && nbcheckpointsPasser == checkpoints.Length || other.tag == "Finish" && cheat==true)
+		//on vérifie si le joueur a passé les trois checkpoint ou si le finish est activé 
+        if (other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && nbcheckpointsPasser == checkpoints.Length || other.tag == "Finish" && cheat==true) 
         {
             nbTours++;
 
             if (nbTours == 3)
             {
                 fin = true;
-                Debug.Log("fin");
+              
                 tour.GetComponent<Text>().text = "0";
                 nbTours = 0;
 
@@ -74,6 +75,7 @@ public class FinishScript : MonoBehaviour
             }
             else
             {
+				//Si les trois tours ne sont pas respectés on continue
                 tour.GetComponent<Text>().text = nbTours.ToString();
                 CharacterController characterController = GetComponent<CharacterController>();
                 MultiControl multiControl = GetComponent<MultiControl>();
@@ -96,7 +98,7 @@ public class FinishScript : MonoBehaviour
         }
         else if (other.tag == "Checkpoint")
         {
-
+			//on prend en compte le passage des checkpoints
             for (int i = 0; i < checkpoints.Length; i++)
             {
                 if (other.gameObject == checkpoints[i] && checkpointsPasser[i] == false)
@@ -110,7 +112,7 @@ public class FinishScript : MonoBehaviour
                     {
                         multiControl.lastCp = other.gameObject;
                     }
-                    Debug.Log("Checkpoint " + (i + 1));
+                  
                     checkpointsPasser[i] = true;
                     nbcheckpointsPasser++;
 					lastCheckpointPosition = other.transform.position;
@@ -120,19 +122,20 @@ public class FinishScript : MonoBehaviour
             }
         }
     }
+//On récupère le dernier checkpoint passé pour l'utiliser dans les respawn
 	public Vector3 GetLastCheckpointPosition()
 {
     return lastCheckpointPosition;
 }
     void Update()
     {
+      
        
-        Debug.Log(PlayerPrefs.GetString("map"));
+		//cheatcode pour faire passer d'une map à l'autre
 		if (Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.K))
         {
             cheat = true;
-            Debug.Log("Cheat activated!");
-		
+          
         }
     }
     private IEnumerator WaitForNextScene()
@@ -144,7 +147,8 @@ public class FinishScript : MonoBehaviour
         // Passer à la ligne suivante
         ScoreBoard.enabled = false;
 		cheat = false;
-		Debug.Log(cheat);
+	
+//on regarde la map actuel et on passe a la suivante
         if (PlayerPrefs.GetString("map") == "Map1")
         {
             cheat = false;
@@ -222,7 +226,7 @@ public class FinishScript : MonoBehaviour
         }
             
 
-        // Passer à la ligne suivante
+        // Afficher le scoreboard
         ScoreBoard.enabled = true;
            
 
