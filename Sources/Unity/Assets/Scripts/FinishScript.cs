@@ -53,7 +53,7 @@ public class FinishScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && nbcheckpointsPasser == checkpoints.Length)
+        if (other.tag == "Finish" && rbVehicule.transform.forward.x > 0 && nbcheckpointsPasser == checkpoints.Length || other.tag == "Finish" && cheat==true)
         {
             nbTours++;
 
@@ -124,8 +124,14 @@ public class FinishScript : MonoBehaviour
 }
     void Update()
     {
-        cheat = FindObjectOfType<Autres>().cheatcode;
+       
         Debug.Log(PlayerPrefs.GetString("map"));
+		if (Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.K))
+        {
+            cheat = true;
+            Debug.Log("Cheat activated!");
+		
+        }
     }
     private IEnumerator WaitForNextScene()
     {
@@ -135,7 +141,8 @@ public class FinishScript : MonoBehaviour
 
         // Passer à la ligne suivante
         ScoreBoard.enabled = false;
-
+		cheat = false;
+		Debug.Log(cheat);
         if (PlayerPrefs.GetString("map") == "Map1")
         {
             cheat = false;
