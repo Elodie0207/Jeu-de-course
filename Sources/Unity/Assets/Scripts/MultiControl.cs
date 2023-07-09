@@ -42,13 +42,13 @@ public class MultiControl : MonoBehaviour
     {
 	    float yPosition = feetTransform.position.y;
 		movementIntent = Vector3.zero;
-		if (yPosition < -10)
+		/*if (yPosition < -10)
 		{
 			Vector3 newPosition = new Vector3(-44.73f, 6.17f, 37.9f);
 
 			
 			feetTransform.position = newPosition;
-		}
+		}*/
 		
 		if (Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.UpArrow))
 		{

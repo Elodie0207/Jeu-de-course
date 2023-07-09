@@ -275,6 +275,7 @@ MonoBehaviour:
   roadLayer:
     serializedVersion: 2
     m_Bits: 8
+  lastCp: {fileID: 0}
 --- !u!65 &8325108201388896679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -388,7 +389,7 @@ MeshCollider:
   m_GameObject: {fileID: 8325108201388896698}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
