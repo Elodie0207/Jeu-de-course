@@ -77,27 +77,6 @@ public class GamemodeManager : MonoBehaviour
         }
 
 
-
-        /*GameObject instancePlayer2 = Instantiate(player2, new Vector3(-62.4f, 3f, 15f), Quaternion.identity);
-
-        if (instancePlayer2 != null)
-        {
-            Debug.LogError("instantiate player2");
-        }
-
-        else
-        {
-            Debug.LogError("Could not instantiate player 2.");
-        }
-
-
-
-        Debug.Log("Multiplayer mode finished");
-    }*/
-
-
-
-
     }
 
 }

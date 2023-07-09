@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,26 +6,27 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-//script pour obtenir la pos des jr
+
 public class RaceManager : MonoBehaviour 
 {
-    //liste des != jr
+    // Cette liste contient tous les joueurs de la course.
     public List<FinishScript> racers;
+    
     public List<int> positions;
     
+   
     public Text[] nameTexts;
     public Text[] positionTexts;
     public Text[] scoreTexts;
     
-    
+
     public Text topScore1Text;
     public Text topScore2Text;
     public Text topScore3Text;
-
     
     void Start() 
     {
-        //initialiser les jr de la course
+        // Au début de la partie, le script s'assure que seuls les joueurs actifs sont présents dans la liste des joueurs.
         foreach (FinishScript racer in racers) 
         {
             if (!racer.gameObject.activeSelf) 
@@ -33,14 +35,17 @@ public class RaceManager : MonoBehaviour
             }
         }
         
+        // Les joueurs non actifs sont supprimés de la liste.
         racers.RemoveAll(racer => !racer.gameObject.activeSelf);
     }
 
     void Update () 
     {
+    
         UpdateRacerPositions();
     }
 
+    // Cette méthode est utilisée pour mettre à jour les positions des joueurs.
     private void UpdateRacerPositions() 
     {
         positions.Clear();
@@ -49,24 +54,24 @@ public class RaceManager : MonoBehaviour
             int position = 1;
             foreach (FinishScript otherRacer in racers) 
             {
-                if (otherRacer.nbTours > racer.nbTours) 
+                if (otherRacer.nbTours > racer.nbTours || 
+                    (otherRacer.nbTours == racer.nbTours && 
+                    otherRacer.GetComponent<TrackPosition>().object1Position.z > racer.GetComponent<TrackPosition>().object1Position.z)) 
                 {
                     position++;
                 } 
-                else if (otherRacer.nbTours == racer.nbTours && otherRacer.GetComponent<TrackPosition>().object1Position.z > racer.GetComponent<TrackPosition>().object1Position.z) 
-                {
-                    position++;
-                }
             }
             positions.Add(position);
         }
 
+      
         for (int i = 0; i < positions.Count; i++) 
         {
             positions[i] = positions.Count(p => p < positions[i]) + 1;
         }
     }
 
+    // Cette méthode met à jour le score des joueurs en fonction de leur position.
     public void UpdateScore()
     {   
         FinishScript[] sortedRacers = racers.OrderBy(r => positions[racers.IndexOf(r)]).ToArray();
@@ -76,6 +81,7 @@ public class RaceManager : MonoBehaviour
             FinishScript racer = sortedRacers[i];
             int racerIndex = racers.IndexOf(racer);
 
+            // Attribution des points en fonction de la position du joueur.
             switch (positions[racerIndex])
             {
                 case 1:
@@ -95,12 +101,14 @@ public class RaceManager : MonoBehaviour
                     break;
             }
 
+            // Mise à jour des informations du joueur dans l'interface utilisateur.
             nameTexts[i].text = racer.name;
             positionTexts[i].text = positions[racerIndex].ToString();
             scoreTexts[i].text = ScoreManager.Instance.GetScore(racer.name).ToString();
         }
     }
     
+    // Cette méthode met à jour le podium en affichant les trois meilleurs scores.
     public void UpdatePodium()
     {
         Dictionary<string, int> topScores = ScoreManager.Instance.GetTopScores(3);
@@ -121,9 +129,8 @@ public class RaceManager : MonoBehaviour
             topScore3Text.text = topScoresList[2].Key;
         }
     }
-
-
     
+    // Cette coroutine est utilisée pour "geler" le premier joueur pendant un certain temps.
     public IEnumerator Freeze(float count = 3f)
     {
         FinishScript firstRacer = racers[positions.IndexOf(1)];
@@ -132,6 +139,7 @@ public class RaceManager : MonoBehaviour
         MultiControl MultiController = null;
         IA IAController = null;
 
+        // Vérification du type de contrôleur du joueur.
         if (Controller == null) 
         {
             MultiController = firstRacer.gameObject.GetComponent<MultiControl>();
@@ -141,6 +149,7 @@ public class RaceManager : MonoBehaviour
             }
         }
 
+        // Désactivation temporaire du contrôleur.
         if (Controller != null)
         {
             Controller.enabled = false;
@@ -156,6 +165,7 @@ public class RaceManager : MonoBehaviour
 
         yield return new WaitForSeconds(count);
 
+      
         if (Controller != null)
         {
             Controller.enabled = true;
@@ -169,6 +179,4 @@ public class RaceManager : MonoBehaviour
             IAController.enabled = true;
         }
     }
-    
-    
 }

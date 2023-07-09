@@ -5,7 +5,7 @@ using UnityEngine;
 //script pour suivre la position du gameObject
 public class TrackPosition : MonoBehaviour
 {
-    //gameObject dont on veut connaitre la pos
+    //gameObject dont on veut connaitre la position
     public GameObject object1;
     
     public Vector3 object1Position;

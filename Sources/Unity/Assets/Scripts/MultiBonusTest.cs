@@ -1,3 +1,5 @@
+//autheur: Lokossou Axel
+
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -6,13 +8,18 @@ public class MultiBonusTest : MonoBehaviour
 {
     public MultiControl MultiController;
     public RaceManager Manager;
+   
+    //Les images des différents bonus 
     public Image nitroImage;
     public Image superNitroImage;
     public Image gravityImage;
     public Image inversionImage;
     public Image freezeImage;
     private float RespawnTime = 5f; 
+    
 
+    //En rentrant en contact avec un gameobject avec un tag bonus cube, un des bonus ou malus est chosit aléatoirement
+    //on affiche aussi en bas à droite de l'écran pendant 5 secondes une image indiquant ce que le joueur à reçu 
     private void OnTriggerEnter(Collider other)
     {
         int bonusType = UnityEngine.Random.Range(0, 5);
@@ -59,13 +66,14 @@ public class MultiBonusTest : MonoBehaviour
         }
     }
 
-   
+    //Couroutine faisant réapparaitre le cube après 5 secondes
     private IEnumerator ReactivateBonusCube(GameObject bonusCube, float count)
     {
         yield return new WaitForSeconds(count);
         bonusCube.SetActive(true);
     }
     
+    //Affiche l'image du bonus pendant 5 secondes
     private IEnumerator ShowBonusImage(Image bonusImage, float duration)
     {
         bonusImage.enabled = true;
