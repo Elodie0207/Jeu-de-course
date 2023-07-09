@@ -14,6 +14,12 @@ public class RaceManager : MonoBehaviour
     public Text[] positionTexts;
     public Text[] scoreTexts;
     
+    
+    public Text topScore1Text;
+    public Text topScore2Text;
+    public Text topScore3Text;
+
+    
     void Start() 
     {
         foreach (FinishScript racer in racers) 
@@ -91,7 +97,30 @@ public class RaceManager : MonoBehaviour
             scoreTexts[i].text = ScoreManager.Instance.GetScore(racer.name).ToString();
         }
     }
+    
+    public void UpdatePodium()
+    {
+        Dictionary<string, int> topScores = ScoreManager.Instance.GetTopScores(3);
+        List<KeyValuePair<string, int>> topScoresList = topScores.ToList();
 
+        if (topScoresList.Count > 0)
+        {
+            topScore1Text.text = topScoresList[0].Key;
+        }
+    
+        if (topScoresList.Count > 1)
+        {
+            topScore2Text.text = topScoresList[1].Key;
+        }
+    
+        if (topScoresList.Count > 2)
+        {
+            topScore3Text.text = topScoresList[2].Key;
+        }
+    }
+
+
+    
     public IEnumerator Freeze(float count = 3f)
     {
         FinishScript firstRacer = racers[positions.IndexOf(1)];

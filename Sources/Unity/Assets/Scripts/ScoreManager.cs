@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq; 
 
 public class ScoreManager : MonoBehaviour
 {
@@ -51,6 +52,11 @@ public class ScoreManager : MonoBehaviour
         {
             return 0;
         }
+    }
+
+    public Dictionary<string, int> GetTopScores(int count)
+    {
+        return playerScores.OrderByDescending(pair => pair.Value).Take(count).ToDictionary(pair => pair.Key, pair => pair.Value);
     }
 
     // Optional: method to get all scores.

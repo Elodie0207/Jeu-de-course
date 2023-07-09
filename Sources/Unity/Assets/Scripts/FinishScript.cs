@@ -195,7 +195,7 @@ public class FinishScript : MonoBehaviour
             map = "fin";
             tour.GetComponent<Text>().text = "0";
             nbTours = 0;
-
+            RaceManager.UpdatePodium();
             podiumCanvas.SetActive(true);
             yield return new WaitForSeconds(waitTime);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
