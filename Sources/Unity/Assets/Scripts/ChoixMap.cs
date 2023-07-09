@@ -12,6 +12,7 @@ public class ChoixMap : MonoBehaviour
 
     void Start()
     {
+
         string map = PlayerPrefs.GetString("map");
         //Debug.Log(map);
        

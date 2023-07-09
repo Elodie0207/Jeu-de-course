@@ -525,6 +525,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1430623923}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 596562110}
@@ -2241,6 +2245,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1780876701}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2111449165}
@@ -3450,6 +3458,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
       objectReference: {fileID: 0}
@@ -3877,6 +3889,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 622258118}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -4800,6 +4816,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1980603474}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -5937,6 +5957,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1430623923}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 596562110}
@@ -6099,6 +6123,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1430623923}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -7170,6 +7198,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1430623923}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 596562110}
@@ -7805,6 +7837,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1429641613}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2111449165}
@@ -8416,6 +8452,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
       objectReference: {fileID: 0}
@@ -8750,6 +8790,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
       objectReference: {fileID: 0}
@@ -8963,6 +9007,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1429641613}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -10129,6 +10177,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1980603474}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 5533765709276203825}
@@ -10672,6 +10724,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1980603474}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 5533765709276203825}
@@ -10965,6 +11021,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1780876701}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -12321,6 +12381,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1780876701}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2052690841}
@@ -12797,6 +12861,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1780876701}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -13377,6 +13445,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1430623923}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 596562110}
@@ -13843,6 +13915,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1429641613}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -14575,6 +14651,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 622258118}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -16189,6 +16269,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1429641613}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2111449165}
@@ -16657,6 +16741,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1780876701}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2052690841}
@@ -17046,6 +17134,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1429641613}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -18780,6 +18872,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1780876701}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2052690841}
@@ -19606,6 +19702,7 @@ MonoBehaviour:
   tour: {fileID: 5620267112528405942}
   rbVehicule: {fileID: 666233564}
   ScoreBoard: {fileID: 516507660}
+  podiumCanvas: {fileID: 0}
   Maps: {fileID: 1976743494}
   nbTours: 0
   score: 0
@@ -19762,6 +19859,10 @@ PrefabInstance:
       propertyPath: videoPlayer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
@@ -20307,6 +20408,10 @@ PrefabInstance:
       propertyPath: videoPlayer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
@@ -22497,6 +22602,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1429641613}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2111449165}
@@ -24232,6 +24341,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
       objectReference: {fileID: 0}
@@ -25534,6 +25647,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1780876701}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -29178,6 +29295,11 @@ Transform:
   m_Father: {fileID: 698075581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1110466564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4953144614829610795, guid: 9d6d246f63e6bc143a11422722ead2bc, type: 3}
+  m_PrefabInstance: {fileID: 732971880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1113155162 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
@@ -29344,6 +29466,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1429641613}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -30098,6 +30224,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1430623923}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 596562110}
@@ -30499,6 +30629,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1780876701}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -31673,6 +31807,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1430623923}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 596562110}
@@ -32070,6 +32208,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 622258118}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -33404,6 +33546,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1980603474}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 5533765709276203825}
@@ -34325,6 +34471,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1430623923}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 2021950267}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -38180,6 +38330,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
       objectReference: {fileID: 0}
@@ -38621,6 +38775,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1780876701}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -40200,6 +40358,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 622258118}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 5533765709276203825}
@@ -41097,6 +41259,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 622258118}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 335936785}
@@ -41752,6 +41918,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1780876701}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2052690841}
@@ -42213,6 +42383,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1430623923}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -43484,6 +43658,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 622258118}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 335936785}
@@ -44601,6 +44779,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 622258118}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 335936785}
@@ -45580,6 +45762,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1429641613}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2111449165}
@@ -46069,6 +46255,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 622258118}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -46820,6 +47010,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1430623923}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 596562110}
@@ -47121,6 +47315,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 622258118}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -47576,6 +47774,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1429641613}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2111449165}
@@ -47898,6 +48100,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 622258118}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -49705,6 +49911,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1980603474}
     - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2991140401514356799, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 5533765709276203825}
@@ -50507,6 +50717,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1780876701}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 2052690841}
@@ -51014,6 +51228,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
       objectReference: {fileID: 0}
@@ -51396,6 +51614,10 @@ PrefabInstance:
       propertyPath: videoPlayer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
@@ -52446,6 +52668,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1429641613}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -54696,6 +54922,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 622258118}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 335936785}
@@ -56104,6 +56334,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3334790305158845134, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
   m_PrefabInstance: {fileID: 328647790}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2021950267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3306993209609648801, guid: 7522360e02eb8aa4f854d39b1c37091a, type: 3}
+  m_PrefabInstance: {fileID: 516507659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2022700419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5999373373956982661, guid: 03da12e19404334448423d1605743e6b, type: 3}
@@ -56192,6 +56427,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1780876701}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -56498,6 +56737,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1980603474}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -57233,6 +57476,10 @@ PrefabInstance:
       propertyPath: videoPlayer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 1164954526389486171, guid: 582693819d2a779449fa66b6d5ec9010, type: 3}
       propertyPath: videoPlayer2
       value: 
@@ -59212,6 +59459,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1980603474}
     - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 1592293357221843406, guid: 03da12e19404334448423d1605743e6b, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 5533765709276203825}
@@ -60148,6 +60399,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1980603474}
     - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2360081524081423211, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 5533765709276203825}
@@ -60476,6 +60731,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1980603474}
     - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
+    - target: {fileID: 2075909564905639523, guid: 87e20e59bf01db448ac9973b088c5374, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 5533765709276203825}
@@ -60711,6 +60970,10 @@ PrefabInstance:
       propertyPath: RaceManager
       value: 
       objectReference: {fileID: 1980603474}
+    - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
+      propertyPath: podiumCanvas
+      value: 
+      objectReference: {fileID: 1110466564}
     - target: {fileID: 8325108201388896672, guid: bf1955623c4aefc47bd02dc99790145e, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 

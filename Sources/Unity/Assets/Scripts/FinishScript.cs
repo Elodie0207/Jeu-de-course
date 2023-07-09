@@ -10,6 +10,7 @@ public class FinishScript : MonoBehaviour
     public GameObject tour;
     public Rigidbody rbVehicule;
     public Canvas ScoreBoard;
+    public GameObject podiumCanvas;
 
     public GameObject Maps;
     public int nbTours = 0;
@@ -37,6 +38,7 @@ public class FinishScript : MonoBehaviour
         map = PlayerPrefs.GetString("map");
         checkpointsPasser = new bool[checkpoints.Length];
         ScoreBoard.enabled = false;
+        podiumCanvas.SetActive(false);
         Maps.GetComponent<ChoixMap>();
         piste1 = Maps.GetComponent<ChoixMap>().Piste1;
         piste2 = Maps.GetComponent<ChoixMap>().Piste2;
@@ -193,7 +195,11 @@ public class FinishScript : MonoBehaviour
             map = "fin";
             tour.GetComponent<Text>().text = "0";
             nbTours = 0;
+
+            podiumCanvas.SetActive(true);
+            yield return new WaitForSeconds(waitTime);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            podiumCanvas.SetActive(false);
         }
     }
 
