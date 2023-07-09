@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+//script pour décrire la façon de déserialisé les reponse envoyé par le srv
 [System.Serializable]
 public class ServerResponse
 {

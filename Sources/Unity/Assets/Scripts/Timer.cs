@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//script pour faire un timer
 public class Timer : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Text timer;
 
     private float Debut;

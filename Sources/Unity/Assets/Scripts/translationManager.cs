@@ -6,12 +6,16 @@ using UnityEngine;
 
 public class translationManager : MonoBehaviour
 {
+    //cree un event pour informer que le msg a changé
     public event Action LanguageChanged;
 
     public static translationManager Instance { get; private set; }
 
+    //defini la langue par defaut et la langue courente
     private string defaultLanguage = "fr";
     private string currentLanguage;
+    
+    //definition du dictionnaire de trad
     private Dictionary<string, string> translations;
 
     private void Awake()
@@ -36,6 +40,8 @@ public class translationManager : MonoBehaviour
     {
         LoadLanguage();
     }
+    
+    //initialiser les != texts en fonction de la langue 
     private void LoadLanguage()
     {
         if (PlayerPrefs.HasKey("CurrentLanguage"))
@@ -56,6 +62,7 @@ public class translationManager : MonoBehaviour
         }
     }
 
+    //initialise le dictionnaire avec le fichier json de traduction de la langue select
     private void LoadTranslations()
     {
         string languageFile = "translation_" + currentLanguage;
@@ -72,6 +79,7 @@ public class translationManager : MonoBehaviour
         }
     }
 
+    //permet de recup la traduction en fonction d'une cle pour retrouver dans le fichier json
     public string GetTranslation(string key)
     {
         if (translations == null)

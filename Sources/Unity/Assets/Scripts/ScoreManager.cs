@@ -6,7 +6,8 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
-    // Dictionary to hold player scores. Key is the player's name.
+    //dictionnaire pour garder le score des jr.
+    //la clé est le nom des != jr
     private Dictionary<string, int> playerScores = new Dictionary<string, int>();
 
     private void Awake()
@@ -21,27 +22,25 @@ public class ScoreManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        // Don't destroy this object when a new scene is loaded
+        // Empeche destruction du gameobject pdt le load de la scene
         DontDestroyOnLoad(gameObject);
     }
 
     public void UpdateScore(string playerName, int score)
     {
-        // If the player's name doesn't exist in the dictionary,
-        // add it with the score.
+        // Ajouter le jr s'il n'est pas dans le disctionnaire
         if (!playerScores.ContainsKey(playerName))
         {
             playerScores[playerName] = score;
         }
-        // If the player's name is already in the dictionary, add the
-        // new score to the existing one.
+        // S'il existe, on additionne son nv score
         else
         {
             playerScores[playerName] += score;
         }
     }
 
-    // Optional: method to get a player's score. Returns 0 if the player's name doesn't exist in the dictionary.
+    // Obtenir le scrore du jr
     public int GetScore(string playerName)
     {
         if (playerScores.ContainsKey(playerName))
@@ -54,12 +53,13 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    //retourne le dictionnaire du score des jr
     public Dictionary<string, int> GetTopScores(int count)
     {
         return playerScores.OrderByDescending(pair => pair.Value).Take(count).ToDictionary(pair => pair.Key, pair => pair.Value);
     }
 
-    // Optional: method to get all scores.
+    // methode pour obtenir le score de tt les jr en retournant le dictionnaire
     public Dictionary<string, int> GetAllScores()
     {
         return playerScores;

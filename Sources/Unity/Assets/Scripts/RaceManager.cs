@@ -5,8 +5,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+//script pour obtenir la pos des jr
 public class RaceManager : MonoBehaviour 
 {
+    //liste des != jr
     public List<FinishScript> racers;
     public List<int> positions;
     
@@ -22,6 +24,7 @@ public class RaceManager : MonoBehaviour
     
     void Start() 
     {
+        //initialiser les jr de la course
         foreach (FinishScript racer in racers) 
         {
             if (!racer.gameObject.activeSelf) 

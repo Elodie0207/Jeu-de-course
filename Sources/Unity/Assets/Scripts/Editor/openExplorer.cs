@@ -52,6 +52,7 @@ public class OpenExplorer : EditorWindow
 
         EditorGUILayout.LabelField("Selected File: ", filePath);
         
+        //btn pour selectionner un fichier depuis le dossier importfileDrawer
         if (GUILayout.Button("Select File"))
         {
             filePath = EditorUtility.OpenFilePanel("Select File", config.importfileDrawer, "");

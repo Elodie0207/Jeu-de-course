@@ -10,6 +10,7 @@ public class FinishScript : MonoBehaviour
     public GameObject tour;
     public Rigidbody rbVehicule;
     public Canvas ScoreBoard;
+    public GameObject ScordBoardCanvas;
     public GameObject podiumCanvas;
 
     public GameObject Maps;
@@ -37,6 +38,7 @@ public class FinishScript : MonoBehaviour
         tour.GetComponent<Text>().text = "0";
         map = PlayerPrefs.GetString("map");
         checkpointsPasser = new bool[checkpoints.Length];
+        ScordBoardCanvas.SetActive(true);
         ScoreBoard.enabled = false;
         podiumCanvas.SetActive(false);
         Maps.GetComponent<ChoixMap>();
