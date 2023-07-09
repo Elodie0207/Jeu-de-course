@@ -6,7 +6,14 @@ public class BonusTest : MonoBehaviour
 {
     public CharacterController playerCharacterController;
     public RaceManager Manager;
-    public Text bonusNameText; 
+
+   
+    public Image nitroImage;
+    public Image superNitroImage;
+    public Image gravityImage;
+    public Image inversionImage;
+    public Image freezeImage;
+
     private float RespawnTime = 5f; 
 
     private void OnTriggerEnter(Collider other)
@@ -15,45 +22,43 @@ public class BonusTest : MonoBehaviour
 
         if (other.CompareTag("BonusCube"))
         {
-            string bonusName = ""; 
+            Image bonusImage = null; 
 
             if (bonusType == 0)
             {
                 StartCoroutine(playerCharacterController.Nitro());
-                
-                bonusName = "Nitro";
+                bonusImage = nitroImage;
             }
 
             if (bonusType == 1)
             {
                 StartCoroutine(playerCharacterController.SuperNitro());
-                bonusName = "SuperNitro";
+                bonusImage = superNitroImage;
             }
 
             if (bonusType == 2)
             {
                 StartCoroutine(playerCharacterController.Gravity());
-                bonusName = "Gravity";
+                bonusImage = gravityImage;
             }
 
             if (bonusType == 3)
             {
                 StartCoroutine(playerCharacterController.Invert());
-                bonusName = "Inversion";
+                bonusImage = inversionImage;
             }
-
 
             if (bonusType == 4)
             {
                 StartCoroutine(Manager.Freeze());
-                bonusName = "Freeze";
+                bonusImage = freezeImage;
             }    
 
             other.gameObject.SetActive(false);
             StartCoroutine(ReactivateBonusCube(other.gameObject, RespawnTime));
 
-            // Affichez le nom du bonus à l'écran et le cache après 5 secondes
-            StartCoroutine(ShowBonusName(bonusName, 5f));
+            // Activez l'image du bonus et la désactivez après 5 secondes
+            StartCoroutine(ShowBonusImage(bonusImage, 5f));
         }
     }
 
@@ -63,11 +68,10 @@ public class BonusTest : MonoBehaviour
         bonusCube.SetActive(true);
     }
 
-    private IEnumerator ShowBonusName(string bonusName, float count)
+    private IEnumerator ShowBonusImage(Image bonusImage, float duration)
     {
-        bonusNameText.enabled = true;
-        bonusNameText.text = bonusName;
-        yield return new WaitForSeconds(count);
-        bonusNameText.enabled = false;
+        bonusImage.enabled = true;
+        yield return new WaitForSeconds(duration);
+        bonusImage.enabled = false; // Cache l'image du bonus après la durée spécifiée
     }
 }
