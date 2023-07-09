@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawRotationSpeed: 150
-  movementForce: 250
+  movementForce: 90
   feetTransform: {fileID: 2360081524081423216}
   rb: {fileID: 2360081524081423215}
   playerModelAndCamera: {fileID: 2210564010184598526}
@@ -237,6 +237,7 @@ MonoBehaviour:
   tour: {fileID: 5516688793137537000}
   rbVehicule: {fileID: 2360081524081423215}
   ScoreBoard: {fileID: 0}
+  podiumCanvas: {fileID: 0}
   Maps: {fileID: 0}
   nbTours: 0
   score: 0
