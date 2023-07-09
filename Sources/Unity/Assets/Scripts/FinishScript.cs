@@ -63,7 +63,8 @@ public class FinishScript : MonoBehaviour
                 nbTours = 0;
 
                 RaceManager.UpdateScore();
-                image.gameObject.SetActive(true);
+                if(PlayerPrefs.GetInt("premium") != 1)
+                    image.gameObject.SetActive(true);
                 StartCoroutine(Wait()); // Démarrer une coroutine pour attendre 5 secondes
                 //ScoreBoard.enabled=true;
             }
@@ -199,12 +200,16 @@ public class FinishScript : MonoBehaviour
     private IEnumerator Wait()
     {
         // Attendre 5 secondes
-        yield
-        return new WaitForSeconds(waitTime);
+        if (PlayerPrefs.GetInt("premium") != 1)
+        {
+            yield return new WaitForSeconds(waitTime);
+            image.gameObject.SetActive(false);
+        }
+            
 
         // Passer à la ligne suivante
         ScoreBoard.enabled = true;
-        image.gameObject.SetActive(false);
+           
 
         StartCoroutine(WaitForNextScene());
 

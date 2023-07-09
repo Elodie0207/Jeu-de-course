@@ -67,6 +67,12 @@ public class Menu : MonoBehaviour
 	        {
 		        OnScreenModeChanged(drop.value);
 	        });
+
+	        if (PlayerPrefs.GetString("token") != "")
+	        {
+		        bouttonLogin.GetComponentInChildren<Text>().text = PlayerPrefs.GetString("username");;
+	        }
+	        PlayerPrefs.SetInt("premium", 0);
 	}
     
     public void Jouer(){
@@ -201,10 +207,6 @@ public class Menu : MonoBehaviour
 				if (imageSprite != null)
 				{
 					pubIntertitiel.sprite = imageSprite;
-				}
-				else
-				{
-					Debug.Log("erreur Sprite : "+"PubImage/"+pubResponse.path);
 				}
 				
 				StartCoroutine(WaitAndChangeCanvas(10f));
@@ -811,6 +813,7 @@ public class Menu : MonoBehaviour
 	        void OnApplicationQuit()
 	        {
 		        PlayerPrefs.SetString("token","");
+		        PlayerPrefs.SetInt("premium", 0);
 		        foreach (var badge in badgeList)
 		        {
 			        PlayerPrefs.SetString(badge.name, "");
