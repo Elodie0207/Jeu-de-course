@@ -7952,7 +7952,7 @@ PrefabInstance:
     - target: {fileID: 6228253219831077289, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: IA1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2033310725}
     - target: {fileID: 6228253219831077289, guid: 6a5b2825ddeebf44793e3aec12e37f86, type: 3}
       propertyPath: IA2
       value: 
@@ -17739,6 +17739,20 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 2294053872979688474, guid: 03da12e19404334448423d1605743e6b, type: 3}
   m_PrefabInstance: {fileID: 666233558}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &666233565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666233561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355bdb5fcf1c5b54c86ee6ebe2149a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object1: {fileID: 666233561}
+  object1Position: {x: 0, y: 0, z: 0}
 --- !u!114 &677828759 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 233133339772072115, guid: 0c7226fb5534a854998d663c8f537b30, type: 3}
@@ -34558,16 +34572,16 @@ MonoBehaviour:
   - {fileID: 1113155162}
   - {fileID: 1004074479}
   - {fileID: 469956516}
+  - {fileID: 1568693019}
   - {fileID: 727671323}
   - {fileID: 259152305}
   - {fileID: 211543967}
   - {fileID: 14192974}
-  - {fileID: 916061218}
-  - {fileID: 1512286856}
-  - {fileID: 1218245907}
-  - {fileID: 1568693019}
   - {fileID: 1148441566}
   - {fileID: 666233562}
+  - {fileID: 1512286856}
+  - {fileID: 1218245907}
+  - {fileID: 916061218}
   positions: 
   nameTexts:
   - {fileID: 516507661}
