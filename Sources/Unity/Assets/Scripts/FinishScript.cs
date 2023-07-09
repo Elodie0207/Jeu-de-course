@@ -70,6 +70,15 @@ public class FinishScript : MonoBehaviour
             else
             {
                 tour.GetComponent<Text>().text = nbTours.ToString();
+                CharacterController characterController = GetComponent<CharacterController>();
+                MultiControl multiControl = GetComponent<MultiControl>();
+                if (characterController != null)
+                {
+                    characterController.lastCp = other.gameObject;
+                }else if (multiControl != null)
+                {
+                    multiControl.lastCp = other.gameObject;
+                }
             }
 
             // Réinitialiser le tableau des checkpoints franchis
@@ -87,6 +96,15 @@ public class FinishScript : MonoBehaviour
             {
                 if (other.gameObject == checkpoints[i] && checkpointsPasser[i] == false)
                 {
+                    CharacterController characterController = GetComponent<CharacterController>();
+                    MultiControl multiControl = GetComponent<MultiControl>();
+                    if (characterController != null)
+                    {
+                        characterController.lastCp = other.gameObject;
+                    }else if (multiControl != null)
+                    {
+                        multiControl.lastCp = other.gameObject;
+                    }
                     Debug.Log("Checkpoint " + (i + 1));
                     checkpointsPasser[i] = true;
                     nbcheckpointsPasser++;

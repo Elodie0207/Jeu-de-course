@@ -28,6 +28,7 @@ public class MultiControl : MonoBehaviour
 	private Vector3 movementIntent;
 	private bool isInverted = false;  
 
+	public GameObject lastCp;
 
 	void Start()
 	{
@@ -130,7 +131,15 @@ public class MultiControl : MonoBehaviour
         else {
 	        levitationBool = false;
 	        rb.useGravity = true;
+	        StartCoroutine(PauseCoroutine());
         }
+    }
+    
+    private IEnumerator PauseCoroutine()
+    {
+	    yield return new WaitForSeconds(1f);
+	    
+	    rb.position= lastCp.transform.position;
     }
     
     public IEnumerator Nitro(float count = 5f)
